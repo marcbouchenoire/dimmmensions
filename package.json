@@ -27,7 +27,7 @@
   "scripts": {
     "build": "microbundle",
     "lint": "eslint '{src,tests}/**/*.{ts,tsx}' --fix",
-    "generate": "node scripts/generate.js",
+    "generate": "ts-node-transpile-only scripts/generate.ts",
     "prepare": "rimraf dist && yarn build",
     "release": "yarn login && np"
   },
@@ -37,6 +37,8 @@
     }
   },
   "devDependencies": {
+    "@types/command-exists": "^1.2.0",
+    "@types/rimraf": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
     "app-exists": "^1.1.0",
@@ -55,6 +57,7 @@
     "np": "^7.4.0",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
     "write-json-file": "^4.3.0"
   }

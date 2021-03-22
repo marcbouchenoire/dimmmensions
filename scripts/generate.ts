@@ -1,11 +1,11 @@
-const { promisify } = require("util")
-const withApp = require("app-exists")
-const withCommand = require("command-exists")
-const execa = require("execa")
-const globby = require("globby")
-const getJSON = require("load-json-file")
-const rimraf = promisify(require("rimraf"))
-const writeJSON = require("write-json-file")
+import withApp from "app-exists"
+import withCommand from "command-exists"
+import execa from "execa"
+import globby from "globby"
+import getJSON from "load-json-file"
+import writeJSON from "write-json-file"
+import { isMacOS } from "./utils/is-macOS"
+import { trash } from "./utils/trash"
 
 const SCHEME = "dimensions"
 const PROJECT = "./src/dimensions/dimensions.xcodeproj"
@@ -28,16 +28,12 @@ const DEVICES = [
   "iPad Air (4th generation)"
 ]
 
-function isMacOS() {
-  return process.platform === "darwin"
-}
+function exit(condition: boolean, message: string) {
+  if (!condition) return
 
-function exit(condition, message) {
-  if (condition) {
-    console.error(message)
+  console.error(message)
 
-    return process.exit(0)
-  }
+  return process.exit(0)
 }
 
 async function generate() {
@@ -79,7 +75,7 @@ async function generate() {
         dimensions.push(await getJSON(attachment))
       }
 
-      await rimraf(DERIVED_DATA_PATH)
+      await trash(DERIVED_DATA_PATH)
     }
 
     dimensions = dimensions.filter((dimension, index, dimensions) => {
