@@ -27,6 +27,7 @@
   "scripts": {
     "build": "microbundle",
     "lint": "eslint '{src,tests}/**/*.{ts,tsx}' --fix",
+    "generate": "node scripts/generate.js",
     "prepare": "rimraf dist && yarn build",
     "release": "yarn login && np"
   },
@@ -38,17 +39,23 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
+    "app-exists": "^1.1.0",
+    "command-exists": "^1.2.9",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
+    "execa": "^5.0.0",
+    "globby": "^11.0.2",
     "husky": "^5.1.3",
     "lint-staged": "^10.5.4",
+    "load-json-file": "^6.2.0",
     "microbundle": "^0.13.0",
     "np": "^7.4.0",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.3",
+    "write-json-file": "^4.3.0"
   }
 }

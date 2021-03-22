@@ -1,3 +1,3 @@
-import data from "./index.json"
+import dimensions from "./dimensions.json"
 
-export const dimensions = data
+export { dimensions }
