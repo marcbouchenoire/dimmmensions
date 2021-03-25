@@ -4,29 +4,13 @@ import execa from "execa"
 import globby from "globby"
 import getJSON from "load-json-file"
 import writeJSON from "write-json-file"
+import { getSimulators } from "./utils/get-simulators"
 import { isMacOS } from "./utils/is-macOS"
 import { trash } from "./utils/trash"
 
 const SCHEME = "dimensions"
 const PROJECT = "./src/dimensions/dimensions.xcodeproj"
 const DERIVED_DATA_PATH = "/tmp/com.marcbouchenoire.dimensions"
-const DEVICES = [
-  "iPhone 8",
-  "iPhone 8 Plus",
-  "iPhone 11",
-  "iPhone 11 Pro",
-  "iPhone 11 Pro Max",
-  "iPhone 12",
-  "iPhone 12 mini",
-  "iPhone 12 Pro",
-  "iPhone 12 Pro Max",
-  "iPhone SE (2nd generation)",
-  "iPad Pro (9.7-inch)",
-  "iPad Pro (11-inch) (2nd generation)",
-  "iPad Pro (12.9-inch) (4th generation)",
-  "iPad (8th generation)",
-  "iPad Air (4th generation)"
-]
 
 function exit(condition: boolean, message: string) {
   if (!condition) return
@@ -44,8 +28,9 @@ async function generate() {
 
   try {
     let dimensions = []
+    const simulators = await getSimulators()
 
-    for (const device of DEVICES) {
+    for (const simulator of simulators) {
       await execa("xcodebuild", [
         "build",
         "test",
@@ -57,7 +42,7 @@ async function generate() {
         "-derivedDataPath",
         DERIVED_DATA_PATH,
         "-destination",
-        `platform=iOS Simulator,name=${device}`
+        `platform=iOS Simulator,name=${simulator.name}`
       ])
 
       const [output] = (await globby(
