@@ -2,75 +2,160 @@ import withApp from "app-exists"
 import withCommand from "command-exists"
 import execa from "execa"
 import globby from "globby"
+import Listr, { ListrTask } from "listr"
 import getJSON from "load-json-file"
 import writeJSON from "write-json-file"
-import { getSimulators } from "./utils/get-simulators"
+import { getDevices, Device } from "./utils/get-devices"
 import { isMacOS } from "./utils/is-macOS"
+import { isSilentError, SilentError } from "./utils/silent-error"
 import { trash } from "./utils/trash"
 
 const SCHEME = "dimensions"
 const PROJECT = "./src/dimensions/dimensions.xcodeproj"
 const DERIVED_DATA_PATH = "/tmp/com.marcbouchenoire.dimensions"
 
-function exit(condition: boolean, message: string) {
-  if (!condition) return
-
-  console.error(message)
-
-  return process.exit(0)
+interface Context {
+  devices: Device[]
+  dimensions: Dimensions[]
 }
 
-async function generate() {
-  exit(!isMacOS(), "macOS is required.")
-  exit(!withApp("Xcode"), "Xcode is required.")
-  exit(!withCommand("xcodebuild"), "Xcode Command Line Tools are required.")
-  exit(!withCommand("xcparse"), "xcparse is required.")
+interface Dimensions {
+  device: string
+  orientation: "portrait" | "landscape"
+  scale: number
+  screen: Screen
+  sizeClass: SizeClass
+  safeArea: Frame
+  layoutMargins: Frame
+  readableContent: Frame
+}
 
-  try {
-    let dimensions = []
-    const simulators = await getSimulators()
+interface Screen {
+  width: number
+  height: number
+}
 
-    for (const simulator of simulators) {
-      await execa("xcodebuild", [
-        "build",
-        "test",
-        "-quiet",
-        "-scheme",
-        SCHEME,
-        "-project",
-        PROJECT,
-        "-derivedDataPath",
-        DERIVED_DATA_PATH,
-        "-destination",
-        `platform=iOS Simulator,name=${simulator.name}`
-      ])
+interface SizeClass {
+  horizontal: "unspecified" | "compact" | "regular"
+  vertical: "unspecified" | "compact" | "regular"
+}
 
-      const [output] = (await globby(
-        `${DERIVED_DATA_PATH}/Logs/Test/*.xcresult`,
-        {
-          onlyFiles: false
+interface Frame {
+  top: number
+  right: number
+  bottom: number
+  left: number
+}
+
+const tasks = new Listr([
+  {
+    title: "Verifying requirements",
+    task: () => {
+      if (!isMacOS()) {
+        throw new SilentError("macOS is required.")
+      } else if (!withApp("Xcode")) {
+        throw new SilentError("Xcode is required.")
+      } else if (!withCommand("xcodebuild")) {
+        throw new SilentError("Xcode Command Line Tools are required.")
+      } else if (!withCommand("xcparse")) {
+        throw new SilentError("xcparse is required.")
+      }
+    }
+  },
+  {
+    title: "Gathering devices",
+    task: async (context: Context) => {
+      context.devices = await getDevices()
+    }
+  },
+  {
+    title: "Gathering dimensions",
+    task: (context: Context) => {
+      const tasks: ListrTask[] = []
+      context.dimensions = []
+
+      for (const device of context.devices) {
+        const task: ListrTask = {
+          title: device.name,
+          task: () => {
+            return new Listr([
+              {
+                title: "Extracting dimensions",
+                task: async () => {
+                  await execa("xcodebuild", [
+                    "build",
+                    "test",
+                    "-quiet",
+                    "-scheme",
+                    SCHEME,
+                    "-project",
+                    PROJECT,
+                    "-derivedDataPath",
+                    DERIVED_DATA_PATH,
+                    "-destination",
+                    `platform=iOS Simulator,name=${device.name}`
+                  ])
+                }
+              },
+              {
+                title: "Parsing extracted dimensions",
+                task: async () => {
+                  const [output] = (await globby(
+                    `${DERIVED_DATA_PATH}/Logs/Test/*.xcresult`,
+                    {
+                      onlyFiles: false
+                    }
+                  )) ?? [undefined]
+
+                  await execa("xcparse", [
+                    "attachments",
+                    output,
+                    DERIVED_DATA_PATH
+                  ])
+
+                  const attachments = await globby(`${DERIVED_DATA_PATH}/*.txt`)
+
+                  for (const attachment of attachments) {
+                    context.dimensions.push(await getJSON(attachment))
+                  }
+                }
+              },
+              {
+                title: "Cleaning up extraction cache",
+                task: async () => {
+                  await trash(DERIVED_DATA_PATH)
+                }
+              }
+            ])
+          }
         }
-      )) ?? [undefined]
 
-      await execa("xcparse", ["attachments", output, DERIVED_DATA_PATH])
-
-      const attachments = await globby(`${DERIVED_DATA_PATH}/*.txt`)
-
-      for (const attachment of attachments) {
-        dimensions.push(await getJSON(attachment))
+        tasks.push(task)
       }
 
-      await trash(DERIVED_DATA_PATH)
+      return new Listr(tasks)
     }
-
-    dimensions = dimensions.filter((dimension, index, dimensions) => {
-      return dimensions.indexOf(dimension) === index
-    })
-
-    await writeJSON("./src/dimensions.json", dimensions)
-  } catch (error) {
-    console.error(error)
+  },
+  {
+    title: "Formatting dimensions",
+    task: (context: Context) => {
+      context.dimensions = context.dimensions.filter(
+        (dimension, index, dimensions) => {
+          return dimensions.indexOf(dimension) === index
+        }
+      )
+    }
+  },
+  {
+    title: "Generating file",
+    task: async (context: Context) => {
+      await writeJSON("./src/dimensions.json", context.dimensions)
+    }
   }
-}
+])
 
-generate()
+tasks.run().catch((error: Error | SilentError) => {
+  if (isSilentError(error)) return
+
+  console.error(error)
+})
