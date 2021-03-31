@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         let layoutMargins = getFrame(window.layoutMarginsGuide, screen)
         let readableContent = getFrame(window.readableContentGuide, screen)
         
-        let dimensions = try! JSONEncoder().encode(Dimensions(device: device.model, orientation: orientation, scale: scale, screen: screen, sizeClass: sizeClass, safeArea: safeArea, layoutMargins: layoutMargins, readableContent: readableContent))
+        let dimensions = try! JSONEncoder().encode(Dimensions(device: device.name, orientation: orientation, scale: scale, screen: screen, sizeClass: sizeClass, safeArea: safeArea, layoutMargins: layoutMargins, readableContent: readableContent))
         
         self.view.accessibilityIdentifier = "dimensions"
         self.view.accessibilityLabel = String(data: dimensions, encoding: String.Encoding.utf8)

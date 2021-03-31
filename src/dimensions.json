@@ -1,41 +1,10 @@
 [
 	{
 		"screen": {
-			"width": 736,
-			"height": 414
+			"width": 810,
+			"height": 1080
 		},
-		"device": "iPhone",
-		"layoutMargins": {
-			"left": 8,
-			"top": 8,
-			"right": 8,
-			"bottom": 8
-		},
-		"sizeClass": {
-			"horizontal": "compact",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 8,
-			"top": 8,
-			"right": 8,
-			"bottom": 8
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 0,
-			"right": 0,
-			"bottom": 0
-		},
-		"orientation": "landscape",
-		"scale": 3
-	},
-	{
-		"screen": {
-			"width": 414,
-			"height": 736
-		},
-		"device": "iPhone",
+		"device": "iPad (8th generation)",
 		"layoutMargins": {
 			"left": 8,
 			"top": 28,
@@ -43,13 +12,13 @@
 			"bottom": 8
 		},
 		"sizeClass": {
-			"horizontal": "compact",
+			"horizontal": "regular",
 			"vertical": "regular"
 		},
 		"readableContent": {
-			"left": 8,
+			"left": 73,
 			"top": 28,
-			"right": 8,
+			"right": 73,
 			"bottom": 8
 		},
 		"safeArea": {
@@ -59,35 +28,283 @@
 			"bottom": 0
 		},
 		"orientation": "portrait",
-		"scale": 3
+		"scale": 2
 	},
 	{
 		"screen": {
-			"width": 414,
-			"height": 896
+			"width": 810,
+			"height": 1080
 		},
-		"device": "iPhone",
+		"device": "iPad (8th generation)",
 		"layoutMargins": {
 			"left": 8,
-			"top": 56,
+			"top": 28,
 			"right": 8,
-			"bottom": 42
+			"bottom": 8
 		},
 		"sizeClass": {
-			"horizontal": "compact",
+			"horizontal": "regular",
 			"vertical": "regular"
 		},
 		"readableContent": {
-			"left": 8,
-			"top": 56,
-			"right": 8,
-			"bottom": 42
+			"left": 73,
+			"top": 28,
+			"right": 73,
+			"bottom": 8
 		},
 		"safeArea": {
 			"left": 0,
-			"top": 48,
+			"top": 20,
 			"right": 0,
-			"bottom": 34
+			"bottom": 0
+		},
+		"orientation": "portrait",
+		"scale": 2
+	},
+	{
+		"screen": {
+			"width": 820,
+			"height": 1180
+		},
+		"device": "iPad Air (4th generation)",
+		"layoutMargins": {
+			"left": 8,
+			"top": 32,
+			"right": 8,
+			"bottom": 28
+		},
+		"sizeClass": {
+			"horizontal": "regular",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 78,
+			"top": 32,
+			"right": 78,
+			"bottom": 28
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 24,
+			"right": 0,
+			"bottom": 20
+		},
+		"orientation": "portrait",
+		"scale": 2
+	},
+	{
+		"screen": {
+			"width": 820,
+			"height": 1180
+		},
+		"device": "iPad Air (4th generation)",
+		"layoutMargins": {
+			"left": 8,
+			"top": 32,
+			"right": 8,
+			"bottom": 28
+		},
+		"sizeClass": {
+			"horizontal": "regular",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 78,
+			"top": 32,
+			"right": 78,
+			"bottom": 28
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 24,
+			"right": 0,
+			"bottom": 20
+		},
+		"orientation": "portrait",
+		"scale": 2
+	},
+	{
+		"screen": {
+			"width": 834,
+			"height": 1194
+		},
+		"device": "iPad Pro (11-inch) (2nd generation)",
+		"layoutMargins": {
+			"left": 8,
+			"top": 32,
+			"right": 8,
+			"bottom": 28
+		},
+		"sizeClass": {
+			"horizontal": "regular",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 85,
+			"top": 32,
+			"right": 85,
+			"bottom": 28
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 24,
+			"right": 0,
+			"bottom": 20
+		},
+		"orientation": "portrait",
+		"scale": 2
+	},
+	{
+		"screen": {
+			"width": 834,
+			"height": 1194
+		},
+		"device": "iPad Pro (11-inch) (2nd generation)",
+		"layoutMargins": {
+			"left": 8,
+			"top": 32,
+			"right": 8,
+			"bottom": 28
+		},
+		"sizeClass": {
+			"horizontal": "regular",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 85,
+			"top": 32,
+			"right": 85,
+			"bottom": 28
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 24,
+			"right": 0,
+			"bottom": 20
+		},
+		"orientation": "portrait",
+		"scale": 2
+	},
+	{
+		"screen": {
+			"width": 1024,
+			"height": 1366
+		},
+		"device": "iPad Pro (12.9-inch) (4th generation)",
+		"layoutMargins": {
+			"left": 8,
+			"top": 32,
+			"right": 8,
+			"bottom": 28
+		},
+		"sizeClass": {
+			"horizontal": "regular",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 180,
+			"top": 32,
+			"right": 180,
+			"bottom": 28
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 24,
+			"right": 0,
+			"bottom": 20
+		},
+		"orientation": "portrait",
+		"scale": 2
+	},
+	{
+		"screen": {
+			"width": 1024,
+			"height": 1366
+		},
+		"device": "iPad Pro (12.9-inch) (4th generation)",
+		"layoutMargins": {
+			"left": 8,
+			"top": 32,
+			"right": 8,
+			"bottom": 28
+		},
+		"sizeClass": {
+			"horizontal": "regular",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 180,
+			"top": 32,
+			"right": 180,
+			"bottom": 28
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 24,
+			"right": 0,
+			"bottom": 20
+		},
+		"orientation": "portrait",
+		"scale": 2
+	},
+	{
+		"screen": {
+			"width": 768,
+			"height": 1024
+		},
+		"device": "iPad Pro (9.7-inch)",
+		"layoutMargins": {
+			"left": 8,
+			"top": 28,
+			"right": 8,
+			"bottom": 8
+		},
+		"sizeClass": {
+			"horizontal": "regular",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 52,
+			"top": 28,
+			"right": 52,
+			"bottom": 8
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 20,
+			"right": 0,
+			"bottom": 0
+		},
+		"orientation": "portrait",
+		"scale": 2
+	},
+	{
+		"screen": {
+			"width": 768,
+			"height": 1024
+		},
+		"device": "iPad Pro (9.7-inch)",
+		"layoutMargins": {
+			"left": 8,
+			"top": 28,
+			"right": 8,
+			"bottom": 8
+		},
+		"sizeClass": {
+			"horizontal": "regular",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 52,
+			"top": 28,
+			"right": 52,
+			"bottom": 8
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 20,
+			"right": 0,
+			"bottom": 0
 		},
 		"orientation": "portrait",
 		"scale": 2
@@ -97,7 +314,7 @@
 			"width": 896,
 			"height": 414
 		},
-		"device": "iPhone",
+		"device": "iPhone 11",
 		"layoutMargins": {
 			"left": 56,
 			"top": 8,
@@ -125,13 +342,13 @@
 	},
 	{
 		"screen": {
-			"width": 375,
-			"height": 812
+			"width": 414,
+			"height": 896
 		},
-		"device": "iPhone",
+		"device": "iPhone 11",
 		"layoutMargins": {
 			"left": 8,
-			"top": 52,
+			"top": 56,
 			"right": 8,
 			"bottom": 42
 		},
@@ -141,25 +358,25 @@
 		},
 		"readableContent": {
 			"left": 8,
-			"top": 52,
+			"top": 56,
 			"right": 8,
 			"bottom": 42
 		},
 		"safeArea": {
 			"left": 0,
-			"top": 44,
+			"top": 48,
 			"right": 0,
 			"bottom": 34
 		},
 		"orientation": "portrait",
-		"scale": 3
+		"scale": 2
 	},
 	{
 		"screen": {
 			"width": 812,
 			"height": 375
 		},
-		"device": "iPhone",
+		"device": "iPhone 11 Pro",
 		"layoutMargins": {
 			"left": 52,
 			"top": 8,
@@ -187,10 +404,41 @@
 	},
 	{
 		"screen": {
+			"width": 375,
+			"height": 812
+		},
+		"device": "iPhone 11 Pro",
+		"layoutMargins": {
+			"left": 8,
+			"top": 52,
+			"right": 8,
+			"bottom": 42
+		},
+		"sizeClass": {
+			"horizontal": "compact",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 8,
+			"top": 52,
+			"right": 8,
+			"bottom": 42
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 44,
+			"right": 0,
+			"bottom": 34
+		},
+		"orientation": "portrait",
+		"scale": 3
+	},
+	{
+		"screen": {
 			"width": 896,
 			"height": 414
 		},
-		"device": "iPhone",
+		"device": "iPhone 11 Pro Max",
 		"layoutMargins": {
 			"left": 52,
 			"top": 8,
@@ -221,7 +469,7 @@
 			"width": 414,
 			"height": 896
 		},
-		"device": "iPhone",
+		"device": "iPhone 11 Pro Max",
 		"layoutMargins": {
 			"left": 8,
 			"top": 52,
@@ -249,75 +497,44 @@
 	},
 	{
 		"screen": {
-			"width": 667,
-			"height": 375
+			"width": 844,
+			"height": 390
 		},
-		"device": "iPhone",
+		"device": "iPhone 12",
 		"layoutMargins": {
-			"left": 8,
+			"left": 55,
 			"top": 8,
-			"right": 8,
-			"bottom": 8
+			"right": 55,
+			"bottom": 29
 		},
 		"sizeClass": {
 			"horizontal": "compact",
 			"vertical": "regular"
 		},
 		"readableContent": {
-			"left": 8,
+			"left": 55,
 			"top": 8,
-			"right": 8,
-			"bottom": 8
+			"right": 55,
+			"bottom": 29
 		},
 		"safeArea": {
-			"left": 0,
+			"left": 47,
 			"top": 0,
-			"right": 0,
-			"bottom": 0
+			"right": 47,
+			"bottom": 21
 		},
 		"orientation": "landscape",
-		"scale": 2
+		"scale": 3
 	},
 	{
 		"screen": {
-			"width": 375,
-			"height": 667
+			"width": 390,
+			"height": 844
 		},
-		"device": "iPhone",
+		"device": "iPhone 12",
 		"layoutMargins": {
 			"left": 8,
-			"top": 28,
-			"right": 8,
-			"bottom": 8
-		},
-		"sizeClass": {
-			"horizontal": "compact",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 8,
-			"top": 28,
-			"right": 8,
-			"bottom": 8
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 20,
-			"right": 0,
-			"bottom": 0
-		},
-		"orientation": "portrait",
-		"scale": 2
-	},
-	{
-		"screen": {
-			"width": 375,
-			"height": 812
-		},
-		"device": "iPhone",
-		"layoutMargins": {
-			"left": 8,
-			"top": 58,
+			"top": 55,
 			"right": 8,
 			"bottom": 42
 		},
@@ -327,13 +544,13 @@
 		},
 		"readableContent": {
 			"left": 8,
-			"top": 58,
+			"top": 55,
 			"right": 8,
 			"bottom": 42
 		},
 		"safeArea": {
 			"left": 0,
-			"top": 50,
+			"top": 47,
 			"right": 0,
 			"bottom": 34
 		},
@@ -345,7 +562,7 @@
 			"width": 812,
 			"height": 375
 		},
-		"device": "iPhone",
+		"device": "iPhone 12 mini",
 		"layoutMargins": {
 			"left": 58,
 			"top": 8,
@@ -373,13 +590,13 @@
 	},
 	{
 		"screen": {
-			"width": 390,
-			"height": 844
+			"width": 375,
+			"height": 812
 		},
-		"device": "iPhone",
+		"device": "iPhone 12 mini",
 		"layoutMargins": {
 			"left": 8,
-			"top": 55,
+			"top": 58,
 			"right": 8,
 			"bottom": 42
 		},
@@ -389,13 +606,13 @@
 		},
 		"readableContent": {
 			"left": 8,
-			"top": 55,
+			"top": 58,
 			"right": 8,
 			"bottom": 42
 		},
 		"safeArea": {
 			"left": 0,
-			"top": 47,
+			"top": 50,
 			"right": 0,
 			"bottom": 34
 		},
@@ -407,7 +624,7 @@
 			"width": 844,
 			"height": 390
 		},
-		"device": "iPhone",
+		"device": "iPhone 12 Pro",
 		"layoutMargins": {
 			"left": 55,
 			"top": 8,
@@ -438,7 +655,7 @@
 			"width": 390,
 			"height": 844
 		},
-		"device": "iPhone",
+		"device": "iPhone 12 Pro",
 		"layoutMargins": {
 			"left": 8,
 			"top": 55,
@@ -462,37 +679,6 @@
 			"bottom": 34
 		},
 		"orientation": "portrait",
-		"scale": 3
-	},
-	{
-		"screen": {
-			"width": 844,
-			"height": 390
-		},
-		"device": "iPhone",
-		"layoutMargins": {
-			"left": 55,
-			"top": 8,
-			"right": 55,
-			"bottom": 29
-		},
-		"sizeClass": {
-			"horizontal": "compact",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 55,
-			"top": 8,
-			"right": 55,
-			"bottom": 29
-		},
-		"safeArea": {
-			"left": 47,
-			"top": 0,
-			"right": 47,
-			"bottom": 21
-		},
-		"orientation": "landscape",
 		"scale": 3
 	},
 	{
@@ -500,7 +686,7 @@
 			"width": 926,
 			"height": 428
 		},
-		"device": "iPhone",
+		"device": "iPhone 12 Pro Max",
 		"layoutMargins": {
 			"left": 55,
 			"top": 8,
@@ -531,7 +717,7 @@
 			"width": 428,
 			"height": 926
 		},
-		"device": "iPhone",
+		"device": "iPhone 12 Pro Max",
 		"layoutMargins": {
 			"left": 8,
 			"top": 55,
@@ -559,10 +745,196 @@
 	},
 	{
 		"screen": {
+			"width": 667,
+			"height": 375
+		},
+		"device": "iPhone 8",
+		"layoutMargins": {
+			"left": 8,
+			"top": 8,
+			"right": 8,
+			"bottom": 8
+		},
+		"sizeClass": {
+			"horizontal": "compact",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 8,
+			"top": 8,
+			"right": 8,
+			"bottom": 8
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 0,
+			"right": 0,
+			"bottom": 0
+		},
+		"orientation": "landscape",
+		"scale": 2
+	},
+	{
+		"screen": {
+			"width": 375,
+			"height": 667
+		},
+		"device": "iPhone 8",
+		"layoutMargins": {
+			"left": 8,
+			"top": 28,
+			"right": 8,
+			"bottom": 8
+		},
+		"sizeClass": {
+			"horizontal": "compact",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 8,
+			"top": 28,
+			"right": 8,
+			"bottom": 8
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 20,
+			"right": 0,
+			"bottom": 0
+		},
+		"orientation": "portrait",
+		"scale": 2
+	},
+	{
+		"screen": {
+			"width": 736,
+			"height": 414
+		},
+		"device": "iPhone 8 Plus",
+		"layoutMargins": {
+			"left": 8,
+			"top": 8,
+			"right": 8,
+			"bottom": 8
+		},
+		"sizeClass": {
+			"horizontal": "compact",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 8,
+			"top": 8,
+			"right": 8,
+			"bottom": 8
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 0,
+			"right": 0,
+			"bottom": 0
+		},
+		"orientation": "landscape",
+		"scale": 3
+	},
+	{
+		"screen": {
+			"width": 414,
+			"height": 736
+		},
+		"device": "iPhone 8 Plus",
+		"layoutMargins": {
+			"left": 8,
+			"top": 28,
+			"right": 8,
+			"bottom": 8
+		},
+		"sizeClass": {
+			"horizontal": "compact",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 8,
+			"top": 28,
+			"right": 8,
+			"bottom": 8
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 20,
+			"right": 0,
+			"bottom": 0
+		},
+		"orientation": "portrait",
+		"scale": 3
+	},
+	{
+		"screen": {
+			"width": 667,
+			"height": 375
+		},
+		"device": "iPhone SE (2nd generation)",
+		"layoutMargins": {
+			"left": 8,
+			"top": 8,
+			"right": 8,
+			"bottom": 8
+		},
+		"sizeClass": {
+			"horizontal": "compact",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 8,
+			"top": 8,
+			"right": 8,
+			"bottom": 8
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 0,
+			"right": 0,
+			"bottom": 0
+		},
+		"orientation": "landscape",
+		"scale": 2
+	},
+	{
+		"screen": {
+			"width": 375,
+			"height": 667
+		},
+		"device": "iPhone SE (2nd generation)",
+		"layoutMargins": {
+			"left": 8,
+			"top": 28,
+			"right": 8,
+			"bottom": 8
+		},
+		"sizeClass": {
+			"horizontal": "compact",
+			"vertical": "regular"
+		},
+		"readableContent": {
+			"left": 8,
+			"top": 28,
+			"right": 8,
+			"bottom": 8
+		},
+		"safeArea": {
+			"left": 0,
+			"top": 20,
+			"right": 0,
+			"bottom": 0
+		},
+		"orientation": "portrait",
+		"scale": 2
+	},
+	{
+		"screen": {
 			"width": 568,
 			"height": 320
 		},
-		"device": "iPhone",
+		"device": "iPod touch (7th generation)",
 		"layoutMargins": {
 			"left": 8,
 			"top": 8,
@@ -593,7 +965,7 @@
 			"width": 320,
 			"height": 568
 		},
-		"device": "iPhone",
+		"device": "iPod touch (7th generation)",
 		"layoutMargins": {
 			"left": 8,
 			"top": 28,
@@ -615,316 +987,6 @@
 			"top": 20,
 			"right": 0,
 			"bottom": 0
-		},
-		"orientation": "portrait",
-		"scale": 2
-	},
-	{
-		"screen": {
-			"width": 768,
-			"height": 1024
-		},
-		"device": "iPad",
-		"layoutMargins": {
-			"left": 8,
-			"top": 28,
-			"right": 8,
-			"bottom": 8
-		},
-		"sizeClass": {
-			"horizontal": "regular",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 52,
-			"top": 28,
-			"right": 52,
-			"bottom": 8
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 20,
-			"right": 0,
-			"bottom": 0
-		},
-		"orientation": "portrait",
-		"scale": 2
-	},
-	{
-		"screen": {
-			"width": 768,
-			"height": 1024
-		},
-		"device": "iPad",
-		"layoutMargins": {
-			"left": 8,
-			"top": 28,
-			"right": 8,
-			"bottom": 8
-		},
-		"sizeClass": {
-			"horizontal": "regular",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 52,
-			"top": 28,
-			"right": 52,
-			"bottom": 8
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 20,
-			"right": 0,
-			"bottom": 0
-		},
-		"orientation": "portrait",
-		"scale": 2
-	},
-	{
-		"screen": {
-			"width": 834,
-			"height": 1194
-		},
-		"device": "iPad",
-		"layoutMargins": {
-			"left": 8,
-			"top": 32,
-			"right": 8,
-			"bottom": 28
-		},
-		"sizeClass": {
-			"horizontal": "regular",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 85,
-			"top": 32,
-			"right": 85,
-			"bottom": 28
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 24,
-			"right": 0,
-			"bottom": 20
-		},
-		"orientation": "portrait",
-		"scale": 2
-	},
-	{
-		"screen": {
-			"width": 834,
-			"height": 1194
-		},
-		"device": "iPad",
-		"layoutMargins": {
-			"left": 8,
-			"top": 32,
-			"right": 8,
-			"bottom": 28
-		},
-		"sizeClass": {
-			"horizontal": "regular",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 85,
-			"top": 32,
-			"right": 85,
-			"bottom": 28
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 24,
-			"right": 0,
-			"bottom": 20
-		},
-		"orientation": "portrait",
-		"scale": 2
-	},
-	{
-		"screen": {
-			"width": 1024,
-			"height": 1366
-		},
-		"device": "iPad",
-		"layoutMargins": {
-			"left": 8,
-			"top": 32,
-			"right": 8,
-			"bottom": 28
-		},
-		"sizeClass": {
-			"horizontal": "regular",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 180,
-			"top": 32,
-			"right": 180,
-			"bottom": 28
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 24,
-			"right": 0,
-			"bottom": 20
-		},
-		"orientation": "portrait",
-		"scale": 2
-	},
-	{
-		"screen": {
-			"width": 1024,
-			"height": 1366
-		},
-		"device": "iPad",
-		"layoutMargins": {
-			"left": 8,
-			"top": 32,
-			"right": 8,
-			"bottom": 28
-		},
-		"sizeClass": {
-			"horizontal": "regular",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 180,
-			"top": 32,
-			"right": 180,
-			"bottom": 28
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 24,
-			"right": 0,
-			"bottom": 20
-		},
-		"orientation": "portrait",
-		"scale": 2
-	},
-	{
-		"screen": {
-			"width": 810,
-			"height": 1080
-		},
-		"device": "iPad",
-		"layoutMargins": {
-			"left": 8,
-			"top": 28,
-			"right": 8,
-			"bottom": 8
-		},
-		"sizeClass": {
-			"horizontal": "regular",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 73,
-			"top": 28,
-			"right": 73,
-			"bottom": 8
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 20,
-			"right": 0,
-			"bottom": 0
-		},
-		"orientation": "portrait",
-		"scale": 2
-	},
-	{
-		"screen": {
-			"width": 810,
-			"height": 1080
-		},
-		"device": "iPad",
-		"layoutMargins": {
-			"left": 8,
-			"top": 28,
-			"right": 8,
-			"bottom": 8
-		},
-		"sizeClass": {
-			"horizontal": "regular",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 73,
-			"top": 28,
-			"right": 73,
-			"bottom": 8
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 20,
-			"right": 0,
-			"bottom": 0
-		},
-		"orientation": "portrait",
-		"scale": 2
-	},
-	{
-		"screen": {
-			"width": 820,
-			"height": 1180
-		},
-		"device": "iPad",
-		"layoutMargins": {
-			"left": 8,
-			"top": 32,
-			"right": 8,
-			"bottom": 28
-		},
-		"sizeClass": {
-			"horizontal": "regular",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 78,
-			"top": 32,
-			"right": 78,
-			"bottom": 28
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 24,
-			"right": 0,
-			"bottom": 20
-		},
-		"orientation": "portrait",
-		"scale": 2
-	},
-	{
-		"screen": {
-			"width": 820,
-			"height": 1180
-		},
-		"device": "iPad",
-		"layoutMargins": {
-			"left": 8,
-			"top": 32,
-			"right": 8,
-			"bottom": 28
-		},
-		"sizeClass": {
-			"horizontal": "regular",
-			"vertical": "regular"
-		},
-		"readableContent": {
-			"left": 78,
-			"top": 32,
-			"right": 78,
-			"bottom": 28
-		},
-		"safeArea": {
-			"left": 0,
-			"top": 24,
-			"right": 0,
-			"bottom": 20
 		},
 		"orientation": "portrait",
 		"scale": 2

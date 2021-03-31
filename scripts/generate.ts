@@ -139,11 +139,15 @@ const tasks = new Listr([
   {
     title: "Formatting dimensions",
     task: (context: Context) => {
-      context.dimensions = context.dimensions.filter(
-        (dimension, index, dimensions) => {
+      context.dimensions = context.dimensions
+        .filter((dimension, index, dimensions) => {
           return dimensions.indexOf(dimension) === index
-        }
-      )
+        })
+        .sort(
+          (a, b) =>
+            a.device.localeCompare(b.device) ||
+            a.orientation.localeCompare(b.orientation)
+        )
     }
   },
   {
