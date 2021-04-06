@@ -7,7 +7,6 @@
 import UIKit
 
 struct Dimensions: Codable {
-    var device: String
     var orientation: String
     var scale: CGFloat
     var screen: Screen
@@ -54,12 +53,11 @@ func getFrame(_ layoutGuide: UILayoutGuide, _ screen: Screen) -> Frame {
 }
 
 class ViewController: UIViewController {
-    override func viewLayoutMarginsDidChange() {
+    override func viewDidLayoutSubviews() {
         super.viewLayoutMarginsDidChange()
         
         let window = UIApplication.shared.windows[0]
         let windowScene = window.windowScene!
-        let device = UIDevice.current
         
         let orientation = getOrientation(windowScene.interfaceOrientation)
         let scale = windowScene.screen.scale
@@ -69,7 +67,7 @@ class ViewController: UIViewController {
         let layoutMargins = getFrame(window.layoutMarginsGuide, screen)
         let readableContent = getFrame(window.readableContentGuide, screen)
         
-        let dimensions = try! JSONEncoder().encode(Dimensions(device: device.name, orientation: orientation, scale: scale, screen: screen, sizeClass: sizeClass, safeArea: safeArea, layoutMargins: layoutMargins, readableContent: readableContent))
+        let dimensions = try! JSONEncoder().encode(Dimensions(orientation: orientation, scale: scale, screen: screen, sizeClass: sizeClass, safeArea: safeArea, layoutMargins: layoutMargins, readableContent: readableContent))
         
         self.view.accessibilityIdentifier = "dimensions"
         self.view.accessibilityLabel = String(data: dimensions, encoding: String.Encoding.utf8)

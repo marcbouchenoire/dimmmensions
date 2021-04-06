@@ -5,6 +5,7 @@ import globby from "globby"
 import Listr, { ListrTask } from "listr"
 import getJSON from "load-json-file"
 import writeJSON from "write-json-file"
+import { getArea } from "./utils/get-area"
 import { getDevices, Device } from "./utils/get-devices"
 import { isMacOS } from "./utils/is-macOS"
 import { isSilentError, SilentError } from "./utils/silent-error"
@@ -19,25 +20,35 @@ interface Context {
   dimensions: Dimensions[]
 }
 
-interface Dimensions {
-  device: string
-  orientation: "portrait" | "landscape"
+export interface Dimensions extends Record<Orientation, OrientedDimensions> {
   scale: number
+}
+
+export interface OrientedDimensions {
   screen: Screen
-  sizeClass: SizeClass
+  sizeClass: SizeClasses
   safeArea: Frame
   layoutMargins: Frame
   readableContent: Frame
 }
+
+export interface ExtractedDimensions extends OrientedDimensions {
+  orientation: Orientation
+  scale: number
+}
+
+type Orientation = "portrait" | "landscape"
+
+type SizeClass = "unspecified" | "compact" | "regular"
 
 interface Screen {
   width: number
   height: number
 }
 
-interface SizeClass {
-  horizontal: "unspecified" | "compact" | "regular"
-  vertical: "unspecified" | "compact" | "regular"
+interface SizeClasses {
+  horizontal: SizeClass
+  vertical: SizeClass
 }
 
 interface Frame {
@@ -115,8 +126,38 @@ const tasks = new Listr([
 
                   const attachments = await globby(`${DERIVED_DATA_PATH}/*.txt`)
 
+                  let scale: number
+                  let portrait: OrientedDimensions
+                  let landscape: OrientedDimensions
+
                   for (const attachment of attachments) {
-                    context.dimensions.push(await getJSON(attachment))
+                    const {
+                      orientation,
+                      scale: extractedScale,
+                      ...dimensions
+                    }: ExtractedDimensions = await getJSON(attachment)
+
+                    scale = extractedScale
+
+                    if (orientation === "portrait") {
+                      portrait = dimensions
+                    } else {
+                      landscape = dimensions
+                    }
+                  }
+
+                  const dimensions: Dimensions = {
+                    scale,
+                    portrait,
+                    landscape
+                  }
+
+                  const isUniqueDimensions = !context.dimensions
+                    .map((dimensions) => JSON.stringify(dimensions))
+                    .includes(JSON.stringify(dimensions))
+
+                  if (isUniqueDimensions) {
+                    context.dimensions.push(dimensions)
                   }
                 }
               },
@@ -137,17 +178,11 @@ const tasks = new Listr([
     }
   },
   {
-    title: "Formatting dimensions",
+    title: "Sorting dimensions",
     task: (context: Context) => {
-      context.dimensions = context.dimensions
-        .filter((dimension, index, dimensions) => {
-          return dimensions.indexOf(dimension) === index
-        })
-        .sort(
-          (a, b) =>
-            a.device.localeCompare(b.device) ||
-            a.orientation.localeCompare(b.orientation)
-        )
+      context.dimensions = context.dimensions.sort((a, b) => {
+        return getArea(a) - getArea(b)
+      })
     }
   },
   {
