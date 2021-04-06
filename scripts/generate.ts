@@ -5,6 +5,11 @@ import globby from "globby"
 import Listr, { ListrTask } from "listr"
 import getJSON from "load-json-file"
 import writeJSON from "write-json-file"
+import {
+  Dimensions,
+  ExtractedDimensions,
+  OrientedDimensions
+} from "../src/types"
 import { getArea } from "./utils/get-area"
 import { getDevices, Device } from "./utils/get-devices"
 import { isMacOS } from "./utils/is-macOS"
@@ -18,44 +23,6 @@ const DERIVED_DATA_PATH = "/tmp/com.marcbouchenoire.dimensions"
 interface Context {
   devices: Device[]
   dimensions: Dimensions[]
-}
-
-export interface Dimensions extends Record<Orientation, OrientedDimensions> {
-  scale: number
-}
-
-export interface OrientedDimensions {
-  screen: Screen
-  sizeClass: SizeClasses
-  safeArea: Frame
-  layoutMargins: Frame
-  readableContent: Frame
-}
-
-export interface ExtractedDimensions extends OrientedDimensions {
-  orientation: Orientation
-  scale: number
-}
-
-type Orientation = "portrait" | "landscape"
-
-type SizeClass = "unspecified" | "compact" | "regular"
-
-interface Screen {
-  width: number
-  height: number
-}
-
-interface SizeClasses {
-  horizontal: SizeClass
-  vertical: SizeClass
-}
-
-interface Frame {
-  top: number
-  right: number
-  bottom: number
-  left: number
 }
 
 const tasks = new Listr([
