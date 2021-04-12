@@ -10,8 +10,8 @@ import {
   ExtractedDimensions,
   OrientedDimensions
 } from "../src/types"
-import { getArea } from "./utils/get-area"
 import { getDevices, Device } from "./utils/get-devices"
+import { getHashCode } from "./utils/get-hash-code"
 import { isMacOS } from "./utils/is-macOS"
 import { isSilentError, SilentError } from "./utils/silent-error"
 import { trash } from "./utils/trash"
@@ -148,7 +148,7 @@ const tasks = new Listr([
     title: "Sorting dimensions",
     task: (context: Context) => {
       context.dimensions = context.dimensions.sort((a, b) => {
-        return getArea(a) - getArea(b)
+        return getHashCode(a) - getHashCode(b)
       })
     }
   },

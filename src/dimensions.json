@@ -3,8 +3,8 @@
 		"scale": 2,
 		"portrait": {
 			"screen": {
-				"width": 320,
-				"height": 568
+				"width": 768,
+				"height": 1024
 			},
 			"layoutMargins": {
 				"left": 8,
@@ -13,13 +13,13 @@
 				"bottom": 8
 			},
 			"sizeClass": {
-				"horizontal": "compact",
+				"horizontal": "regular",
 				"vertical": "regular"
 			},
 			"readableContent": {
-				"left": 8,
+				"left": 52,
 				"top": 28,
-				"right": 8,
+				"right": 52,
 				"bottom": 8
 			},
 			"safeArea": {
@@ -31,45 +31,45 @@
 		},
 		"landscape": {
 			"screen": {
-				"width": 568,
-				"height": 320
+				"width": 1024,
+				"height": 768
 			},
 			"layoutMargins": {
 				"left": 8,
-				"top": 8,
+				"top": 28,
 				"right": 8,
 				"bottom": 8
 			},
 			"sizeClass": {
-				"horizontal": "compact",
+				"horizontal": "regular",
 				"vertical": "regular"
 			},
 			"readableContent": {
-				"left": 8,
-				"top": 8,
-				"right": 8,
+				"left": 180,
+				"top": 28,
+				"right": 180,
 				"bottom": 8
 			},
 			"safeArea": {
 				"left": 0,
-				"top": 0,
+				"top": 20,
 				"right": 0,
 				"bottom": 0
 			}
 		}
 	},
 	{
-		"scale": 2,
+		"scale": 3,
 		"portrait": {
 			"screen": {
-				"width": 375,
-				"height": 667
+				"width": 414,
+				"height": 896
 			},
 			"layoutMargins": {
 				"left": 8,
-				"top": 28,
+				"top": 52,
 				"right": 8,
-				"bottom": 8
+				"bottom": 42
 			},
 			"sizeClass": {
 				"horizontal": "compact",
@@ -77,43 +77,43 @@
 			},
 			"readableContent": {
 				"left": 8,
-				"top": 28,
+				"top": 52,
 				"right": 8,
-				"bottom": 8
+				"bottom": 42
 			},
 			"safeArea": {
 				"left": 0,
-				"top": 20,
+				"top": 44,
 				"right": 0,
-				"bottom": 0
+				"bottom": 34
 			}
 		},
 		"landscape": {
 			"screen": {
-				"width": 667,
-				"height": 375
+				"width": 896,
+				"height": 414
 			},
 			"layoutMargins": {
-				"left": 8,
+				"left": 52,
 				"top": 8,
-				"right": 8,
-				"bottom": 8
+				"right": 52,
+				"bottom": 29
 			},
 			"sizeClass": {
 				"horizontal": "compact",
 				"vertical": "regular"
 			},
 			"readableContent": {
-				"left": 8,
+				"left": 116,
 				"top": 8,
-				"right": 8,
-				"bottom": 8
+				"right": 116,
+				"bottom": 29
 			},
 			"safeArea": {
-				"left": 0,
+				"left": 44,
 				"top": 0,
-				"right": 0,
-				"bottom": 0
+				"right": 44,
+				"bottom": 21
 			}
 		}
 	},
@@ -177,76 +177,76 @@
 		}
 	},
 	{
-		"scale": 3,
+		"scale": 2,
 		"portrait": {
 			"screen": {
-				"width": 375,
-				"height": 812
+				"width": 1024,
+				"height": 1366
 			},
 			"layoutMargins": {
 				"left": 8,
-				"top": 52,
+				"top": 32,
 				"right": 8,
-				"bottom": 42
+				"bottom": 28
 			},
 			"sizeClass": {
-				"horizontal": "compact",
+				"horizontal": "regular",
 				"vertical": "regular"
 			},
 			"readableContent": {
-				"left": 8,
-				"top": 52,
-				"right": 8,
-				"bottom": 42
+				"left": 180,
+				"top": 32,
+				"right": 180,
+				"bottom": 28
 			},
 			"safeArea": {
 				"left": 0,
-				"top": 44,
+				"top": 24,
 				"right": 0,
-				"bottom": 34
+				"bottom": 20
 			}
 		},
 		"landscape": {
 			"screen": {
-				"width": 812,
-				"height": 375
+				"width": 1366,
+				"height": 1024
 			},
 			"layoutMargins": {
-				"left": 52,
-				"top": 8,
-				"right": 52,
-				"bottom": 29
+				"left": 8,
+				"top": 32,
+				"right": 8,
+				"bottom": 28
 			},
 			"sizeClass": {
-				"horizontal": "compact",
+				"horizontal": "regular",
 				"vertical": "regular"
 			},
 			"readableContent": {
-				"left": 52,
-				"top": 8,
-				"right": 52,
-				"bottom": 29
+				"left": 351,
+				"top": 32,
+				"right": 351,
+				"bottom": 28
 			},
 			"safeArea": {
-				"left": 44,
-				"top": 0,
-				"right": 44,
-				"bottom": 21
+				"left": 0,
+				"top": 24,
+				"right": 0,
+				"bottom": 20
 			}
 		}
 	},
 	{
-		"scale": 3,
+		"scale": 2,
 		"portrait": {
 			"screen": {
 				"width": 375,
-				"height": 812
+				"height": 667
 			},
 			"layoutMargins": {
 				"left": 8,
-				"top": 58,
+				"top": 28,
 				"right": 8,
-				"bottom": 42
+				"bottom": 8
 			},
 			"sizeClass": {
 				"horizontal": "compact",
@@ -254,58 +254,27 @@
 			},
 			"readableContent": {
 				"left": 8,
-				"top": 58,
+				"top": 28,
 				"right": 8,
-				"bottom": 42
+				"bottom": 8
 			},
 			"safeArea": {
 				"left": 0,
-				"top": 50,
+				"top": 20,
 				"right": 0,
-				"bottom": 34
+				"bottom": 0
 			}
 		},
 		"landscape": {
 			"screen": {
-				"width": 812,
+				"width": 667,
 				"height": 375
 			},
 			"layoutMargins": {
-				"left": 58,
-				"top": 8,
-				"right": 58,
-				"bottom": 29
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"readableContent": {
-				"left": 58,
-				"top": 8,
-				"right": 58,
-				"bottom": 29
-			},
-			"safeArea": {
-				"left": 50,
-				"top": 0,
-				"right": 50,
-				"bottom": 21
-			}
-		}
-	},
-	{
-		"scale": 3,
-		"portrait": {
-			"screen": {
-				"width": 390,
-				"height": 844
-			},
-			"layoutMargins": {
 				"left": 8,
-				"top": 55,
+				"top": 8,
 				"right": 8,
-				"bottom": 42
+				"bottom": 8
 			},
 			"sizeClass": {
 				"horizontal": "compact",
@@ -313,43 +282,15 @@
 			},
 			"readableContent": {
 				"left": 8,
-				"top": 55,
+				"top": 8,
 				"right": 8,
-				"bottom": 42
+				"bottom": 8
 			},
 			"safeArea": {
 				"left": 0,
-				"top": 47,
-				"right": 0,
-				"bottom": 34
-			}
-		},
-		"landscape": {
-			"screen": {
-				"width": 844,
-				"height": 390
-			},
-			"layoutMargins": {
-				"left": 55,
-				"top": 8,
-				"right": 55,
-				"bottom": 29
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"readableContent": {
-				"left": 55,
-				"top": 8,
-				"right": 55,
-				"bottom": 29
-			},
-			"safeArea": {
-				"left": 47,
 				"top": 0,
-				"right": 47,
-				"bottom": 21
+				"right": 0,
+				"bottom": 0
 			}
 		}
 	},
@@ -408,65 +349,6 @@
 				"left": 48,
 				"top": 0,
 				"right": 48,
-				"bottom": 21
-			}
-		}
-	},
-	{
-		"scale": 3,
-		"portrait": {
-			"screen": {
-				"width": 414,
-				"height": 896
-			},
-			"layoutMargins": {
-				"left": 8,
-				"top": 52,
-				"right": 8,
-				"bottom": 42
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"readableContent": {
-				"left": 8,
-				"top": 52,
-				"right": 8,
-				"bottom": 42
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 44,
-				"right": 0,
-				"bottom": 34
-			}
-		},
-		"landscape": {
-			"screen": {
-				"width": 896,
-				"height": 414
-			},
-			"layoutMargins": {
-				"left": 52,
-				"top": 8,
-				"right": 52,
-				"bottom": 29
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"readableContent": {
-				"left": 116,
-				"top": 8,
-				"right": 116,
-				"bottom": 29
-			},
-			"safeArea": {
-				"left": 44,
-				"top": 0,
-				"right": 44,
 				"bottom": 21
 			}
 		}
@@ -534,8 +416,8 @@
 		"scale": 2,
 		"portrait": {
 			"screen": {
-				"width": 768,
-				"height": 1024
+				"width": 320,
+				"height": 568
 			},
 			"layoutMargins": {
 				"left": 8,
@@ -544,13 +426,13 @@
 				"bottom": 8
 			},
 			"sizeClass": {
-				"horizontal": "regular",
+				"horizontal": "compact",
 				"vertical": "regular"
 			},
 			"readableContent": {
-				"left": 52,
+				"left": 8,
 				"top": 28,
-				"right": 52,
+				"right": 8,
 				"bottom": 8
 			},
 			"safeArea": {
@@ -562,28 +444,28 @@
 		},
 		"landscape": {
 			"screen": {
-				"width": 1024,
-				"height": 768
+				"width": 568,
+				"height": 320
 			},
 			"layoutMargins": {
 				"left": 8,
-				"top": 28,
+				"top": 8,
 				"right": 8,
 				"bottom": 8
 			},
 			"sizeClass": {
-				"horizontal": "regular",
+				"horizontal": "compact",
 				"vertical": "regular"
 			},
 			"readableContent": {
-				"left": 180,
-				"top": 28,
-				"right": 180,
+				"left": 8,
+				"top": 8,
+				"right": 8,
 				"bottom": 8
 			},
 			"safeArea": {
 				"left": 0,
-				"top": 20,
+				"top": 0,
 				"right": 0,
 				"bottom": 0
 			}
@@ -708,6 +590,124 @@
 		}
 	},
 	{
+		"scale": 3,
+		"portrait": {
+			"screen": {
+				"width": 390,
+				"height": 844
+			},
+			"layoutMargins": {
+				"left": 8,
+				"top": 55,
+				"right": 8,
+				"bottom": 42
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "regular"
+			},
+			"readableContent": {
+				"left": 8,
+				"top": 55,
+				"right": 8,
+				"bottom": 42
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 47,
+				"right": 0,
+				"bottom": 34
+			}
+		},
+		"landscape": {
+			"screen": {
+				"width": 844,
+				"height": 390
+			},
+			"layoutMargins": {
+				"left": 55,
+				"top": 8,
+				"right": 55,
+				"bottom": 29
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "regular"
+			},
+			"readableContent": {
+				"left": 55,
+				"top": 8,
+				"right": 55,
+				"bottom": 29
+			},
+			"safeArea": {
+				"left": 47,
+				"top": 0,
+				"right": 47,
+				"bottom": 21
+			}
+		}
+	},
+	{
+		"scale": 3,
+		"portrait": {
+			"screen": {
+				"width": 375,
+				"height": 812
+			},
+			"layoutMargins": {
+				"left": 8,
+				"top": 58,
+				"right": 8,
+				"bottom": 42
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "regular"
+			},
+			"readableContent": {
+				"left": 8,
+				"top": 58,
+				"right": 8,
+				"bottom": 42
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 50,
+				"right": 0,
+				"bottom": 34
+			}
+		},
+		"landscape": {
+			"screen": {
+				"width": 812,
+				"height": 375
+			},
+			"layoutMargins": {
+				"left": 58,
+				"top": 8,
+				"right": 58,
+				"bottom": 29
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "regular"
+			},
+			"readableContent": {
+				"left": 58,
+				"top": 8,
+				"right": 58,
+				"bottom": 29
+			},
+			"safeArea": {
+				"left": 50,
+				"top": 0,
+				"right": 50,
+				"bottom": 21
+			}
+		}
+	},
+	{
 		"scale": 2,
 		"portrait": {
 			"screen": {
@@ -767,61 +767,61 @@
 		}
 	},
 	{
-		"scale": 2,
+		"scale": 3,
 		"portrait": {
 			"screen": {
-				"width": 1024,
-				"height": 1366
+				"width": 375,
+				"height": 812
 			},
 			"layoutMargins": {
 				"left": 8,
-				"top": 32,
+				"top": 52,
 				"right": 8,
-				"bottom": 28
+				"bottom": 42
 			},
 			"sizeClass": {
-				"horizontal": "regular",
+				"horizontal": "compact",
 				"vertical": "regular"
 			},
 			"readableContent": {
-				"left": 180,
-				"top": 32,
-				"right": 180,
-				"bottom": 28
+				"left": 8,
+				"top": 52,
+				"right": 8,
+				"bottom": 42
 			},
 			"safeArea": {
 				"left": 0,
-				"top": 24,
+				"top": 44,
 				"right": 0,
-				"bottom": 20
+				"bottom": 34
 			}
 		},
 		"landscape": {
 			"screen": {
-				"width": 1366,
-				"height": 1024
+				"width": 812,
+				"height": 375
 			},
 			"layoutMargins": {
-				"left": 8,
-				"top": 32,
-				"right": 8,
-				"bottom": 28
+				"left": 52,
+				"top": 8,
+				"right": 52,
+				"bottom": 29
 			},
 			"sizeClass": {
-				"horizontal": "regular",
+				"horizontal": "compact",
 				"vertical": "regular"
 			},
 			"readableContent": {
-				"left": 351,
-				"top": 32,
-				"right": 351,
-				"bottom": 28
+				"left": 52,
+				"top": 8,
+				"right": 52,
+				"bottom": 29
 			},
 			"safeArea": {
-				"left": 0,
-				"top": 24,
-				"right": 0,
-				"bottom": 20
+				"left": 44,
+				"top": 0,
+				"right": 44,
+				"bottom": 21
 			}
 		}
 	}
