@@ -10,7 +10,17 @@ export interface Device {
   name: string
 }
 
-export async function getDevices() {
+function getPlatformName(platform: string) {
+  const [, name, version] = platform.match(/([a-zA-Z]+)-([\d-]+)/)
+
+  return `${name} ${version.replace("-", ".")}`
+}
+
+export function getDeviceNames(devices: Device[]) {
+  return devices.map((device) => device.name)
+}
+
+export async function getDevices(): Promise<[Device[], string]> {
   const { stdout } = await execa("xcrun", [
     "simctl",
     "list",
@@ -22,11 +32,8 @@ export async function getDevices() {
     .filter((platform) => platform.includes("iOS"))
     .sort()
     .reverse()
+
   const devices: Device[] = platforms[platform]
 
-  return devices
-}
-
-export function getDeviceNames(devices: Device[]) {
-  return devices.map((device) => device.name)
+  return [devices, getPlatformName(platform)]
 }

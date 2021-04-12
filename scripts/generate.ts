@@ -22,6 +22,7 @@ const DERIVED_DATA_PATH = "/tmp/com.marcbouchenoire.dimensions"
 
 interface Context {
   devices: Device[]
+  platform: string
   dimensions: Dimensions[]
 }
 
@@ -43,7 +44,10 @@ const tasks = new Listr([
   {
     title: "Gathering devices",
     task: async (context: Context) => {
-      context.devices = await getDevices()
+      const [devices, platform] = await getDevices()
+
+      context.devices = devices
+      context.platform = platform
     }
   },
   {
@@ -153,9 +157,10 @@ const tasks = new Listr([
     }
   },
   {
-    title: "Generating file",
+    title: "Generating files",
     task: async (context: Context) => {
-      await writeJSON("./src/dimensions.json", context.dimensions)
+      await writeJSON("./src/data/dimensions.json", context.dimensions)
+      await writeJSON("./src/data/logs.json", { platform: context.platform })
     }
   }
 ])
