@@ -1,16 +1,16 @@
-import dimensions from "./dimensions.json"
+import collection from "./dimensions.json"
 import { isNumber } from "./guards"
 import { Dimensions } from "./types"
 import { isMultiple } from "./utils/is-multiple"
 
-export function getDimensions(): Dimensions[]
-export function getDimensions(width: number, height: number): Dimensions[]
-export function getDimensions(width?: number, height?: number): Dimensions[] {
+export function dimensions(): Dimensions[]
+export function dimensions(width: number, height: number): Dimensions[]
+export function dimensions(width?: number, height?: number): Dimensions[] {
   if (!(isNumber(width) && isNumber(height))) {
-    return dimensions as Dimensions[]
+    return collection as Dimensions[]
   }
 
-  return (dimensions as Dimensions[]).filter((dimensions) => {
+  return (collection as Dimensions[]).filter((dimensions) => {
     const isCorrectWidth =
       isMultiple(width, dimensions.portrait.screen.width, dimensions.scale) ||
       isMultiple(width, dimensions.landscape.screen.width, dimensions.scale)
