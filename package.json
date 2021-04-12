@@ -25,7 +25,7 @@
   "esnext": "./dist/ios-dimension.modern.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "microbundle",
+    "build": "microbundle --tsconfig tsconfig.build.json",
     "lint": "eslint '{src,tests}/**/*.{ts,tsx}' --fix",
     "generate": "ts-node-transpile-only scripts/generate.ts",
     "prepare": "rimraf dist && yarn build",
