@@ -1,6 +1,7 @@
 import dimensions from "./dimensions.json"
 import { isNumber } from "./guards"
 import { Dimensions } from "./types"
+import { isMultiple } from "./utils/is-multiple"
 
 export function getDimensions(): Dimensions[]
 export function getDimensions(width: number, height: number): Dimensions[]
@@ -11,11 +12,11 @@ export function getDimensions(width?: number, height?: number): Dimensions[] {
 
   return (dimensions as Dimensions[]).filter((dimensions) => {
     const isCorrectWidth =
-      width === dimensions.portrait.screen.width ||
-      width === dimensions.landscape.screen.width
+      isMultiple(width, dimensions.portrait.screen.width, dimensions.scale) ||
+      isMultiple(width, dimensions.landscape.screen.width, dimensions.scale)
     const isCorrectHeight =
-      height === dimensions.portrait.screen.height ||
-      height === dimensions.landscape.screen.height
+      isMultiple(height, dimensions.portrait.screen.height, dimensions.scale) ||
+      isMultiple(height, dimensions.landscape.screen.height, dimensions.scale)
 
     return isCorrectWidth && isCorrectHeight
   })
