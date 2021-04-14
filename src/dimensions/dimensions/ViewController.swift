@@ -33,7 +33,7 @@ struct Frame: Codable {
     var left: CGFloat
 }
 
-func getOrientation(_ orientation: UIInterfaceOrientation) -> String {
+func getOrientation(_ orientation: UIDeviceOrientation) -> String {
     return orientation.isLandscape ? "landscape" : "portrait"
 }
 
@@ -48,24 +48,29 @@ func getSizeClass(_ sizeClass: UIUserInterfaceSizeClass) -> String {
     }
 }
 
-func getFrame(_ layoutGuide: UILayoutGuide, _ screen: Screen) -> Frame {
-    return Frame(top: layoutGuide.layoutFrame.minY, right: screen.width - layoutGuide.layoutFrame.maxX, bottom: screen.height - layoutGuide.layoutFrame.maxY, left: layoutGuide.layoutFrame.minX)
+func getFrameFromInsets(_ insets: UIEdgeInsets) -> Frame {
+    return Frame(top: insets.top, right: insets.right, bottom: insets.bottom, left: insets.left)
+}
+
+func getFrameFromGuide(_ guide: UILayoutGuide, _ screen: Screen) -> Frame {
+    return Frame(top: guide.layoutFrame.minY, right: screen.width - guide.layoutFrame.maxX, bottom: screen.height - guide.layoutFrame.maxY, left: guide.layoutFrame.minX)
 }
 
 class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewLayoutMarginsDidChange()
         
-        let window = UIApplication.shared.windows[0]
-        let windowScene = window.windowScene!
-        
-        let orientation = getOrientation(windowScene.interfaceOrientation)
-        let scale = windowScene.screen.scale
-        let screen = Screen(width: windowScene.screen.bounds.width, height: windowScene.screen.bounds.height)
-        let sizeClass = SizeClasses(horizontal: getSizeClass(windowScene.traitCollection.horizontalSizeClass), vertical: getSizeClass(windowScene.traitCollection.verticalSizeClass))
-        let safeArea = getFrame(window.safeAreaLayoutGuide, screen)
-        let layoutMargins = getFrame(window.layoutMarginsGuide, screen)
-        let readableContent = getFrame(window.readableContentGuide, screen)
+        let orientation = getOrientation(UIDevice.current.orientation)
+        let scale = UIScreen.main.scale
+        let screen = Screen(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        let sizeClass = SizeClasses(horizontal: getSizeClass(self.traitCollection.horizontalSizeClass), vertical: getSizeClass(self.traitCollection.verticalSizeClass))
+        let safeArea = getFrameFromInsets(self.view.safeAreaInsets)
+        let layoutMargins = getFrameFromInsets(self.view.layoutMargins)
+        let readableContent = getFrameFromGuide(self.view.readableContentGuide, screen)
         
         let dimensions = try! JSONEncoder().encode(Dimensions(orientation: orientation, scale: scale, screen: screen, sizeClass: sizeClass, safeArea: safeArea, layoutMargins: layoutMargins, readableContent: readableContent))
         
