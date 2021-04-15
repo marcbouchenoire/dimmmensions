@@ -18,7 +18,9 @@ import { trash } from "./utils/trash"
 
 const SCHEME = "dimensions"
 const PROJECT = "./src/dimensions/dimensions.xcodeproj"
-const DERIVED_DATA_PATH = "/tmp/com.marcbouchenoire.dimensions"
+const DERIVED_DATA = "/tmp/com.marcbouchenoire.dimensions"
+const DIMENSIONS = "./src/data/dimensions.json"
+const LOGS = "./src/data/logs.json"
 
 interface Context {
   devices: Device[]
@@ -73,7 +75,7 @@ const tasks = new Listr([
                     "-project",
                     PROJECT,
                     "-derivedDataPath",
-                    DERIVED_DATA_PATH,
+                    DERIVED_DATA,
                     "-destination",
                     `platform=iOS Simulator,name=${device.name}`
                   ])
@@ -83,19 +85,15 @@ const tasks = new Listr([
                 title: "Parsing extracted dimensions",
                 task: async () => {
                   const [output] = (await globby(
-                    `${DERIVED_DATA_PATH}/Logs/Test/*.xcresult`,
+                    `${DERIVED_DATA}/Logs/Test/*.xcresult`,
                     {
                       onlyFiles: false
                     }
                   )) ?? [undefined]
 
-                  await execa("xcparse", [
-                    "attachments",
-                    output,
-                    DERIVED_DATA_PATH
-                  ])
+                  await execa("xcparse", ["attachments", output, DERIVED_DATA])
 
-                  const attachments = await globby(`${DERIVED_DATA_PATH}/*.txt`)
+                  const attachments = await globby(`${DERIVED_DATA}/*.txt`)
 
                   let scale: number
                   let portrait: OrientedDimensions
@@ -135,7 +133,7 @@ const tasks = new Listr([
               {
                 title: "Cleaning up extraction cache",
                 task: async () => {
-                  await trash(DERIVED_DATA_PATH)
+                  await trash(DERIVED_DATA)
                 }
               }
             ])
@@ -159,8 +157,8 @@ const tasks = new Listr([
   {
     title: "Generating files",
     task: async (context: Context) => {
-      await writeJSON("./src/data/dimensions.json", context.dimensions)
-      await writeJSON("./src/data/logs.json", { platform: context.platform })
+      await writeJSON(DIMENSIONS, context.dimensions)
+      await writeJSON(LOGS, { platform: context.platform })
     }
   }
 ])
