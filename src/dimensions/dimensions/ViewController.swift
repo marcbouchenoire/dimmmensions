@@ -8,6 +8,7 @@ import UIKit
 import ScreenCorners
 
 struct Dimensions: Codable {
+    var device: String
     var orientation: String
     var scale: CGFloat
     var radius: CGFloat
@@ -50,6 +51,17 @@ func getSizeClass(_ sizeClass: UIUserInterfaceSizeClass) -> String {
     }
 }
 
+func getDevice(_ idiom: UIUserInterfaceIdiom) -> String {
+    switch idiom {
+    case .phone:
+        return "iPhone"
+    case .pad:
+        return "iPad"
+    default:
+        return "unspecified"
+    }
+}
+
 func getFrameFromInsets(_ insets: UIEdgeInsets) -> Frame {
     return Frame(top: insets.top, right: insets.right, bottom: insets.bottom, left: insets.left)
 }
@@ -66,6 +78,7 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewLayoutMarginsDidChange()
         
+        let device = getDevice(UIDevice.current.userInterfaceIdiom)
         let orientation = getOrientation(UIDevice.current.orientation)
         let scale = UIScreen.main.scale
         let radius = UIScreen.main.displayCornerRadius
@@ -75,7 +88,7 @@ class ViewController: UIViewController {
         let layoutMargins = getFrameFromInsets(self.view.layoutMargins)
         let readableContent = getFrameFromGuide(self.view.readableContentGuide, screen)
         
-        let dimensions = try! JSONEncoder().encode(Dimensions(orientation: orientation, scale: scale, radius: radius, screen: screen, sizeClass: sizeClass, safeArea: safeArea, layoutMargins: layoutMargins, readableContent: readableContent))
+        let dimensions = try! JSONEncoder().encode(Dimensions(device: device, orientation: orientation, scale: scale, radius: radius, screen: screen, sizeClass: sizeClass, safeArea: safeArea, layoutMargins: layoutMargins, readableContent: readableContent))
         
         self.view.accessibilityIdentifier = "dimensions"
         self.view.accessibilityLabel = String(data: dimensions, encoding: String.Encoding.utf8)

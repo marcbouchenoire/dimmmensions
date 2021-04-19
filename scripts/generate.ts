@@ -6,11 +6,12 @@ import Listr, { ListrTask } from "listr"
 import getJSON from "load-json-file"
 import writeJSON from "write-json-file"
 import {
+  Device,
   Dimensions,
   ExtractedDimensions,
   OrientedDimensions
 } from "../src/types"
-import { getDevices, Device } from "./utils/get-devices"
+import { getDevices, SimulatorDevice } from "./utils/get-devices"
 import { getHashCode } from "./utils/get-hash-code"
 import { isMacOS } from "./utils/is-macOS"
 import { isSilentError, SilentError } from "./utils/silent-error"
@@ -23,7 +24,7 @@ const DIMENSIONS = "./src/data/dimensions.json"
 const LOGS = "./src/data/logs.json"
 
 interface Context {
-  devices: Device[]
+  devices: SimulatorDevice[]
   platform: string
   dimensions: Dimensions[]
 }
@@ -95,6 +96,7 @@ const tasks = new Listr([
 
                   const attachments = await globby(`${DERIVED_DATA}/*.txt`)
 
+                  let device: Device
                   let scale: number
                   let radius: number
                   let portrait: OrientedDimensions
@@ -103,11 +105,13 @@ const tasks = new Listr([
                   for (const attachment of attachments) {
                     const {
                       orientation,
+                      device: extractedDevice,
                       scale: extractedScale,
                       radius: extractedRadius,
                       ...dimensions
                     }: ExtractedDimensions = await getJSON(attachment)
 
+                    device = extractedDevice as Device
                     scale = extractedScale
                     radius = extractedRadius
 
@@ -119,6 +123,7 @@ const tasks = new Listr([
                   }
 
                   const dimensions: Dimensions = {
+                    device,
                     scale,
                     radius,
                     portrait,

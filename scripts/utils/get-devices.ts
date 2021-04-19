@@ -1,6 +1,6 @@
 import execa from "execa"
 
-export interface Device {
+export interface SimulatorDevice {
   dataPath: string
   logPath: string
   udid: string
@@ -16,11 +16,11 @@ function getPlatformName(platform: string) {
   return `${name} ${version.replace("-", ".")}`
 }
 
-export function getDeviceNames(devices: Device[]) {
+export function getDeviceNames(devices: SimulatorDevice[]) {
   return devices.map((device) => device.name)
 }
 
-export async function getDevices(): Promise<[Device[], string]> {
+export async function getDevices(): Promise<[SimulatorDevice[], string]> {
   const { stdout } = await execa("xcrun", [
     "simctl",
     "list",
@@ -33,7 +33,7 @@ export async function getDevices(): Promise<[Device[], string]> {
     .sort()
     .reverse()
 
-  const devices: Device[] = platforms[platform]
+  const devices: SimulatorDevice[] = platforms[platform]
 
   return [devices, getPlatformName(platform)]
 }
