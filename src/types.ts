@@ -1,5 +1,6 @@
 export interface Dimensions extends Record<Orientation, OrientedDimensions> {
   scale: number
+  radius: number
 }
 
 export interface OrientedDimensions {
@@ -13,6 +14,7 @@ export interface OrientedDimensions {
 export interface ExtractedDimensions extends OrientedDimensions {
   orientation: Orientation
   scale: number
+  radius: number
 }
 
 type Orientation = "portrait" | "landscape"

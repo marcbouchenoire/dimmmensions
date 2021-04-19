@@ -96,6 +96,7 @@ const tasks = new Listr([
                   const attachments = await globby(`${DERIVED_DATA}/*.txt`)
 
                   let scale: number
+                  let radius: number
                   let portrait: OrientedDimensions
                   let landscape: OrientedDimensions
 
@@ -103,10 +104,12 @@ const tasks = new Listr([
                     const {
                       orientation,
                       scale: extractedScale,
+                      radius: extractedRadius,
                       ...dimensions
                     }: ExtractedDimensions = await getJSON(attachment)
 
                     scale = extractedScale
+                    radius = extractedRadius
 
                     if (orientation === "portrait") {
                       portrait = dimensions
@@ -117,6 +120,7 @@ const tasks = new Listr([
 
                   const dimensions: Dimensions = {
                     scale,
+                    radius,
                     portrait,
                     landscape
                   }

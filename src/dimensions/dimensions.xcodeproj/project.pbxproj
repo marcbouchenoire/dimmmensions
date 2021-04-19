@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4901918926029D14004563D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4901918826029D14004563D6 /* LaunchScreen.storyboard */; };
+		495E089E26299748005527A2 /* ScreenCorners in Frameworks */ = {isa = PBXBuildFile; productRef = 495E089D26299748005527A2 /* ScreenCorners */; };
 		49A9F79526013851009297B6 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9F79426013851009297B6 /* Tests.swift */; };
 		49B13AA025FE82CB0037EB51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B13A9F25FE82CB0037EB51 /* AppDelegate.swift */; };
 		49B13AA225FE82CB0037EB51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B13AA125FE82CB0037EB51 /* SceneDelegate.swift */; };
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				495E089E26299748005527A2 /* ScreenCorners in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +129,9 @@
 			dependencies = (
 			);
 			name = dimensions;
+			packageProductDependencies = (
+				495E089D26299748005527A2 /* ScreenCorners */,
+			);
 			productName = dimensions;
 			productReference = 49B13A9C25FE82CB0037EB51 /* dimensions.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +163,9 @@
 				Base,
 			);
 			mainGroup = 49B13A9325FE82CB0037EB51;
+			packageReferences = (
+				495E089C26299748005527A2 /* XCRemoteSwiftPackageReference "ScreenCorners" */,
+			);
 			productRefGroup = 49B13A9D25FE82CB0037EB51 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -441,6 +449,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		495E089C26299748005527A2 /* XCRemoteSwiftPackageReference "ScreenCorners" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:kylebshr/ScreenCorners.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		495E089D26299748005527A2 /* ScreenCorners */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 495E089C26299748005527A2 /* XCRemoteSwiftPackageReference "ScreenCorners" */;
+			productName = ScreenCorners;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 49B13A9425FE82CB0037EB51 /* Project object */;
 }
