@@ -21,3 +21,5 @@ export function dimensions(width?: number, height?: number): Dimensions[] {
     return isCorrectWidth && isCorrectHeight
   })
 }
+
+export { Dimensions } from "./types"
