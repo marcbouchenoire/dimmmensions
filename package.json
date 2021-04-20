@@ -28,7 +28,7 @@
     "build": "microbundle --tsconfig tsconfig.build.json",
     "clean": "jest --clearCache && rimraf node_modules",
     "lint": "eslint '{src,tests}/**/*.{ts,tsx}' --fix",
-    "generate": "ts-node-transpile-only scripts/generate.ts",
+    "generate": "node -r esbuild-register scripts/generate.ts",
     "prepare": "rimraf dist && yarn build",
     "release": "yarn login && np",
     "test": "jest"
@@ -45,8 +45,9 @@
     "@types/rimraf": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.22.0",
-    "app-exists": "^1.1.0",
+    "app-exists": "^2.0.0",
     "command-exists": "^1.2.9",
+    "esbuild-register": "^2.5.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-import-resolver-typescript": "^2.4.0",
@@ -64,7 +65,6 @@
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.5.4",
-    "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
     "write-json-file": "^4.3.0"
   }
