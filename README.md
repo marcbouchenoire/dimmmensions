@@ -30,26 +30,38 @@ npm install ios-dimensions
 
 ## Usage
 
+#### `dimensions`
+
 Import `dimensions`.
 
 ```tsx
 import { dimensions } from "ios-dimensions"
+
+// dimensions: [Dimension, Dimension, Dimension...]
 ```
 
-Given no arguments, `dimensions` will return all dimensions.
+#### `getDimensions`
+
+Import `getDimensions`.
 
 ```tsx
-const collection = dimensions()
-
-// collection: [Dimension, Dimension, Dimension...]
+import { getDimensions } from "ios-dimensions"
 ```
 
-Given a specific `width` and `height`, `dimensions` will return dimensions that match the specified `screen` size, either in portrait or landscape.
+Given no arguments, `getDimensions` will also return all dimensions.
 
 ```tsx
-const collection = dimensions(320, 568)
+const dimensions = getDimensions()
 
-// collection: [Dimension]
+// dimensions: [Dimension, Dimension, Dimension...]
+```
+
+Given a specific `width` and `height`, `getDimensions` will return dimensions that match the specified `screen` size, either in portrait or landscape.
+
+```tsx
+const dimensions = getDimensions(320, 568)
+
+// dimensions: [Dimension]
 ```
 
 ## Automation
