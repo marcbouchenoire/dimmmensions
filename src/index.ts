@@ -3,9 +3,11 @@ import { isNumber } from "./guards"
 import { Dimensions } from "./types"
 import { isMultiple } from "./utils/is-multiple"
 
-export function dimensions(): Dimensions[]
-export function dimensions(width: number, height: number): Dimensions[]
-export function dimensions(width?: number, height?: number): Dimensions[] {
+export const dimensions = data as Dimensions[]
+
+export function getDimensions(): Dimensions[]
+export function getDimensions(width: number, height: number): Dimensions[]
+export function getDimensions(width?: number, height?: number): Dimensions[] {
   if (!(isNumber(width) && isNumber(height))) {
     return data as Dimensions[]
   }
