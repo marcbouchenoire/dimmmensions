@@ -29,14 +29,9 @@
     "clean": "jest --clearCache && rimraf node_modules",
     "lint": "eslint '{src,tests}/**/*.{ts,tsx}' --fix",
     "generate": "node -r esbuild-register scripts/generate.ts",
-    "prepare": "rimraf dist && yarn build",
+    "prepare": "simple-git-hooks && rimraf dist && yarn build",
     "release": "yarn login && np",
     "test": "jest"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "devDependencies": {
     "@types/command-exists": "^1.2.0",
@@ -55,7 +50,6 @@
     "eslint-plugin-prettier": "^3.4.0",
     "execa": "^5.0.0",
     "globby": "^11.0.3",
-    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
     "listr": "^0.14.3",
@@ -64,6 +58,7 @@
     "np": "^7.4.0",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
+    "simple-git-hooks": "^2.4.1",
     "ts-jest": "^26.5.4",
     "typescript": "^4.2.3",
     "write-json-file": "^4.3.0"
