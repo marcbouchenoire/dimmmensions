@@ -34,13 +34,19 @@ const tasks = new Listr([
     title: "Verifying requirements",
     task: () => {
       if (!isMacOS()) {
-        throw new SilentError("macOS is required.")
+        throw new SilentError("Xcode is only available on macOS.")
       } else if (!withApp("Xcode")) {
-        throw new SilentError("Xcode is required.")
+        throw new SilentError(
+          `Xcode is required. (https://developer.apple.com/xcode/)")}`
+        )
       } else if (!withCommand("xcodebuild")) {
-        throw new SilentError("Xcode Command Line Tools are required.")
+        throw new SilentError(
+          "Xcode Command Line Tools are required. (https://developer.apple.com/xcode/resources/)"
+        )
       } else if (!withCommand("xcparse")) {
-        throw new SilentError("xcparse is required.")
+        throw new SilentError(
+          "xcparse is required. (https://github.com/ChargePoint/xcparse)"
+        )
       }
     }
   },
