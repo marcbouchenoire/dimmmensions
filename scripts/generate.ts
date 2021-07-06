@@ -25,13 +25,12 @@ const LOGS = "./src/data/logs.json"
 
 interface Context {
   devices: SimulatorDevice[]
-  platform: string
   dimensions: Dimensions[]
+  platform: string
 }
 
 const tasks = new Listr([
   {
-    title: "Verifying requirements",
     task: () => {
       if (!isMacOS()) {
         throw new SilentError("Xcode is only available on macOS.")
@@ -48,30 +47,28 @@ const tasks = new Listr([
           "xcparse is required. (https://github.com/ChargePoint/xcparse)"
         )
       }
-    }
+    },
+    title: "Verifying requirements"
   },
   {
-    title: "Gathering devices",
     task: async (context: Context) => {
       const [devices, platform] = await getDevices()
 
       context.devices = devices
       context.platform = platform
-    }
+    },
+    title: "Gathering devices"
   },
   {
-    title: "Gathering dimensions",
     task: (context: Context) => {
       const tasks: ListrTask[] = []
       context.dimensions = []
 
       for (const device of context.devices) {
         const task: ListrTask = {
-          title: device.name,
           task: () => {
             return new Listr([
               {
-                title: "Extracting dimensions",
                 task: async () => {
                   await execa("xcodebuild", [
                     "build",
@@ -86,10 +83,10 @@ const tasks = new Listr([
                     "-destination",
                     `platform=iOS Simulator,name=${device.name}`
                   ])
-                }
+                },
+                title: "Extracting dimensions"
               },
               {
-                title: "Parsing extracted dimensions",
                 task: async () => {
                   const [output] = (await globby(
                     `${DERIVED_DATA}/Logs/Test/*.xcresult`,
@@ -130,10 +127,10 @@ const tasks = new Listr([
 
                   const dimensions: Dimensions = {
                     device,
-                    scale,
-                    radius,
+                    landscape,
                     portrait,
-                    landscape
+                    radius,
+                    scale
                   }
 
                   const isUniqueDimensions = !context.dimensions
@@ -143,38 +140,41 @@ const tasks = new Listr([
                   if (isUniqueDimensions) {
                     context.dimensions.push(dimensions)
                   }
-                }
+                },
+                title: "Parsing extracted dimensions"
               },
               {
-                title: "Cleaning up extraction cache",
                 task: async () => {
                   await trash(DERIVED_DATA)
-                }
+                },
+                title: "Cleaning up extraction cache"
               }
             ])
-          }
+          },
+          title: device.name
         }
 
         tasks.push(task)
       }
 
       return new Listr(tasks)
-    }
+    },
+    title: "Gathering dimensions"
   },
   {
-    title: "Sorting dimensions",
     task: (context: Context) => {
       context.dimensions = context.dimensions.sort((a, b) => {
         return getHashCode(a) - getHashCode(b)
       })
-    }
+    },
+    title: "Sorting dimensions"
   },
   {
-    title: "Generating files",
     task: async (context: Context) => {
       await writeJSON(DIMENSIONS, context.dimensions)
       await writeJSON(LOGS, { platform: context.platform })
-    }
+    },
+    title: "Generating files"
   }
 ])
 

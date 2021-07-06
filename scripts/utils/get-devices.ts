@@ -2,12 +2,12 @@ import execa from "execa"
 
 export interface SimulatorDevice {
   dataPath: string
-  logPath: string
-  udid: string
-  isAvailable: boolean
   deviceTypeIdentifier: string
-  state: string
+  isAvailable: boolean
+  logPath: string
   name: string
+  state: string
+  udid: string
 }
 
 function getPlatformName(platform: string) {
