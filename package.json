@@ -45,7 +45,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@bouchenoiremarc/eslint-config": "^1.0.0",
+    "@bouchenoiremarc/eslint-config": "^1.1.0",
     "@types/command-exists": "^1.2.0",
     "@types/jest": "^26.0.22",
     "@types/listr": "^0.14.2",
