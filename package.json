@@ -24,6 +24,17 @@
   "esmodule": "./dist/ios-dimensions.modern.js",
   "esnext": "./dist/ios-dimensions.modern.js",
   "types": "./dist/index.d.ts",
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "scripts": {
     "build": "microbundle --tsconfig tsconfig.build.json",
     "clean": "jest --clearCache && rimraf node_modules",
@@ -46,7 +57,9 @@
     "eslint": "^7.30.0",
     "execa": "^5.0.0",
     "globby": "^11.0.3",
+    "husky": "4.3.8",
     "jest": "^27.0.6",
+    "lint-staged": "^11.0.0",
     "listr": "^0.14.3",
     "load-json-file": "^6.2.0",
     "microbundle": "^0.13.0",
