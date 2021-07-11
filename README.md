@@ -69,3 +69,7 @@ const dimensions = getDimensions(320, 568)
 Dimensions are extracted from iOS with the `generate` command—using Xcode and Simulator.
 
 <img src=".github/generate@2x.png" width="620" height="426">
+
+## Related
+
+[🔣 ios-symbols](https://github.com/bouchenoiremarc/ios-symbols): A collection of every symbol from SF Symbols.
