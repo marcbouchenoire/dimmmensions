@@ -2,7 +2,7 @@
 
 📏 ️A collection of dimensions from iOS.
 
-[![npm](https://img.shields.io/npm/v/ios-dimensions?color=%2385f)](https://www.npmjs.com/package/ios-dimensions) [![gzipped](https://img.shields.io/bundlephobia/minzip/ios-dimensions?label=gzipped&color=%23d5e)](https://www.npmjs.com/package/ios-dimensions) [![license](https://img.shields.io/github/license/bouchenoiremarc/ios-dimensions?color=%23e48)](https://github.com/bouchenoiremarc/ios-dimensions/blob/main/LICENSE)
+[![build](https://github.com/bouchenoiremarc/ios-dimensions/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bouchenoiremarc/ios-dimensions/actions/workflows/ci.yml) [![npm](https://img.shields.io/npm/v/ios-dimensions?color=%230cf)](https://www.npmjs.com/package/ios-dimensions) [![gzipped](https://img.shields.io/bundlephobia/minzip/ios-dimensions?label=gzipped&color=%2385f)](https://www.npmjs.com/package/ios-dimensions) [![license](https://img.shields.io/github/license/bouchenoiremarc/ios-dimensions?color=%23e4b)](https://github.com/bouchenoiremarc/ios-dimensions/blob/main/LICENSE)
 
 <img src=".github/dimensions@2x.png" width="620" height="426">
 
