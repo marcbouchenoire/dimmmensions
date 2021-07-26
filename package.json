@@ -18,11 +18,15 @@
   "sideEffects": false,
   "source": "./src/index.ts",
   "main": "./dist/ios-dimensions.js",
-  "umd:main": "./dist/ios-dimensions.umd.js",
+  "unpkg": "./dist/ios-dimensions.umd.js",
   "module": "./dist/ios-dimensions.module.js",
-  "exports": "./dist/ios-dimensions.modern.js",
-  "esmodule": "./dist/ios-dimensions.modern.js",
-  "esnext": "./dist/ios-dimensions.modern.js",
+  "exports": {
+    ".": {
+      "require": "./dist/ios-dimensions.js",
+      "import": "./dist/ios-dimensions.modern.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "types": "./dist/index.d.ts",
   "lint-staged": {
     "**/*.{ts,tsx}": [
