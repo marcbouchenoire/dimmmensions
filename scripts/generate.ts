@@ -1,7 +1,7 @@
 import withApp from "app-exists"
 import withCommand from "command-exists"
 import execa from "execa"
-import globby from "globby"
+import { globby } from "globby"
 import Listr, { ListrTask } from "listr"
 import getJSON from "load-json-file"
 import writeJSON from "write-json-file"
