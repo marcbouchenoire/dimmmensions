@@ -5,3 +5,23 @@
   place-content: center;
   place-items: center;
 }
+
+.github {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 24px;
+  height: 24px;
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

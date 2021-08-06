@@ -82,6 +82,21 @@ function Page() {
         dimensions={dimensions}
         orientation={orientation as Orientation}
       />
+      <a
+        aria-label="GitHub"
+        className={styles.github}
+        href="https://github.com/bouchenoiremarc/ios-dimensions"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M24 12c0 9.5-1.02 11.6-8.75 11.94v-4.1c0-1.2-.43-1.97-.9-2.37 2.9-.32 5.94-1.4 5.94-6.32 0-1.4-.5-2.55-1.33-3.44.13-.33.58-1.63-.13-3.4 0 0-1.1-.34-3.57 1.32a12.67 12.67 0 00-6.51 0C6.26 3.97 5.17 4.32 5.17 4.32a4.55 4.55 0 00-.13 3.39 4.92 4.92 0 00-1.34 3.44c0 4.9 3.04 6 5.93 6.33a2.7 2.7 0 00-.83 1.71c-.74.33-2.62.9-3.78-1.06 0 0-.69-1.23-2-1.32h-.01c-.16 0-1.17.04-.07.78 0 0 .85.4 1.44 1.87 0 0 .75 2.3 4.37 1.52v2.96C1.1 23.6.02 21.55 0 12.34V12C0 1.4 1.27.03 11.67 0H12c10.7 0 12 1.3 12 12z"
+            fill="currentColor"
+            fillRule="evenodd"
+          />
+        </svg>
+      </a>
     </div>
   )
 }
