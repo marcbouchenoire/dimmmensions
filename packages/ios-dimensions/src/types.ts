@@ -18,11 +18,11 @@ export interface Traits {
   scale: number
 }
 
-export type Device = "iPhone" | "iPad"
+export type Device = "iPad" | "iPhone"
 
-export type Orientation = "portrait" | "landscape"
+export type Orientation = "landscape" | "portrait"
 
-export type SizeClass = "unspecified" | "compact" | "regular"
+export type SizeClass = "compact" | "regular" | "unspecified"
 
 export interface Screen {
   height: number

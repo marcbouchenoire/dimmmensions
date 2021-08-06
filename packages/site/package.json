@@ -1,0 +1,44 @@
+{
+  "name": "site",
+  "version": "0.0.0",
+  "private": true,
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.scss": [
+      "stylelint --fix --syntax scss",
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "dev": "next dev & yarn modules --watch --ignoreInitial",
+    "build": "yarn modules && next build",
+    "modules": "yarn tsm '**/*.module.scss'",
+    "clean": "rimraf node_modules",
+    "lint": "eslint '**/*.{ts,tsx}' --fix && stylelint '**/*.scss' --fix --syntax scss && prettier --write '**/*.{ts,tsx,scss}'"
+  },
+  "dependencies": {
+    "clsx": "^1.1.1",
+    "framer-motion": "^4.1.17",
+    "ios-dimensions": "^2.0.0",
+    "leva": "^0.9.13",
+    "next": "^11.0.1",
+    "next-seo": "^4.26.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "sass": "^1.36.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-scss": "^3.20.1",
+    "typed-scss-modules": "^4.1.1"
+  }
+}

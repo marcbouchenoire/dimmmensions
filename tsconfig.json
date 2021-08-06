@@ -1,5 +1,4 @@
 {
-  "include": ["scripts", "src", "tests"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "baseUrl": ".",
