@@ -1,11 +1,11 @@
 import { NextSeo } from "next-seo"
 import { AppProps } from "next/app"
+import { Favicon } from "../components/Favicon"
 import "../styles/main.scss"
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Component {...pageProps} />
       <NextSeo
         description="A collection of dimensions from iOS."
         openGraph={{
@@ -21,6 +21,8 @@ function App({ Component, pageProps }: AppProps) {
           handle: "@bouchenoiremarc"
         }}
       />
+      <Favicon emoji="📏" />
+      <Component {...pageProps} />
     </>
   )
 }
