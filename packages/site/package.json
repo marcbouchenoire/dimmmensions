@@ -14,9 +14,8 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "dev": "next dev & yarn modules --watch --ignoreInitial",
-    "build": "yarn modules && next build",
-    "modules": "yarn tsm '**/*.module.scss'",
+    "dev": "next dev",
+    "build": "next build",
     "clean": "rimraf node_modules",
     "lint": "eslint '**/*.{ts,tsx}' --fix && stylelint '**/*.scss' --fix --syntax scss && prettier --write '**/*.{ts,tsx,scss}'"
   },
@@ -38,7 +37,6 @@
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended": "^5.0.0",
-    "stylelint-scss": "^3.20.1",
-    "typed-scss-modules": "^4.1.1"
+    "stylelint-scss": "^3.20.1"
   }
 }

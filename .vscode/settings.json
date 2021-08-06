@@ -9,8 +9,7 @@
   "eslint.workingDirectories": ["packages/site", "packages/ios-dimensions"],
   "files.exclude": {
     "node_modules": true,
-    "yarn.lock": true,
-    "**/*.module.scss.d.ts": true
+    "yarn.lock": true
   },
   "stylelint.enable": true,
   "stylelint.validate": ["scss"]
