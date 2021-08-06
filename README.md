@@ -6,6 +6,8 @@
 
 <img src=".github/dimensions@2x.png" width="620" height="426">
 
+🔗 Explore and preview dimensions in the [playground](https://www.marcbouchenoire.com/ios-dimensions).
+
 ## Installation
 
 #### Skypack
