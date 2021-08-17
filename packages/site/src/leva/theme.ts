@@ -5,8 +5,8 @@ type Theme = ComponentProps<typeof Leva>["theme"]
 
 export const theme: Theme = {
   colors: {
-    accent1: "#ddd",
-    accent2: "$elevation1",
+    accent1: "#e8e8e8",
+    accent2: "$accent1",
     accent3: "$accent1",
     elevation1: "#f3f3f3",
     elevation2: "#fff",

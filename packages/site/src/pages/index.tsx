@@ -2,7 +2,7 @@ import { useControls, Leva, LevaInputs, button } from "leva"
 import { Preview } from "../components/Preview"
 import { theme } from "../leva/theme"
 import { Orientation } from "../types"
-import { getDimensions } from "../utils/getDimensions"
+import { getDimensions } from "../utils/get-dimensions"
 import styles from "./index.module.scss"
 
 const APPEARANCE_FOLDER = "Appearance"
@@ -10,8 +10,10 @@ const COLOR_SAFE_AREA = "#85f"
 const COLOR_LAYOUT_MARGINS = "#0bf"
 const COLOR_READABLE_CONTENT = "#9c2"
 
+const attributedDimensions = getDimensions()
+
 /* eslint-disable sort-keys-fix/sort-keys-fix */
-const orientationOptions = {
+const orientations = {
   Portrait: "portrait",
   Landscape: "landscape"
 }
@@ -21,14 +23,14 @@ function Page() {
   const { dimensions } = useControls({
     dimensions: {
       label: "Device",
-      options: getDimensions(),
+      options: attributedDimensions,
       type: LevaInputs.SELECT
     }
   })
   const { orientation } = useControls({
     orientation: {
       label: "Orientation",
-      options: orientationOptions,
+      options: orientations,
       type: LevaInputs.SELECT,
       value: "portrait"
     }
