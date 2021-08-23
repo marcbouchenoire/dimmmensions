@@ -1,5 +1,6 @@
 import { Leva } from "leva"
 import { ComponentProps } from "react"
+import { LEVA_WIDTH } from "../constants"
 
 type Theme = ComponentProps<typeof Leva>["theme"]
 
@@ -18,13 +19,11 @@ export const theme: Theme = {
   },
   radii: { sm: "5px" },
   shadows: {
-    level1:
-      "0px 4px 10px rgba(0, 0, 0, 0.06), 0px 20px 26px  rgba(0, 0, 0, 0.02)",
-    level2:
-      "0px 12px 18px rgba(0, 0, 0, 0.06), 0px 28px 36px rgba(0, 0, 0, 0.04)"
+    level1: "0px 2px 6px rgba(0, 0, 0, 0.04), 0px 4px 24px rgba(0, 0, 0, 0.02)",
+    level2: "$level1"
   },
   sizes: {
-    rootWidth: "320px",
+    rootWidth: `${LEVA_WIDTH}px`,
     rowHeight: "26px"
   },
   space: {

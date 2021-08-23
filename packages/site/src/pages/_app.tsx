@@ -21,7 +21,7 @@ function App({ Component, pageProps }: AppProps) {
           handle: "@bouchenoiremarc"
         }}
       />
-      <Favicon emoji="📏" />
+      <Favicon>📏</Favicon>
       <Component {...pageProps} />
     </>
   )

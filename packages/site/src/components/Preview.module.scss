@@ -1,7 +1,7 @@
 .container {
   position: relative;
   display: flex;
-  width: min(80vw, calc(var(--ratio) * 80vh));
+  width: min(80vw, calc(var(--ratio) * (80vh - var(--header-height))));
   max-width: var(--width);
   place-content: center;
   place-items: center;
@@ -18,8 +18,8 @@
   position: absolute;
   overflow: hidden;
   background: #fff;
-  border-radius: 6px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.06), 0px 18px 24px rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 4px 24px rgba(0, 0, 0, 0.02);
   inset: 0;
   will-change: transform;
 
@@ -39,8 +39,7 @@
   backdrop-filter: saturate(180%) blur(20px);
   background: rgba(0, 0, 0, 0.5);
   border-radius: 100px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06),
-    0px 20px 26px rgba(0, 0, 0, 0.02);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04), 0px 8px 26px rgba(0, 0, 0, 0.02);
   color: #fff;
   font-size: 15px;
   font-weight: 600;
