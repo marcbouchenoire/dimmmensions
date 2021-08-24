@@ -9,9 +9,6 @@ import { getDimensions } from "../utils/get-dimensions"
 import styles from "./index.module.scss"
 
 const APPEARANCE_FOLDER = "Appearance"
-const COLOR_SAFE_AREA = "#85f"
-const COLOR_LAYOUT_MARGINS = "#0bf"
-const COLOR_READABLE_CONTENT = "#9c2"
 
 const attributedDimensions = getDimensions()
 
@@ -21,6 +18,11 @@ const orientations = {
   Landscape: "landscape"
 }
 /* eslint-enable sort-keys-fix/sort-keys-fix */
+
+const DEFAULT_ORIENTATION = orientations.Portrait
+const DEFAULT_COLOR_SAFE_AREA = "#85f"
+const DEFAULT_COLOR_LAYOUT_MARGINS = "#0bf"
+const DEFAULT_COLOR_READABLE_CONTENT = "#9c2"
 
 function Page() {
   const { dimensions } = useControls({
@@ -35,14 +37,14 @@ function Page() {
       label: "Orientation",
       options: orientations,
       type: LevaInputs.SELECT,
-      value: "portrait"
+      value: DEFAULT_ORIENTATION
     }
   })
   const [{ safeArea }, setSafeArea] = useControls(APPEARANCE_FOLDER, () => ({
     safeArea: {
       label: "Safe Area",
       type: LevaInputs.COLOR,
-      value: COLOR_SAFE_AREA
+      value: DEFAULT_COLOR_SAFE_AREA
     }
   }))
   const [{ layoutMargins }, setLayoutMargins] = useControls(
@@ -51,7 +53,7 @@ function Page() {
       layoutMargins: {
         label: "Layout Margins",
         type: LevaInputs.COLOR,
-        value: COLOR_LAYOUT_MARGINS
+        value: DEFAULT_COLOR_LAYOUT_MARGINS
       }
     })
   )
@@ -61,20 +63,20 @@ function Page() {
       readableContent: {
         label: "Readable Content",
         type: LevaInputs.COLOR,
-        value: COLOR_READABLE_CONTENT
+        value: DEFAULT_COLOR_READABLE_CONTENT
       }
     })
   )
   useControls(APPEARANCE_FOLDER, {
     Reset: button(() => {
       setSafeArea({
-        safeArea: COLOR_SAFE_AREA
+        safeArea: DEFAULT_COLOR_SAFE_AREA
       })
       setLayoutMargins({
-        layoutMargins: COLOR_LAYOUT_MARGINS
+        layoutMargins: DEFAULT_COLOR_LAYOUT_MARGINS
       })
       setReadableContent({
-        readableContent: COLOR_READABLE_CONTENT
+        readableContent: DEFAULT_COLOR_READABLE_CONTENT
       })
     })
   })
