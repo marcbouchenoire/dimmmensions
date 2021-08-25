@@ -99,11 +99,11 @@ const tasks = new Listr([
 
                   const attachments = await globby(`${DERIVED_DATA}/*.txt`)
 
-                  let device: Device
-                  let scale: number
-                  let radius: number
-                  let portrait: OrientedDimensions
-                  let landscape: OrientedDimensions
+                  let device!: Device
+                  let scale!: number
+                  let radius!: number
+                  let portrait!: OrientedDimensions
+                  let landscape!: OrientedDimensions
 
                   for (const attachment of attachments) {
                     const {

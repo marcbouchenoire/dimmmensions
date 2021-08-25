@@ -5,6 +5,7 @@
   "lint-staged": {
     "**/*.{ts,tsx}": [
       "eslint --fix",
+      "tsc-mixed --project tsconfig.json",
       "prettier --write"
     ],
     "**/*.scss": [
@@ -17,7 +18,11 @@
     "dev": "next dev",
     "build": "next build",
     "clean": "rimraf node_modules",
-    "lint": "eslint '**/*.{ts,tsx}' --fix && stylelint '**/*.scss' --fix --syntax scss && prettier --write '**/*.{ts,tsx,scss}'"
+    "lint": "yarn lint:eslint & yarn lint:stylelint && yarn lint:tsc && yarn lint:prettier",
+    "lint:eslint": "eslint '**/*.{ts,tsx}' --fix",
+    "lint:prettier": "prettier --write '**/*.{ts,tsx}' --loglevel silent",
+    "lint:stylelint": "stylelint '**/*.scss' --fix --syntax scss",
+    "lint:tsc": "tsc --project tsconfig.json"
   },
   "dependencies": {
     "clsx": "^1.1.1",

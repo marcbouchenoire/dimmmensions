@@ -11,7 +11,7 @@ export interface SimulatorDevice {
 }
 
 function getPlatformName(platform: string) {
-  const [, name, version] = platform.match(/([A-Za-z]+)-([\d-]+)/)
+  const [, name, version] = platform.match(/([A-Za-z]+)-([\d-]+)/) ?? []
 
   return `${name} ${version.replace("-", ".")}`
 }
