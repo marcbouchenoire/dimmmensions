@@ -1,12 +1,18 @@
 import clsx from "clsx"
 import { useControls, Leva, LevaInputs, button } from "leva"
+import { GetStaticProps } from "next"
 import { CSSProperties } from "react"
-import { Preview } from "../components/Preview"
-import { HEADER_HEIGHT, LEVA_MARGIN, LEVA_WIDTH } from "../constants"
+import pkg from "../../../ios-dimensions/package.json"
+import { Screen } from "../components/Screen"
+import { LEVA_MARGIN, LEVA_WIDTH } from "../constants"
 import { theme } from "../leva/theme"
 import { Orientation } from "../types"
 import { getDimensions } from "../utils/get-dimensions"
 import styles from "./index.module.scss"
+
+interface Props {
+  version: string
+}
 
 const APPEARANCE_FOLDER = "Appearance"
 
@@ -24,7 +30,7 @@ const DEFAULT_COLOR_SAFE_AREA = "#85f"
 const DEFAULT_COLOR_LAYOUT_MARGINS = "#0bf"
 const DEFAULT_COLOR_READABLE_CONTENT = "#9c2"
 
-function Page() {
+function Page({ version }: Props) {
   const { dimensions } = useControls({
     dimensions: {
       label: "Device",
@@ -86,15 +92,25 @@ function Page() {
       className={styles.page}
       style={
         {
-          "--header-height": `${HEADER_HEIGHT}px`,
           "--leva-margin": `${LEVA_MARGIN}px`,
           "--leva-width": `${LEVA_WIDTH}px`
         } as CSSProperties
       }
     >
+      <Leva theme={theme} titleBar={false} />
       <header className={styles.header}>
         <div className={styles.headings}>
-          <h1>ios-dimensions</h1>
+          <h1>
+            ios-dimensions{" "}
+            <a
+              className={styles.version}
+              href={`https://github.com/bouchenoiremarc/ios-dimensions/releases/tag/v${version}`}
+              rel="noreferrer"
+              target="_blank"
+            >
+              v{version}
+            </a>
+          </h1>
           <p>📏 A collection of dimensions from iOS.</p>
         </div>
         <nav className={styles.links}>
@@ -126,7 +142,24 @@ function Page() {
               >
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path
-                    d="M24 12c0 10.7-1.3 12-12 12C1.4 24 .03 22.73 0 12.33V12C0 1.4 1.27.03 11.67 0H12c10.7 0 12 1.3 12 12zM5.02 5L5 19h7V8.5h3.5V19H19V5.02L5.02 5z"
+                    d="M24 12c0 10.7-1.3 12-12 12C1.4 24 .03 22.73 0 12.33V12C0 1.4 1.27.03 11.67 0H12c10.7 0 12 1.3 12 12zM6.02 6L6 18h6V9h3v9h3V6.02L6.02 6z"
+                    fill="currentColor"
+                    fillRule="evenodd"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                aria-label="twitter"
+                className={clsx(styles.link, styles.twitter)}
+                href="https://twitter.com/bouchenoiremarc"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M24 12c0 10.7-1.3 12-12 12C1.4 24 .03 22.73 0 12.33V12C0 1.4 1.27.03 11.67 0H12c10.7 0 12 1.3 12 12zm-6.22-5.33a3.29 3.29 0 00-4.03-.8 3.14 3.14 0 00-1.57 3.73 9.5 9.5 0 01-6.82-3.4 3.26 3.26 0 00.87 4.25c-.46.01-.92-.07-1.35-.24a3.33 3.33 0 002.75 3.13c-.48.14-1 .17-1.5.09a3.37 3.37 0 002.8 2.22 6.97 6.97 0 01-4.68 1.42 9.6 9.6 0 009.8.17A9.17 9.17 0 0018.7 8.8a3.1 3.1 0 001.55-1.66c-.6.28-1.23.46-1.89.52a3.09 3.09 0 001.5-1.8c-.63.4-1.33.68-2.08.8z"
                     fill="currentColor"
                     fillRule="evenodd"
                   />
@@ -137,8 +170,7 @@ function Page() {
         </nav>
       </header>
       <main className={styles.main}>
-        <Leva theme={theme} titleBar={false} />
-        <Preview
+        <Screen
           colors={{ layoutMargins, readableContent, safeArea }}
           dimensions={dimensions}
           orientation={orientation as Orientation}
@@ -149,3 +181,11 @@ function Page() {
 }
 
 export default Page
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  return {
+    props: {
+      version: pkg.version ?? ""
+    }
+  }
+}

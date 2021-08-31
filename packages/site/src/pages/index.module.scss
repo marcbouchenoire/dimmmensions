@@ -1,8 +1,16 @@
 .page {
+  --header-height: 80px;
+
   position: absolute;
   display: grid;
   grid-template-rows: var(--header-height) 1fr;
   inset: 0;
+
+  @media (max-width: 820px) {
+    & > div[class^="leva"] {
+      display: none !important;
+    }
+  }
 }
 
 .header {
@@ -33,12 +41,11 @@
   min-width: 0;
   flex-direction: column;
   margin-right: 20px;
-  gap: 6px;
 
   h1,
   p {
     overflow: hidden;
-    padding: 0.2em 0;
+    padding: 0.4em 0;
     margin: 0;
     line-height: 1;
     text-overflow: ellipsis;
@@ -57,6 +64,30 @@
   }
 }
 
+.version {
+  position: relative;
+  display: inline-block;
+  margin-left: 8px;
+  color: #666;
+  font-size: 12px;
+  text-decoration: none;
+  transform: translateY(-1px);
+  transition: opacity 0.2s ease-in-out;
+
+  &:before {
+    position: absolute;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    content: "";
+    inset: -6px -6px -4px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
 .links {
   flex: none;
   margin-left: auto;
@@ -65,7 +96,7 @@
     display: flex;
     padding: 0;
     margin: 0;
-    gap: 12px;
+    gap: 16px;
     list-style: none;
   }
 }
@@ -74,17 +105,7 @@
   position: relative;
   display: block;
   overflow: hidden;
-  padding: 10px;
-  border-radius: 50%;
   transition: opacity 0.2s ease-in-out;
-
-  &:before {
-    position: absolute;
-    background: currentColor;
-    content: "";
-    inset: 0;
-    opacity: 0.08;
-  }
 
   &:hover {
     opacity: 0.5;
@@ -105,15 +126,13 @@
   color: #c00;
 }
 
+.twitter {
+  color: #1af;
+}
+
 .main {
   position: relative;
   display: flex;
   place-content: center;
   place-items: center;
-
-  @media (max-width: 820px) {
-    & > div[class^="leva"] {
-      display: none !important;
-    }
-  }
 }

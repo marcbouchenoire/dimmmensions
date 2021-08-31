@@ -3,7 +3,7 @@ import { AnimatePresence, motion, Spring, Variants } from "framer-motion"
 import { Dimensions } from "ios-dimensions"
 import { ComponentPropsWithoutRef, CSSProperties, useMemo } from "react"
 import { Orientation } from "../types"
-import styles from "./Preview.module.scss"
+import styles from "./Screen.module.scss"
 
 const OPACITY = 0.5
 const PATTERN_SIZE = 8
@@ -91,7 +91,7 @@ const variants: Variants = {
   }
 }
 
-export function Preview({
+export function Screen({
   className,
   dimensions,
   orientation,
@@ -154,7 +154,7 @@ export function Preview({
       {...props}
     >
       <motion.div
-        className={styles.preview}
+        className={styles.screen}
         layout
         transition={{ ...transition, bounce: 0.1 }}
       >
