@@ -5806,9 +5806,9 @@ globby@^11.0.2, globby@^11.0.3:
     slash "^3.0.0"
 
 globby@^12.0.0:
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/globby/-/globby-12.0.0.tgz#b8bbb8e9d48f8a3c9abf5624030f1f9e1cfbe3ed"
-  integrity sha512-3mOIUduqSMHm6gNjIw9E641TZ93NB8lFVt+6MKIw6vUaIS5aSsw/6cl0gT86z1IoKlaL90BiOQlA593GUMlzEA==
+  version "12.0.2"
+  resolved "https://registry.yarnpkg.com/globby/-/globby-12.0.2.tgz#53788b2adf235602ed4cabfea5c70a1139e1ab11"
+  integrity sha512-lAsmb/5Lww4r7MM9nCCliDZVIKbZTavrsunAsHLr9oHthrZP1qi7/gAnHOsUs9bLvEt2vKVJhHmxuL7QbDuPdQ==
   dependencies:
     array-union "^3.0.1"
     dir-glob "^3.0.1"
