@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@types/command-exists": "^1.2.0",
-    "@types/jest": "^26.0.22",
+    "@types/jest": "^27.0.1",
     "@types/listr": "^0.14.2",
     "app-exists": "^2.0.0",
     "command-exists": "^1.2.9",
