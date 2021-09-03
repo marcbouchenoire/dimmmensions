@@ -66,6 +66,6 @@
     "load-json-file": "^6.2.0",
     "microbundle": "^0.13.0",
     "ts-jest": "^27.0.3",
-    "write-json-file": "^4.3.0"
+    "write-json-file": "^5.0.0"
   }
 }
