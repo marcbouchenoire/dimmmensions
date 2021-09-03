@@ -3,8 +3,8 @@ import withCommand from "command-exists"
 import execa from "execa"
 import { globby } from "globby"
 import Listr, { ListrTask } from "listr"
-import getJSON from "load-json-file"
-import writeJSON from "write-json-file"
+import { loadJsonFile } from "load-json-file"
+import { writeJsonFile } from "write-json-file"
 import {
   Device,
   Dimensions,
@@ -112,7 +112,7 @@ const tasks = new Listr([
                       scale: extractedScale,
                       radius: extractedRadius,
                       ...dimensions
-                    }: ExtractedDimensions = await getJSON(attachment)
+                    }: ExtractedDimensions = await loadJsonFile(attachment)
 
                     device = extractedDevice as Device
                     scale = extractedScale
@@ -171,8 +171,8 @@ const tasks = new Listr([
   },
   {
     task: async (context: Context) => {
-      await writeJSON(DIMENSIONS, context.dimensions)
-      await writeJSON(LOGS, { platform: context.platform })
+      await writeJsonFile(DIMENSIONS, context.dimensions)
+      await writeJsonFile(LOGS, { platform: context.platform })
     },
     title: "Generating files"
   }
