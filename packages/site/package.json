@@ -1,6 +1,6 @@
 {
   "name": "site",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": true,
   "lint-staged": {
     "**/*.{ts,tsx}": [
@@ -27,7 +27,7 @@
   "dependencies": {
     "clsx": "^1.1.1",
     "framer-motion": "^4.1.17",
-    "ios-dimensions": "^2.0.0",
+    "ios-dimensions": "^2.0.1",
     "leva": "^0.9.13",
     "next": "^11.1.0",
     "next-seo": "^4.26.0",
