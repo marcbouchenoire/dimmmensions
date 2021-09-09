@@ -96,6 +96,7 @@ export function Screen({
   dimensions,
   orientation,
   colors,
+  style,
   ...props
 }: Props) {
   const { screen, ...dimensionsWithOrientation } = useMemo(
@@ -148,7 +149,8 @@ export function Screen({
         {
           "--height": `${height}px`,
           "--ratio": ratio,
-          "--width": `${width}px`
+          "--width": `${width}px`,
+          ...style
         } as CSSProperties
       }
       {...props}
