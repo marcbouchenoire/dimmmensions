@@ -3,7 +3,7 @@
   "private": true,
   "husky": {
     "hooks": {
-      "pre-commit": "lerna run --concurrency 1 --stream pre-commit --since HEAD --exclude-dependents"
+      "pre-commit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents"
     }
   },
   "workspaces": [
@@ -17,6 +17,8 @@
     "lint": "lerna run lint --stream",
     "test": "lerna run test --stream",
     "prepare": "lerna run prepare --stream",
+    "prepublishOnly": "lerna run prepublishOnly --stream",
+    "release": "lerna publish --create-release github",
     "clean": "lerna run clean"
   },
   "devDependencies": {
