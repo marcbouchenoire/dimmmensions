@@ -16,6 +16,7 @@
     "build": "yarn workspace ios-dimensions build",
     "lint": "lerna run lint --stream",
     "test": "lerna run test --stream",
+    "prepare": "lerna run prepare --stream",
     "release": "lerna publish",
     "clean": "lerna run clean"
   },
