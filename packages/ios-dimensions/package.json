@@ -55,7 +55,7 @@
     "@types/command-exists": "^1.2.0",
     "@types/jest": "^27.0.1",
     "@types/listr": "^0.14.2",
-    "app-exists": "^1.1.0",
+    "app-exists": "^2.1.1",
     "command-exists": "^1.2.9",
     "execa": "^5.0.0",
     "globby": "^11.0.4",
