@@ -1,226 +1,13 @@
 [
 	{
 		"device": "iPhone",
-		"scale": 2,
-		"radius": 0,
-		"portrait": {
-			"screen": {
-				"width": 320,
-				"height": 568
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 16,
-				"top": 20,
-				"right": 16,
-				"bottom": 0
-			},
-			"readableContent": {
-				"left": 16,
-				"top": 20,
-				"right": 16,
-				"bottom": 0
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 20,
-				"right": 0,
-				"bottom": 0
-			}
-		},
 		"landscape": {
 			"screen": {
-				"width": 568,
-				"height": 320
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "compact"
-			},
-			"layoutMargins": {
-				"left": 20,
-				"top": 0,
-				"right": 20,
-				"bottom": 0
-			},
-			"readableContent": {
-				"left": 20,
-				"top": 0,
-				"right": 20,
-				"bottom": 0
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 0,
-				"right": 0,
-				"bottom": 0
-			}
-		}
-	},
-	{
-		"device": "iPad",
-		"scale": 2,
-		"radius": 18,
-		"portrait": {
-			"screen": {
-				"width": 1024,
-				"height": 1366
+				"width": 926,
+				"height": 428
 			},
 			"sizeClass": {
 				"horizontal": "regular",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 20,
-				"top": 24,
-				"right": 20,
-				"bottom": 20
-			},
-			"readableContent": {
-				"left": 180,
-				"top": 24,
-				"right": 180,
-				"bottom": 20
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 24,
-				"right": 0,
-				"bottom": 20
-			}
-		},
-		"landscape": {
-			"screen": {
-				"width": 1366,
-				"height": 1024
-			},
-			"sizeClass": {
-				"horizontal": "regular",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 20,
-				"top": 24,
-				"right": 20,
-				"bottom": 20
-			},
-			"readableContent": {
-				"left": 351,
-				"top": 24,
-				"right": 351,
-				"bottom": 20
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 24,
-				"right": 0,
-				"bottom": 20
-			}
-		}
-	},
-	{
-		"device": "iPhone",
-		"scale": 3,
-		"radius": 0,
-		"portrait": {
-			"screen": {
-				"width": 414,
-				"height": 736
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 20,
-				"top": 20,
-				"right": 20,
-				"bottom": 0
-			},
-			"readableContent": {
-				"left": 20,
-				"top": 20,
-				"right": 20,
-				"bottom": 0
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 20,
-				"right": 0,
-				"bottom": 0
-			}
-		},
-		"landscape": {
-			"screen": {
-				"width": 736,
-				"height": 414
-			},
-			"sizeClass": {
-				"horizontal": "regular",
-				"vertical": "compact"
-			},
-			"layoutMargins": {
-				"left": 20,
-				"top": 0,
-				"right": 20,
-				"bottom": 0
-			},
-			"readableContent": {
-				"left": 20,
-				"top": 0,
-				"right": 20,
-				"bottom": 0
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 0,
-				"right": 0,
-				"bottom": 0
-			}
-		}
-	},
-	{
-		"device": "iPhone",
-		"scale": 3,
-		"radius": 47.33,
-		"portrait": {
-			"screen": {
-				"width": 390,
-				"height": 844
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 16,
-				"top": 47,
-				"right": 16,
-				"bottom": 34
-			},
-			"readableContent": {
-				"left": 16,
-				"top": 47,
-				"right": 16,
-				"bottom": 34
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 47,
-				"right": 0,
-				"bottom": 34
-			}
-		},
-		"landscape": {
-			"screen": {
-				"width": 844,
-				"height": 390
-			},
-			"sizeClass": {
-				"horizontal": "compact",
 				"vertical": "compact"
 			},
 			"layoutMargins": {
@@ -230,9 +17,9 @@
 				"bottom": 21
 			},
 			"readableContent": {
-				"left": 63,
+				"left": 131,
 				"top": 0,
-				"right": 63,
+				"right": 131,
 				"bottom": 21
 			},
 			"safeArea": {
@@ -241,195 +28,7 @@
 				"right": 47,
 				"bottom": 21
 			}
-		}
-	},
-	{
-		"device": "iPhone",
-		"scale": 3,
-		"radius": 39,
-		"portrait": {
-			"screen": {
-				"width": 375,
-				"height": 812
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 16,
-				"top": 44,
-				"right": 16,
-				"bottom": 34
-			},
-			"readableContent": {
-				"left": 16,
-				"top": 44,
-				"right": 16,
-				"bottom": 34
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 44,
-				"right": 0,
-				"bottom": 34
-			}
 		},
-		"landscape": {
-			"screen": {
-				"width": 812,
-				"height": 375
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "compact"
-			},
-			"layoutMargins": {
-				"left": 60,
-				"top": 0,
-				"right": 60,
-				"bottom": 21
-			},
-			"readableContent": {
-				"left": 60,
-				"top": 0,
-				"right": 60,
-				"bottom": 21
-			},
-			"safeArea": {
-				"left": 44,
-				"top": 0,
-				"right": 44,
-				"bottom": 21
-			}
-		}
-	},
-	{
-		"device": "iPhone",
-		"scale": 2,
-		"radius": 41.5,
-		"portrait": {
-			"screen": {
-				"width": 414,
-				"height": 896
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 20,
-				"top": 48,
-				"right": 20,
-				"bottom": 34
-			},
-			"readableContent": {
-				"left": 20,
-				"top": 48,
-				"right": 20,
-				"bottom": 34
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 48,
-				"right": 0,
-				"bottom": 34
-			}
-		},
-		"landscape": {
-			"screen": {
-				"width": 896,
-				"height": 414
-			},
-			"sizeClass": {
-				"horizontal": "regular",
-				"vertical": "compact"
-			},
-			"layoutMargins": {
-				"left": 64,
-				"top": 0,
-				"right": 64,
-				"bottom": 21
-			},
-			"readableContent": {
-				"left": 116,
-				"top": 0,
-				"right": 116,
-				"bottom": 21
-			},
-			"safeArea": {
-				"left": 48,
-				"top": 0,
-				"right": 48,
-				"bottom": 21
-			}
-		}
-	},
-	{
-		"device": "iPhone",
-		"scale": 3,
-		"radius": 44,
-		"portrait": {
-			"screen": {
-				"width": 375,
-				"height": 812
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 16,
-				"top": 50,
-				"right": 16,
-				"bottom": 34
-			},
-			"readableContent": {
-				"left": 16,
-				"top": 50,
-				"right": 16,
-				"bottom": 34
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 50,
-				"right": 0,
-				"bottom": 34
-			}
-		},
-		"landscape": {
-			"screen": {
-				"width": 812,
-				"height": 375
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "compact"
-			},
-			"layoutMargins": {
-				"left": 66,
-				"top": 0,
-				"right": 66,
-				"bottom": 21
-			},
-			"readableContent": {
-				"left": 66,
-				"top": 0,
-				"right": 66,
-				"bottom": 21
-			},
-			"safeArea": {
-				"left": 50,
-				"top": 0,
-				"right": 50,
-				"bottom": 21
-			}
-		}
-	},
-	{
-		"device": "iPhone",
-		"scale": 3,
-		"radius": 53.33,
 		"portrait": {
 			"screen": {
 				"width": 428,
@@ -458,196 +57,18 @@
 				"bottom": 34
 			}
 		},
-		"landscape": {
-			"screen": {
-				"width": 926,
-				"height": 428
-			},
-			"sizeClass": {
-				"horizontal": "regular",
-				"vertical": "compact"
-			},
-			"layoutMargins": {
-				"left": 63,
-				"top": 0,
-				"right": 63,
-				"bottom": 21
-			},
-			"readableContent": {
-				"left": 131,
-				"top": 0,
-				"right": 131,
-				"bottom": 21
-			},
-			"safeArea": {
-				"left": 47,
-				"top": 0,
-				"right": 47,
-				"bottom": 21
-			}
-		}
+		"radius": 53.33,
+		"scale": 3
 	},
 	{
 		"device": "iPhone",
-		"scale": 2,
-		"radius": 0,
-		"portrait": {
-			"screen": {
-				"width": 375,
-				"height": 667
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 16,
-				"top": 20,
-				"right": 16,
-				"bottom": 0
-			},
-			"readableContent": {
-				"left": 16,
-				"top": 20,
-				"right": 16,
-				"bottom": 0
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 20,
-				"right": 0,
-				"bottom": 0
-			}
-		},
 		"landscape": {
 			"screen": {
-				"width": 667,
+				"width": 812,
 				"height": 375
 			},
 			"sizeClass": {
 				"horizontal": "compact",
-				"vertical": "compact"
-			},
-			"layoutMargins": {
-				"left": 20,
-				"top": 0,
-				"right": 20,
-				"bottom": 0
-			},
-			"readableContent": {
-				"left": 20,
-				"top": 0,
-				"right": 20,
-				"bottom": 0
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 0,
-				"right": 0,
-				"bottom": 0
-			}
-		}
-	},
-	{
-		"device": "iPad",
-		"scale": 2,
-		"radius": 0,
-		"portrait": {
-			"screen": {
-				"width": 768,
-				"height": 1024
-			},
-			"sizeClass": {
-				"horizontal": "regular",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 20,
-				"top": 20,
-				"right": 20,
-				"bottom": 0
-			},
-			"readableContent": {
-				"left": 52,
-				"top": 20,
-				"right": 52,
-				"bottom": 0
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 20,
-				"right": 0,
-				"bottom": 0
-			}
-		},
-		"landscape": {
-			"screen": {
-				"width": 1024,
-				"height": 768
-			},
-			"sizeClass": {
-				"horizontal": "regular",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 20,
-				"top": 20,
-				"right": 20,
-				"bottom": 0
-			},
-			"readableContent": {
-				"left": 180,
-				"top": 20,
-				"right": 180,
-				"bottom": 0
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 20,
-				"right": 0,
-				"bottom": 0
-			}
-		}
-	},
-	{
-		"device": "iPhone",
-		"scale": 3,
-		"radius": 39,
-		"portrait": {
-			"screen": {
-				"width": 414,
-				"height": 896
-			},
-			"sizeClass": {
-				"horizontal": "compact",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 20,
-				"top": 44,
-				"right": 20,
-				"bottom": 34
-			},
-			"readableContent": {
-				"left": 20,
-				"top": 44,
-				"right": 20,
-				"bottom": 34
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 44,
-				"right": 0,
-				"bottom": 34
-			}
-		},
-		"landscape": {
-			"screen": {
-				"width": 896,
-				"height": 414
-			},
-			"sizeClass": {
-				"horizontal": "regular",
 				"vertical": "compact"
 			},
 			"layoutMargins": {
@@ -657,9 +78,9 @@
 				"bottom": 21
 			},
 			"readableContent": {
-				"left": 116,
+				"left": 60,
 				"top": 0,
-				"right": 116,
+				"right": 60,
 				"bottom": 21
 			},
 			"safeArea": {
@@ -668,134 +89,129 @@
 				"right": 44,
 				"bottom": 21
 			}
-		}
-	},
-	{
-		"device": "iPad",
-		"scale": 2,
-		"radius": 18,
+		},
 		"portrait": {
 			"screen": {
-				"width": 820,
-				"height": 1180
+				"width": 375,
+				"height": 812
 			},
 			"sizeClass": {
-				"horizontal": "regular",
+				"horizontal": "compact",
 				"vertical": "regular"
 			},
 			"layoutMargins": {
-				"left": 20,
-				"top": 24,
-				"right": 20,
-				"bottom": 20
+				"left": 16,
+				"top": 44,
+				"right": 16,
+				"bottom": 34
 			},
 			"readableContent": {
-				"left": 78,
-				"top": 24,
-				"right": 78,
-				"bottom": 20
+				"left": 16,
+				"top": 44,
+				"right": 16,
+				"bottom": 34
 			},
 			"safeArea": {
 				"left": 0,
-				"top": 24,
+				"top": 44,
 				"right": 0,
-				"bottom": 20
+				"bottom": 34
 			}
 		},
+		"radius": 39,
+		"scale": 3
+	},
+	{
+		"device": "iPhone",
 		"landscape": {
 			"screen": {
-				"width": 1180,
-				"height": 820
+				"width": 568,
+				"height": 320
 			},
 			"sizeClass": {
-				"horizontal": "regular",
-				"vertical": "regular"
+				"horizontal": "compact",
+				"vertical": "compact"
 			},
 			"layoutMargins": {
 				"left": 20,
-				"top": 24,
+				"top": 0,
 				"right": 20,
-				"bottom": 20
+				"bottom": 0
 			},
 			"readableContent": {
-				"left": 258,
-				"top": 24,
-				"right": 258,
-				"bottom": 20
+				"left": 20,
+				"top": 0,
+				"right": 20,
+				"bottom": 0
 			},
 			"safeArea": {
 				"left": 0,
-				"top": 24,
+				"top": 0,
 				"right": 0,
-				"bottom": 20
+				"bottom": 0
 			}
-		}
-	},
-	{
-		"device": "iPad",
-		"scale": 2,
-		"radius": 18,
+		},
 		"portrait": {
 			"screen": {
-				"width": 834,
-				"height": 1194
+				"width": 320,
+				"height": 568
 			},
 			"sizeClass": {
-				"horizontal": "regular",
+				"horizontal": "compact",
 				"vertical": "regular"
 			},
 			"layoutMargins": {
-				"left": 20,
-				"top": 24,
-				"right": 20,
-				"bottom": 20
+				"left": 16,
+				"top": 20,
+				"right": 16,
+				"bottom": 0
 			},
 			"readableContent": {
-				"left": 85,
-				"top": 24,
-				"right": 85,
-				"bottom": 20
+				"left": 16,
+				"top": 20,
+				"right": 16,
+				"bottom": 0
 			},
 			"safeArea": {
 				"left": 0,
-				"top": 24,
+				"top": 20,
 				"right": 0,
-				"bottom": 20
+				"bottom": 0
 			}
 		},
-		"landscape": {
-			"screen": {
-				"width": 1194,
-				"height": 834
-			},
-			"sizeClass": {
-				"horizontal": "regular",
-				"vertical": "regular"
-			},
-			"layoutMargins": {
-				"left": 20,
-				"top": 24,
-				"right": 20,
-				"bottom": 20
-			},
-			"readableContent": {
-				"left": 265,
-				"top": 24,
-				"right": 265,
-				"bottom": 20
-			},
-			"safeArea": {
-				"left": 0,
-				"top": 24,
-				"right": 0,
-				"bottom": 20
-			}
-		}
-	},
-	{
-		"device": "iPad",
-		"scale": 2,
 		"radius": 0,
+		"scale": 2
+	},
+	{
+		"device": "iPad",
+		"landscape": {
+			"screen": {
+				"width": 1080,
+				"height": 810
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 20,
+				"right": 20,
+				"bottom": 0
+			},
+			"readableContent": {
+				"left": 208,
+				"top": 20,
+				"right": 208,
+				"bottom": 0
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 20,
+				"right": 0,
+				"bottom": 0
+			}
+		},
 		"portrait": {
 			"screen": {
 				"width": 810,
@@ -824,10 +240,381 @@
 				"bottom": 0
 			}
 		},
+		"radius": 0,
+		"scale": 2
+	},
+	{
+		"device": "iPhone",
 		"landscape": {
 			"screen": {
-				"width": 1080,
-				"height": 810
+				"width": 844,
+				"height": 390
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "compact"
+			},
+			"layoutMargins": {
+				"left": 63,
+				"top": 0,
+				"right": 63,
+				"bottom": 21
+			},
+			"readableContent": {
+				"left": 63,
+				"top": 0,
+				"right": 63,
+				"bottom": 21
+			},
+			"safeArea": {
+				"left": 47,
+				"top": 0,
+				"right": 47,
+				"bottom": 21
+			}
+		},
+		"portrait": {
+			"screen": {
+				"width": 390,
+				"height": 844
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 16,
+				"top": 47,
+				"right": 16,
+				"bottom": 34
+			},
+			"readableContent": {
+				"left": 16,
+				"top": 47,
+				"right": 16,
+				"bottom": 34
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 47,
+				"right": 0,
+				"bottom": 34
+			}
+		},
+		"radius": 47.33,
+		"scale": 3
+	},
+	{
+		"device": "iPad",
+		"landscape": {
+			"screen": {
+				"width": 1194,
+				"height": 834
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 24,
+				"right": 20,
+				"bottom": 20
+			},
+			"readableContent": {
+				"left": 265,
+				"top": 24,
+				"right": 265,
+				"bottom": 20
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 24,
+				"right": 0,
+				"bottom": 20
+			}
+		},
+		"portrait": {
+			"screen": {
+				"width": 834,
+				"height": 1194
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 24,
+				"right": 20,
+				"bottom": 20
+			},
+			"readableContent": {
+				"left": 85,
+				"top": 24,
+				"right": 85,
+				"bottom": 20
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 24,
+				"right": 0,
+				"bottom": 20
+			}
+		},
+		"radius": 18,
+		"scale": 2
+	},
+	{
+		"device": "iPhone",
+		"landscape": {
+			"screen": {
+				"width": 667,
+				"height": 375
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "compact"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 0,
+				"right": 20,
+				"bottom": 0
+			},
+			"readableContent": {
+				"left": 20,
+				"top": 0,
+				"right": 20,
+				"bottom": 0
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 0,
+				"right": 0,
+				"bottom": 0
+			}
+		},
+		"portrait": {
+			"screen": {
+				"width": 375,
+				"height": 667
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 16,
+				"top": 20,
+				"right": 16,
+				"bottom": 0
+			},
+			"readableContent": {
+				"left": 16,
+				"top": 20,
+				"right": 16,
+				"bottom": 0
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 20,
+				"right": 0,
+				"bottom": 0
+			}
+		},
+		"radius": 0,
+		"scale": 2
+	},
+	{
+		"device": "iPhone",
+		"landscape": {
+			"screen": {
+				"width": 896,
+				"height": 414
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "compact"
+			},
+			"layoutMargins": {
+				"left": 64,
+				"top": 0,
+				"right": 64,
+				"bottom": 21
+			},
+			"readableContent": {
+				"left": 116,
+				"top": 0,
+				"right": 116,
+				"bottom": 21
+			},
+			"safeArea": {
+				"left": 48,
+				"top": 0,
+				"right": 48,
+				"bottom": 21
+			}
+		},
+		"portrait": {
+			"screen": {
+				"width": 414,
+				"height": 896
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 48,
+				"right": 20,
+				"bottom": 34
+			},
+			"readableContent": {
+				"left": 20,
+				"top": 48,
+				"right": 20,
+				"bottom": 34
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 48,
+				"right": 0,
+				"bottom": 34
+			}
+		},
+		"radius": 41.5,
+		"scale": 2
+	},
+	{
+		"device": "iPad",
+		"landscape": {
+			"screen": {
+				"width": 1133,
+				"height": 744
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 24,
+				"right": 20,
+				"bottom": 20
+			},
+			"readableContent": {
+				"left": 234.5,
+				"top": 24,
+				"right": 234.5,
+				"bottom": 20
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 24,
+				"right": 0,
+				"bottom": 20
+			}
+		},
+		"portrait": {
+			"screen": {
+				"width": 744,
+				"height": 1133
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 24,
+				"right": 20,
+				"bottom": 20
+			},
+			"readableContent": {
+				"left": 20,
+				"top": 24,
+				"right": 20,
+				"bottom": 20
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 24,
+				"right": 0,
+				"bottom": 20
+			}
+		},
+		"radius": 21.5,
+		"scale": 2
+	},
+	{
+		"device": "iPad",
+		"landscape": {
+			"screen": {
+				"width": 1180,
+				"height": 820
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 24,
+				"right": 20,
+				"bottom": 20
+			},
+			"readableContent": {
+				"left": 258,
+				"top": 24,
+				"right": 258,
+				"bottom": 20
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 24,
+				"right": 0,
+				"bottom": 20
+			}
+		},
+		"portrait": {
+			"screen": {
+				"width": 820,
+				"height": 1180
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 24,
+				"right": 20,
+				"bottom": 20
+			},
+			"readableContent": {
+				"left": 78,
+				"top": 24,
+				"right": 78,
+				"bottom": 20
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 24,
+				"right": 0,
+				"bottom": 20
+			}
+		},
+		"radius": 18,
+		"scale": 2
+	},
+	{
+		"device": "iPad",
+		"landscape": {
+			"screen": {
+				"width": 1024,
+				"height": 768
 			},
 			"sizeClass": {
 				"horizontal": "regular",
@@ -840,9 +627,9 @@
 				"bottom": 0
 			},
 			"readableContent": {
-				"left": 208,
+				"left": 180,
 				"top": 20,
-				"right": 208,
+				"right": 180,
 				"bottom": 0
 			},
 			"safeArea": {
@@ -851,6 +638,280 @@
 				"right": 0,
 				"bottom": 0
 			}
-		}
+		},
+		"portrait": {
+			"screen": {
+				"width": 768,
+				"height": 1024
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 20,
+				"right": 20,
+				"bottom": 0
+			},
+			"readableContent": {
+				"left": 52,
+				"top": 20,
+				"right": 52,
+				"bottom": 0
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 20,
+				"right": 0,
+				"bottom": 0
+			}
+		},
+		"radius": 0,
+		"scale": 2
+	},
+	{
+		"device": "iPhone",
+		"landscape": {
+			"screen": {
+				"width": 896,
+				"height": 414
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "compact"
+			},
+			"layoutMargins": {
+				"left": 60,
+				"top": 0,
+				"right": 60,
+				"bottom": 21
+			},
+			"readableContent": {
+				"left": 116,
+				"top": 0,
+				"right": 116,
+				"bottom": 21
+			},
+			"safeArea": {
+				"left": 44,
+				"top": 0,
+				"right": 44,
+				"bottom": 21
+			}
+		},
+		"portrait": {
+			"screen": {
+				"width": 414,
+				"height": 896
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 44,
+				"right": 20,
+				"bottom": 34
+			},
+			"readableContent": {
+				"left": 20,
+				"top": 44,
+				"right": 20,
+				"bottom": 34
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 44,
+				"right": 0,
+				"bottom": 34
+			}
+		},
+		"radius": 39,
+		"scale": 3
+	},
+	{
+		"device": "iPhone",
+		"landscape": {
+			"screen": {
+				"width": 812,
+				"height": 375
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "compact"
+			},
+			"layoutMargins": {
+				"left": 66,
+				"top": 0,
+				"right": 66,
+				"bottom": 21
+			},
+			"readableContent": {
+				"left": 66,
+				"top": 0,
+				"right": 66,
+				"bottom": 21
+			},
+			"safeArea": {
+				"left": 50,
+				"top": 0,
+				"right": 50,
+				"bottom": 21
+			}
+		},
+		"portrait": {
+			"screen": {
+				"width": 375,
+				"height": 812
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 16,
+				"top": 50,
+				"right": 16,
+				"bottom": 34
+			},
+			"readableContent": {
+				"left": 16,
+				"top": 50,
+				"right": 16,
+				"bottom": 34
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 50,
+				"right": 0,
+				"bottom": 34
+			}
+		},
+		"radius": 44,
+		"scale": 3
+	},
+	{
+		"device": "iPad",
+		"landscape": {
+			"screen": {
+				"width": 1366,
+				"height": 1024
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 24,
+				"right": 20,
+				"bottom": 20
+			},
+			"readableContent": {
+				"left": 351,
+				"top": 24,
+				"right": 351,
+				"bottom": 20
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 24,
+				"right": 0,
+				"bottom": 20
+			}
+		},
+		"portrait": {
+			"screen": {
+				"width": 1024,
+				"height": 1366
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 24,
+				"right": 20,
+				"bottom": 20
+			},
+			"readableContent": {
+				"left": 180,
+				"top": 24,
+				"right": 180,
+				"bottom": 20
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 24,
+				"right": 0,
+				"bottom": 20
+			}
+		},
+		"radius": 18,
+		"scale": 2
+	},
+	{
+		"device": "iPhone",
+		"landscape": {
+			"screen": {
+				"width": 736,
+				"height": 414
+			},
+			"sizeClass": {
+				"horizontal": "regular",
+				"vertical": "compact"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 0,
+				"right": 20,
+				"bottom": 0
+			},
+			"readableContent": {
+				"left": 20,
+				"top": 0,
+				"right": 20,
+				"bottom": 0
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 0,
+				"right": 0,
+				"bottom": 0
+			}
+		},
+		"portrait": {
+			"screen": {
+				"width": 414,
+				"height": 736
+			},
+			"sizeClass": {
+				"horizontal": "compact",
+				"vertical": "regular"
+			},
+			"layoutMargins": {
+				"left": 20,
+				"top": 20,
+				"right": 20,
+				"bottom": 0
+			},
+			"readableContent": {
+				"left": 20,
+				"top": 20,
+				"right": 20,
+				"bottom": 0
+			},
+			"safeArea": {
+				"left": 0,
+				"top": 20,
+				"right": 0,
+				"bottom": 0
+			}
+		},
+		"radius": 0,
+		"scale": 3
 	}
 ]
