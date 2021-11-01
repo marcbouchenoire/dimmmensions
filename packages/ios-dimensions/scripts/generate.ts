@@ -65,6 +65,8 @@ const tasks = new Listr([
       context.dimensions = []
 
       for (const device of context.devices) {
+        const name = device.name
+
         const task: ListrTask = {
           task: () => {
             return new Listr([
@@ -128,6 +130,7 @@ const tasks = new Listr([
                   const dimensions: Dimensions = {
                     device,
                     landscape,
+                    name,
                     portrait,
                     radius,
                     scale
@@ -172,7 +175,10 @@ const tasks = new Listr([
   {
     task: async (context: Context) => {
       await writeJsonFile(DIMENSIONS, context.dimensions)
-      await writeJsonFile(LOGS, { platform: context.platform })
+      await writeJsonFile(LOGS, {
+        devices: context.devices.map((device) => device.name),
+        platform: context.platform
+      })
     },
     title: "Generating files"
   }

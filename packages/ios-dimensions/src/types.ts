@@ -14,6 +14,7 @@ export interface ExtractedDimensions extends OrientedDimensions, Traits {
 
 export interface Traits {
   device: Device
+  name: string
   radius: number
   scale: number
 }
