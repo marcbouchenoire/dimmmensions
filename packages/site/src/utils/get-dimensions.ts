@@ -1,4 +1,4 @@
-import { dimensions, Dimensions } from "ios-dimensions"
+import { Dimensions, dimensions } from "ios-dimensions"
 
 export function getDimensions() {
   const attributedDimensions: Record<string, Dimensions> = {}

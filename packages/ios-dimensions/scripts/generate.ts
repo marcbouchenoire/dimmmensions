@@ -11,10 +11,10 @@ import {
   ExtractedDimensions,
   OrientedDimensions
 } from "../src/types"
-import { getDevices, SimulatorDevice } from "./utils/get-devices"
+import { SimulatorDevice, getDevices } from "./utils/get-devices"
 import { getHashCode } from "./utils/get-hash-code"
 import { isMacOS } from "./utils/is-macOS"
-import { isSilentError, SilentError } from "./utils/silent-error"
+import { SilentError, isSilentError } from "./utils/silent-error"
 import { trash } from "./utils/trash"
 
 const SCHEME = "dimensions"

@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import { useControls, Leva, LevaInputs, button } from "leva"
+import { Leva, LevaInputs, button, useControls } from "leva"
 import { GetStaticProps } from "next"
 import { CSSProperties } from "react"
 import pkg from "../../../ios-dimensions/package.json"
@@ -18,12 +18,10 @@ const APPEARANCE_FOLDER = "Appearance"
 
 const attributedDimensions = getDimensions()
 
-/* eslint-disable sort-keys-fix/sort-keys-fix */
 const orientations = {
   Portrait: "portrait",
   Landscape: "landscape"
 }
-/* eslint-enable sort-keys-fix/sort-keys-fix */
 
 const DEFAULT_ORIENTATION = orientations.Portrait
 const DEFAULT_COLOR_SAFE_AREA = "#85f"
