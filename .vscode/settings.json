@@ -6,7 +6,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "eslint.validate": ["typescript", "typescriptreact"],
-  "eslint.workingDirectories": ["packages/site", "packages/ios-dimensions"],
+  "eslint.workingDirectories": ["packages/site", "packages/dimmmensions"],
   "files.exclude": {
     "node_modules": true,
     "yarn.lock": true

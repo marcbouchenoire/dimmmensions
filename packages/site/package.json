@@ -27,7 +27,7 @@
   "dependencies": {
     "clsx": "^1.1.1",
     "framer-motion": "^5.0.0",
-    "ios-dimensions": "^2.2.0",
+    "dimmmensions": "^2.2.0",
     "leva": "^0.9.13",
     "next": "^12.0.1",
     "next-seo": "^4.26.0",

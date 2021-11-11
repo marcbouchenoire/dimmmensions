@@ -1,5 +1,5 @@
 module.exports = {
-  basePath: "/projects/ios-dimensions",
+  basePath: "/projects/dimmmensions",
   cleanUrls: true,
   trailingSlash: false,
   eslint: {
@@ -9,7 +9,7 @@ module.exports = {
     return [
       {
         source: "/",
-        destination: "/projects/ios-dimensions",
+        destination: "/projects/dimmmensions",
         permanent: true,
         basePath: false
       }

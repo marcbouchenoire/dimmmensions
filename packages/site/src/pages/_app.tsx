@@ -16,7 +16,7 @@ function App({ Component, pageProps }: AppProps) {
           },
           site_name: "Marc Bouchenoire"
         }}
-        title="ios-dimensions"
+        title="dimmmensions"
         twitter={{
           handle: "@bouchenoiremarc"
         }}

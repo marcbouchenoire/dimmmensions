@@ -2,7 +2,7 @@ import clsx from "clsx"
 import { Leva, LevaInputs, button, useControls } from "leva"
 import { GetStaticProps } from "next"
 import { CSSProperties } from "react"
-import pkg from "../../../ios-dimensions/package.json"
+import pkg from "../../../dimmmensions/package.json"
 import { Screen } from "../components/Screen"
 import { LEVA_MARGIN, LEVA_WIDTH } from "../constants"
 import { theme } from "../leva/theme"
@@ -99,10 +99,10 @@ function Page({ version }: Props) {
       <header className={styles.header}>
         <div className={styles.headings}>
           <h1>
-            ios-dimensions{" "}
+            dimmmensions{" "}
             <a
               className={styles.version}
-              href={`https://github.com/bouchenoiremarc/ios-dimensions/releases/tag/v${version}`}
+              href={`https://github.com/bouchenoiremarc/dimmmensions/releases/tag/v${version}`}
               rel="noreferrer"
               target="_blank"
             >
@@ -117,7 +117,7 @@ function Page({ version }: Props) {
               <a
                 aria-label="GitHub"
                 className={clsx(styles.link, styles.github)}
-                href="https://github.com/bouchenoiremarc/ios-dimensions"
+                href="https://github.com/bouchenoiremarc/dimmmensions"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -134,7 +134,7 @@ function Page({ version }: Props) {
               <a
                 aria-label="npm"
                 className={clsx(styles.link, styles.npm)}
-                href="https://www.npmjs.com/package/ios-dimensions"
+                href="https://www.npmjs.com/package/dimmmensions"
                 rel="noreferrer"
                 target="_blank"
               >

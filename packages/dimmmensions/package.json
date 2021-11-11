@@ -1,11 +1,11 @@
 {
-  "name": "ios-dimensions",
+  "name": "dimmmensions",
   "version": "2.2.0",
   "description": "A collection of dimensions from iOS devices.",
   "author": "Marc Bouchenoire",
   "license": "MIT",
-  "repository": "https://github.com/bouchenoiremarc/ios-dimensions",
-  "homepage": "https://marcbouchenoire.com/projects/ios-dimensions",
+  "repository": "https://github.com/bouchenoiremarc/dimmmensions",
+  "homepage": "https://marcbouchenoire.com/projects/dimmmensions",
   "keywords": [
     "ios",
     "dimensions",
@@ -18,13 +18,13 @@
   ],
   "sideEffects": false,
   "source": "./src/index.ts",
-  "main": "./dist/ios-dimensions.js",
-  "unpkg": "./dist/ios-dimensions.umd.js",
-  "module": "./dist/ios-dimensions.module.js",
+  "main": "./dist/dimmmensions.js",
+  "unpkg": "./dist/dimmmensions.umd.js",
+  "module": "./dist/dimmmensions.module.js",
   "exports": {
     ".": {
-      "require": "./dist/ios-dimensions.js",
-      "import": "./dist/ios-dimensions.modern.js",
+      "require": "./dist/dimmmensions.js",
+      "import": "./dist/dimmmensions.modern.js",
       "types": "./dist/index.d.ts"
     }
   },

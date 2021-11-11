@@ -1,6 +1,6 @@
 import clsx from "clsx"
+import { Dimensions } from "dimmmensions"
 import { AnimatePresence, Spring, Variants, motion } from "framer-motion"
-import { Dimensions } from "ios-dimensions"
 import { CSSProperties, ComponentPropsWithoutRef, useMemo } from "react"
 import { Orientation } from "../types"
 import styles from "./Screen.module.scss"

@@ -1,1 +1,1 @@
-./packages/ios-dimensions/README.md
+./packages/dimmmensions/README.md
