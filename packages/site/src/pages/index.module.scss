@@ -26,18 +26,18 @@
   margin-right: calc(var(--leva-width) + var(--leva-margin));
   place-items: center;
 
-  &:after {
+  &::after {
     position: absolute;
     right: 20px;
     bottom: -2px;
     left: 20px;
     height: 2px;
-    background: rgba(0, 0, 0, 0.04);
+    background: rgb(0 0 0 / 4%);
     content: "";
   }
 
   @media (max-width: 820px) {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
@@ -79,17 +79,17 @@
   transform: translateY(-1px);
   transition: opacity 0.2s ease-in-out;
 
-  &:before {
+  &::before {
     position: absolute;
     z-index: -1;
-    background: rgba(0, 0, 0, 0.05);
+    background: rgb(0 0 0 / 5%);
     border-radius: 5px;
     content: "";
     inset: -6px -6px -4px;
   }
 
   &:hover {
-    opacity: 0.5;
+    opacity: 50%;
   }
 }
 
@@ -113,7 +113,7 @@
   transition: opacity 0.2s ease-in-out;
 
   &:hover {
-    opacity: 0.5;
+    opacity: 50%;
   }
 
   svg {

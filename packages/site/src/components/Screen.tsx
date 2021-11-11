@@ -227,22 +227,22 @@ export function Screen({
         transition={{ ...transition, bounce: 0.1 }}
       >
         <div className={styles.group}>
-          <span className={styles.secondaryLabel}>@</span>
+          <span className={styles["secondary-Label"]}>@</span>
           <span className={styles.label}>{dimensions.scale}x</span>
         </div>
         <div className={styles.group}>
           <span className={styles.label}>{dimensions.radius}</span>
-          <span className={styles.secondaryLabel}>pt</span>
+          <span className={styles["secondary-Label"]}>pt</span>
         </div>
-        <div className={clsx(styles.group, styles.sizeClasses)}>
-          <div className={styles.sizeClass}>
-            <span className={styles.secondaryLabel}>w</span>
+        <div className={clsx(styles.group, styles["size-classes"])}>
+          <div className={styles["size-class"]}>
+            <span className={styles["secondary-Label"]}>w</span>
             <span className={styles.label}>
               {dimensionsWithOrientation.sizeClass.horizontal.charAt(0)}
             </span>
           </div>
-          <div className={styles.sizeClass}>
-            <span className={styles.secondaryLabel}>h</span>
+          <div className={styles["size-class"]}>
+            <span className={styles["secondary-Label"]}>h</span>
             <span className={styles.label}>
               {dimensionsWithOrientation.sizeClass.vertical.charAt(0)}
             </span>
