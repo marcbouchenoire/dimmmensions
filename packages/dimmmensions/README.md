@@ -10,21 +10,19 @@
 
 #### Skypack
 
-```html
-<script type="module">
-  import { dimensions } from "https://cdn.skypack.dev/dimmmensions"
-</script>
+```javascript
+import { dimensions } from "https://cdn.skypack.dev/dimmmensions"
 ```
 
 #### Yarn
 
-```sh
+```bash
 yarn add dimmmensions
 ```
 
 #### npm
 
-```sh
+```bash
 npm install dimmmensions
 ```
 
@@ -34,7 +32,7 @@ npm install dimmmensions
 
 Import `dimensions`.
 
-```tsx
+```typescript
 import { dimensions } from "dimmmensions"
 
 // dimensions: [Dimension, Dimension, Dimension...]
@@ -44,13 +42,13 @@ import { dimensions } from "dimmmensions"
 
 Import `getDimensions`.
 
-```tsx
+```typescript
 import { getDimensions } from "dimmmensions"
 ```
 
 Given no arguments, `getDimensions` will also return all dimensions.
 
-```tsx
+```typescript
 const dimensions = getDimensions()
 
 // dimensions: [Dimension, Dimension, Dimension...]
@@ -58,7 +56,7 @@ const dimensions = getDimensions()
 
 Given a specific `width` and `height`, `getDimensions` will return dimensions that match the specified `screen` size, either in portrait or landscape.
 
-```tsx
+```typescript
 const dimensions = getDimensions(320, 568)
 
 // dimensions: [Dimension]
