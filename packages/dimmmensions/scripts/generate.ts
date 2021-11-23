@@ -1,10 +1,11 @@
+import fs from "fs/promises"
 import withApp from "app-exists"
 import withCommand from "command-exists"
-import execa from "execa"
-import globby from "globby"
+import { execa } from "execa"
+import { globby } from "globby"
 import Listr, { ListrTask } from "listr"
-import loadJsonFile from "load-json-file"
-import writeJsonFile from "write-json-file"
+import { loadJsonFile } from "load-json-file"
+import { writeJsonFile } from "write-json-file"
 import {
   Device,
   Dimensions,
@@ -15,7 +16,6 @@ import { SimulatorDevice, getDevices } from "./utils/get-devices"
 import { getHashCode } from "./utils/get-hash-code"
 import { isMacOS } from "./utils/is-macOS"
 import { SilentError, isSilentError } from "./utils/silent-error"
-import { trash } from "./utils/trash"
 
 const SCHEME = "dimensions"
 const PROJECT = "./src/dimensions/dimensions.xcodeproj"
@@ -148,7 +148,7 @@ const tasks = new Listr([
               },
               {
                 task: async () => {
-                  await trash(DERIVED_DATA)
+                  await fs.rm(DERIVED_DATA, { recursive: true, force: true })
                 },
                 title: "Cleaning up extraction cache"
               }

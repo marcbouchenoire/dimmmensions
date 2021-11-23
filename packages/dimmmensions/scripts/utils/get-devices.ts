@@ -1,4 +1,4 @@
-import execa from "execa"
+import { execa } from "execa"
 
 export interface SimulatorDevice {
   dataPath: string

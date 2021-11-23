@@ -1,15 +1,17 @@
+import * as assert from "uvu/assert"
 import { isMultiple } from "../../src/utils/is-multiple"
+import { describe } from "../helpers"
 
-describe("isMultiple", () => {
-  test("should return true for multiples below the multiple threshold", () => {
-    expect(isMultiple(16, 8, 2)).toBeTruthy()
+describe("isMultiple", (it) => {
+  it("should return true for multiples below the multiple threshold", () => {
+    assert.equal(isMultiple(16, 8, 2), true)
   })
 
-  test("should return false for multiples above the multiple threshold", () => {
-    expect(isMultiple(16, 8, 1)).toBeFalsy()
+  it("should return false for multiples above the multiple threshold", () => {
+    assert.equal(isMultiple(16, 8, 1), false)
   })
 
-  test("should return false for non-multiples", () => {
-    expect(isMultiple(12, 8, 2)).toBeFalsy()
+  it("should return false for non-multiples", () => {
+    assert.equal(isMultiple(12, 8, 2), false)
   })
 })

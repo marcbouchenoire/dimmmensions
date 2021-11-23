@@ -1,3 +1,4 @@
+import * as assert from "uvu/assert"
 import { isNumber } from "../src/guards"
 import {
   array,
@@ -9,19 +10,20 @@ import {
   set,
   string
 } from "./constants"
+import { describe } from "./helpers"
 
-describe("isNumber", () => {
-  test("should return true for numbers", () => {
-    expect(isNumber(number)).toBeTruthy()
+describe("isNumber", (it) => {
+  it("should return true for numbers", () => {
+    assert.equal(isNumber(number), true)
   })
 
-  test("should return false for any other types", () => {
-    expect(isNumber(array)).toBeFalsy()
-    expect(isNumber(boolean)).toBeFalsy()
-    expect(isNumber(fun)).toBeFalsy()
-    expect(isNumber(map)).toBeFalsy()
-    expect(isNumber(object)).toBeFalsy()
-    expect(isNumber(set)).toBeFalsy()
-    expect(isNumber(string)).toBeFalsy()
+  it("should return false for any other types", () => {
+    assert.equal(isNumber(array), false)
+    assert.equal(isNumber(boolean), false)
+    assert.equal(isNumber(fun), false)
+    assert.equal(isNumber(map), false)
+    assert.equal(isNumber(object), false)
+    assert.equal(isNumber(set), false)
+    assert.equal(isNumber(string), false)
   })
 })
