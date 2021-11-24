@@ -90,7 +90,11 @@ class ViewController: UIViewController {
         
         let dimensions = try! JSONEncoder().encode(Dimensions(device: device, orientation: orientation, scale: scale, radius: radius, screen: screen, sizeClass: sizeClass, safeArea: safeArea, layoutMargins: layoutMargins, readableContent: readableContent))
         
-        self.view.accessibilityIdentifier = "dimensions"
-        self.view.accessibilityLabel = String(data: dimensions, encoding: String.Encoding.utf8)
+        if let string = String(data: dimensions, encoding: String.Encoding.utf8) {
+            print(string)
+            
+            self.view.accessibilityIdentifier = "dimensions"
+            self.view.accessibilityLabel = String(data: dimensions, encoding: String.Encoding.utf8)
+        }
     }
 }

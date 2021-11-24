@@ -17,9 +17,9 @@ import { getHashCode } from "./utils/get-hash-code"
 import { isMacOS } from "./utils/is-macOS"
 import { SilentError, isSilentError } from "./utils/silent-error"
 
-const SCHEME = "dimensions"
-const PROJECT = "./src/dimensions/dimensions.xcodeproj"
-const DERIVED_DATA = "/tmp/com.marcbouchenoire.dimensions"
+const SCHEME = "dimmmensions"
+const PROJECT = "./src/dimmmensions/dimmmensions.xcodeproj"
+const DERIVED_DATA = "/tmp/com.marcbouchenoire.dimmmensions"
 const DIMENSIONS = "./src/data/dimensions.json"
 const LOGS = "./src/data/logs.json"
 

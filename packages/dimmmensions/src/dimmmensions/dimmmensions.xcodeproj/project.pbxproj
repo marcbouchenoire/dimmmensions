@@ -30,7 +30,7 @@
 		49A9F79226013851009297B6 /* tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A9F79426013851009297B6 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		49A9F79626013851009297B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49B13A9C25FE82CB0037EB51 /* dimensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dimensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49B13A9C25FE82CB0037EB51 /* dimmmensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dimmmensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B13A9F25FE82CB0037EB51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49B13AA125FE82CB0037EB51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		49B13AAD25FE82CE0037EB51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		49B13A9325FE82CB0037EB51 = {
 			isa = PBXGroup;
 			children = (
-				49B13A9E25FE82CB0037EB51 /* dimensions */,
+				49B13A9E25FE82CB0037EB51 /* dimmmensions */,
 				49A9F79326013851009297B6 /* tests */,
 				49B13A9D25FE82CB0037EB51 /* Products */,
 			);
@@ -77,13 +77,13 @@
 		49B13A9D25FE82CB0037EB51 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49B13A9C25FE82CB0037EB51 /* dimensions.app */,
+				49B13A9C25FE82CB0037EB51 /* dimmmensions.app */,
 				49A9F79226013851009297B6 /* tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		49B13A9E25FE82CB0037EB51 /* dimensions */ = {
+		49B13A9E25FE82CB0037EB51 /* dimmmensions */ = {
 			isa = PBXGroup;
 			children = (
 				49B13A9F25FE82CB0037EB51 /* AppDelegate.swift */,
@@ -92,7 +92,7 @@
 				4901918826029D14004563D6 /* LaunchScreen.storyboard */,
 				49B13AAD25FE82CE0037EB51 /* Info.plist */,
 			);
-			path = dimensions;
+			path = dimmmensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,9 +116,9 @@
 			productReference = 49A9F79226013851009297B6 /* tests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		49B13A9B25FE82CB0037EB51 /* dimensions */ = {
+		49B13A9B25FE82CB0037EB51 /* dimmmensions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49B13AB025FE82CE0037EB51 /* Build configuration list for PBXNativeTarget "dimensions" */;
+			buildConfigurationList = 49B13AB025FE82CE0037EB51 /* Build configuration list for PBXNativeTarget "dimmmensions" */;
 			buildPhases = (
 				49B13A9825FE82CB0037EB51 /* Sources */,
 				49B13A9925FE82CB0037EB51 /* Frameworks */,
@@ -128,12 +128,12 @@
 			);
 			dependencies = (
 			);
-			name = dimensions;
+			name = dimmmensions;
 			packageProductDependencies = (
 				495E089D26299748005527A2 /* ScreenCorners */,
 			);
 			productName = dimensions;
-			productReference = 49B13A9C25FE82CB0037EB51 /* dimensions.app */;
+			productReference = 49B13A9C25FE82CB0037EB51 /* dimmmensions.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -154,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 49B13A9725FE82CB0037EB51 /* Build configuration list for PBXProject "dimensions" */;
+			buildConfigurationList = 49B13A9725FE82CB0037EB51 /* Build configuration list for PBXProject "dimmmensions" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -170,7 +170,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				49B13A9B25FE82CB0037EB51 /* dimensions */,
+				49B13A9B25FE82CB0037EB51 /* dimmmensions */,
 				49A9F79126013851009297B6 /* tests */,
 			);
 		};
@@ -218,7 +218,7 @@
 /* Begin PBXTargetDependency section */
 		49A9F79826013851009297B6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 49B13A9B25FE82CB0037EB51 /* dimensions */;
+			target = 49B13A9B25FE82CB0037EB51 /* dimmmensions */;
 			targetProxy = 49A9F79726013851009297B6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -239,7 +239,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = dimensions;
+				TEST_TARGET_NAME = dimmmensions;
 			};
 			name = Debug;
 		};
@@ -258,7 +258,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = dimensions;
+				TEST_TARGET_NAME = dimmmensions;
 			};
 			name = Release;
 		};
@@ -385,13 +385,13 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 8GR3FK8AQV;
 				ENABLE_PREVIEWS = NO;
-				INFOPLIST_FILE = dimensions/Info.plist;
+				INFOPLIST_FILE = dimmmensions/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marcbouchenoire.dimensions;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcbouchenoire.dimmmensions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -405,13 +405,13 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 8GR3FK8AQV;
 				ENABLE_PREVIEWS = NO;
-				INFOPLIST_FILE = dimensions/Info.plist;
+				INFOPLIST_FILE = dimmmensions/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marcbouchenoire.dimensions;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcbouchenoire.dimmmensions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -430,7 +430,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49B13A9725FE82CB0037EB51 /* Build configuration list for PBXProject "dimensions" */ = {
+		49B13A9725FE82CB0037EB51 /* Build configuration list for PBXProject "dimmmensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49B13AAE25FE82CE0037EB51 /* Debug */,
@@ -439,7 +439,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49B13AB025FE82CE0037EB51 /* Build configuration list for PBXNativeTarget "dimensions" */ = {
+		49B13AB025FE82CE0037EB51 /* Build configuration list for PBXNativeTarget "dimmmensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49B13AB125FE82CE0037EB51 /* Debug */,

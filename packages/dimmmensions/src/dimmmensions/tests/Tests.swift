@@ -8,8 +8,6 @@ import XCTest
 import UIKit
 
 class Tests: XCTestCase {
-    var window2: UIWindow?
-    
     override func setUpWithError() throws {
         continueAfterFailure = false
     }
