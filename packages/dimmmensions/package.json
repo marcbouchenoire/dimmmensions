@@ -54,19 +54,19 @@
     "generate": "node --loader tsm scripts/generate.ts && yarn prettier 'src/data/*.json'",
     "prepublishOnly": "yarn build",
     "test": "uvu --require tsm tests",
-    "test:coverage": "c8 --include=src yarn test && c8 report --reporter=lcov"
+    "test:coverage": "nyc --temp-dir=.nyc.log --include=src yarn test && nyc report --temp-dir=.nyc.log --reporter=lcov"
   },
   "devDependencies": {
     "@types/command-exists": "^1.2.0",
     "@types/listr": "^0.14.4",
     "app-exists": "^2.1.1",
-    "c8": "^7.10.0",
     "command-exists": "^1.2.9",
     "execa": "^6.0.0",
     "globby": "^12.0.2",
     "listr": "^0.14.3",
     "load-json-file": "^7.0.1",
     "microbundle": "^0.14.2",
+    "nyc": "^15.1.0",
     "uvu": "^0.5.2",
     "write-json-file": "^5.0.0"
   }
