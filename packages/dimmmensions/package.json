@@ -19,14 +19,16 @@
   "sideEffects": false,
   "source": "./src/index.ts",
   "main": "./dist/dimmmensions.js",
-  "unpkg": "./dist/dimmmensions.umd.js",
   "module": "./dist/dimmmensions.module.js",
+  "modern": "./dist/dimmmensions.mjs",
   "exports": {
     ".": {
-      "require": "./dist/dimmmensions.js",
-      "import": "./dist/dimmmensions.modern.js",
-      "types": "./dist/index.d.ts"
-    }
+      "types": "./dist/index.d.ts",
+      "module": "./dist/dimmmensions.module.js",
+      "import": "./dist/dimmmensions.mjs",
+      "default": "./dist/dimmmensions.js"
+    },
+    "./package.json": "./package.json"
   },
   "types": "./dist/index.d.ts",
   "lint-staged": {
