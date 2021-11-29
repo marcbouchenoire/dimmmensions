@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "useWorkspaces": true,
-  "version": "2.2.0",
+  "version": "2.2.1",
   "command": {
     "publish": {
       "allowBranch": "main",
