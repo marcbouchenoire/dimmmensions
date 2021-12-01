@@ -102,7 +102,7 @@ function Page({ version }: Props) {
             dimmmensions{" "}
             <a
               className={styles.version}
-              href={`https://github.com/bouchenoiremarc/dimmmensions/releases/tag/v${version}`}
+              href={`https://github.com/marcbouchenoire/dimmmensions/releases/tag/v${version}`}
               rel="noreferrer"
               target="_blank"
             >
@@ -117,7 +117,7 @@ function Page({ version }: Props) {
               <a
                 aria-label="GitHub"
                 className={clsx(styles.link, styles.github)}
-                href="https://github.com/bouchenoiremarc/dimmmensions"
+                href="https://github.com/marcbouchenoire/dimmmensions"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -151,7 +151,7 @@ function Page({ version }: Props) {
               <a
                 aria-label="twitter"
                 className={clsx(styles.link, styles.twitter)}
-                href="https://twitter.com/bouchenoiremarc"
+                href="https://twitter.com/marcbouchenoire"
                 rel="noreferrer"
                 target="_blank"
               >

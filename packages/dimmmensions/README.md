@@ -1,16 +1,16 @@
-# <a href="https://marcbouchenoire.com/projects/dimmmensions"><img src="https://raw.githubusercontent.com/bouchenoiremarc/dimmmensions/main/.github/logo.svg" height="40" alt="Dimmmensions" /></a>
+# <a href="https://marcbouchenoire.com/projects/dimmmensions"><img src="https://raw.githubusercontent.com/marcbouchenoire/dimmmensions/main/.github/logo.svg" height="40" alt="Dimmmensions" /></a>
 
 📏 ️A collection of dimensions from iOS and iPadOS devices.
 
 [![version](https://img.shields.io/badge/iOS%2015.0-message?color=%23b4e)](https://developer.apple.com/sf-symbols/)
-[![build](https://img.shields.io/github/workflow/status/bouchenoiremarc/dimmmensions/CI?color=%23b4e)](https://github.com/bouchenoiremarc/dimmmensions/actions/workflows/ci.yml)
+[![build](https://img.shields.io/github/workflow/status/marcbouchenoire/dimmmensions/CI?color=%23b4e)](https://github.com/marcbouchenoire/dimmmensions/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/dimmmensions?color=%23b4e)](https://www.npmjs.com/package/dimmmensions)
 [![size](https://img.shields.io/bundlephobia/minzip/dimmmensions?label=size&color=%23b4e)](https://bundlephobia.com/package/dimmmensions)
-[![coverage](https://img.shields.io/codecov/c/github/bouchenoiremarc/dimmmensions?color=%23b4e)](https://codecov.io/gh/bouchenoiremarc/dimmmensions)
-[![license](https://img.shields.io/github/license/bouchenoiremarc/dimmmensions?color=%23b4e)](https://github.com/bouchenoiremarc/dimmmensions/blob/main/LICENSE)
+[![coverage](https://img.shields.io/codecov/c/github/marcbouchenoire/dimmmensions?color=%23b4e)](https://codecov.io/gh/marcbouchenoire/dimmmensions)
+[![license](https://img.shields.io/github/license/marcbouchenoire/dimmmensions?color=%23b4e)](https://github.com/marcbouchenoire/dimmmensions/blob/main/LICENSE)
 
 - [🤖 **Automated**](#automation): Authored and updated automatically
-- 🧪 **Reliable**: Fully tested with [100% code coverage](https://codecov.io/gh/bouchenoiremarc/dimmmensions)
+- 🧪 **Reliable**: Fully tested with [100% code coverage](https://codecov.io/gh/marcbouchenoire/dimmmensions)
 - 📦 **Typed**: Written in [TypeScript](https://www.typescriptlang.org/) and includes definitions out-of-the-box
 - 💨 **Zero dependencies**
 
