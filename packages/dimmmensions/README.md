@@ -1,4 +1,4 @@
-# <a href="https://dimmmensions.marcbouchenoire.com"><img src="https://raw.githubusercontent.com/marcbouchenoire/dimmmensions/main/packages/site/public/logo.svg" width="326" height="40" alt="Dimmmensions" style="max-width: 100%; height: auto;" /></a>
+# <a href="https://dimmmensions.marcbouchenoire.com"><img src="https://raw.githubusercontent.com/marcbouchenoire/dimmmensions/main/packages/site/public/logo.svg" width="326" height="40" alt="Dimmmensions" /></a>
 
 📏 A collection of dimensions from iOS and iPadOS devices.
 
