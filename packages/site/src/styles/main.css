@@ -187,4 +187,6 @@ pre[class*="language-"] {
 
 .logo {
   width: calc(1em * 652 / 80);
+  max-width: 100%;
+  height: auto;
 }

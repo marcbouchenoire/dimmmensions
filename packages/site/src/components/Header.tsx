@@ -85,6 +85,7 @@ export function Header({ className, features, ...props }: Props) {
                 <motion.g
                   animate={theme === "light" ? "visible" : "hidden"}
                   fill="currentColor"
+                  initial="hidden"
                   transition={themeTransition}
                   variants={themeVariants}
                 >
@@ -111,7 +112,13 @@ export function Header({ className, features, ...props }: Props) {
         </nav>
         <section className="mt-16 md:mt-20 lg:mt-28">
           <h1 className="text-4xl md:text-5xl font-bold">
-            <img alt="Dimmmensions" className="logo" src="/logo.svg" />
+            <img
+              alt="Dimmmensions"
+              className="logo"
+              height="40"
+              src="/logo.svg"
+              width="326"
+            />
           </h1>
           <p className="mt-6 text-lg md:text-xl text-zinc-700 dark:text-zinc-300">
             A collection of dimensions from iOS and iPadOS devices.
