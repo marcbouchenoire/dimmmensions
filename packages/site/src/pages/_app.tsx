@@ -1,29 +1,29 @@
-import { NextSeo } from "next-seo"
+import { ThemeProvider } from "next-themes"
 import { AppProps } from "next/app"
+import Head from "next/head"
 import { Favicon } from "../components/Favicon"
-import "../styles/main.scss"
+import "../styles/main.css"
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <NextSeo
-        description="A collection of dimensions from iOS."
-        openGraph={{
-          profile: {
-            firstName: "Marc",
-            lastName: "Bouchenoire",
-            username: "marcbouchenoire"
-          },
-          site_name: "Marc Bouchenoire"
-        }}
-        title="dimmmensions"
-        twitter={{
-          handle: "@marcbouchenoire"
-        }}
-      />
+    <ThemeProvider attribute="class" disableTransitionOnChange>
+      <Head>
+        <title>Dimmmensions</title>
+        <meta content="initial-scale=1, viewport-fit=cover" name="viewport" />
+        <meta
+          content="A collection of dimensions from iOS and iPadOS devices."
+          name="description"
+        />
+        <meta content="Dimmmensions" property="og:title" />
+        <meta
+          content="A collection of dimensions from iOS and iPadOS devices."
+          property="og:description"
+        />
+        <meta content="@marcbouchenoire" name="twitter:creator" />
+      </Head>
       <Favicon>📏</Favicon>
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   )
 }
 

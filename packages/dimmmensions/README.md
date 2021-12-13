@@ -1,6 +1,11 @@
-# <a href="https://marcbouchenoire.com/projects/dimmmensions"><img src="https://raw.githubusercontent.com/marcbouchenoire/dimmmensions/main/.github/logo.svg" width="326" alt="Dimmmensions" /></a>
+# <a href="https://dimmmensions.marcbouchenoire.com"><img src="https://raw.githubusercontent.com/marcbouchenoire/dimmmensions/main/packages/site/public/logo.svg" width="326" alt="Dimmmensions" /></a>
 
 📏 A collection of dimensions from iOS and iPadOS devices.
+
+- 🤖 [**Automated**](#automation): Authored and updated automatically
+- 🧪 **Reliable**: Fully tested with [100% code coverage](https://codecov.io/gh/marcbouchenoire/dimmmensions)
+- 📦 **Typed**: Written in [TypeScript](https://www.typescriptlang.org/) and includes definitions out-of-the-box
+- 💨 **Zero dependencies**
 
 [![version](https://img.shields.io/badge/iOS%2015.0-message?color=%23b4e)](https://developer.apple.com/sf-symbols/)
 [![build](https://img.shields.io/github/workflow/status/marcbouchenoire/dimmmensions/CI?color=%23b4e)](https://github.com/marcbouchenoire/dimmmensions/actions/workflows/ci.yml)
@@ -9,17 +14,12 @@
 [![coverage](https://img.shields.io/codecov/c/github/marcbouchenoire/dimmmensions?color=%23b4e)](https://codecov.io/gh/marcbouchenoire/dimmmensions)
 [![license](https://img.shields.io/github/license/marcbouchenoire/dimmmensions?color=%23b4e)](https://github.com/marcbouchenoire/dimmmensions/blob/main/LICENSE)
 
-- [🤖 **Automated**](#automation): Authored and updated automatically
-- 🧪 **Reliable**: Fully tested with [100% code coverage](https://codecov.io/gh/marcbouchenoire/dimmmensions)
-- 📦 **Typed**: Written in [TypeScript](https://www.typescriptlang.org/) and includes definitions out-of-the-box
-- 💨 **Zero dependencies**
-
 ## Introduction
 
 Dimmmensions collects dimensions as objects for each device.
 
 ```typescript
-{
+interface Dimensions {
   device: "iPhone" | "iPad"
   name: string
   radius: number
@@ -32,7 +32,7 @@ Dimmmensions collects dimensions as objects for each device.
 `landscape` and `portrait` both contain orientation-specific dimensions and size classes.
 
 ```typescript
-{
+interface Orientation {
   screen: {
     width: number
     height: number
@@ -266,4 +266,4 @@ const dimensions = getDimensions(320, 568)
 
 ## Automation
 
-Dimensions are extracted from iOS with the `generate` command—using Xcode and Simulator.
+Dimensions are extracted from iOS and iPadOS with the `generate` command—using Xcode and Simulator.
