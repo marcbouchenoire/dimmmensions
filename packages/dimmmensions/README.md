@@ -1,6 +1,6 @@
-# <a href="https://marcbouchenoire.com/projects/dimmmensions"><img src="https://raw.githubusercontent.com/marcbouchenoire/dimmmensions/main/.github/logo.svg" height="40" alt="Dimmmensions" /></a>
+# <a href="https://marcbouchenoire.com/projects/dimmmensions"><img src="https://raw.githubusercontent.com/marcbouchenoire/dimmmensions/main/.github/logo.svg" width="326" alt="Dimmmensions" /></a>
 
-📏 ️A collection of dimensions from iOS and iPadOS devices.
+📏 A collection of dimensions from iOS and iPadOS devices.
 
 [![version](https://img.shields.io/badge/iOS%2015.0-message?color=%23b4e)](https://developer.apple.com/sf-symbols/)
 [![build](https://img.shields.io/github/workflow/status/marcbouchenoire/dimmmensions/CI?color=%23b4e)](https://github.com/marcbouchenoire/dimmmensions/actions/workflows/ci.yml)
