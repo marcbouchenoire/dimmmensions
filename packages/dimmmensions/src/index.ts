@@ -24,4 +24,4 @@ export function getDimensions(width?: number, height?: number): Dimensions[] {
   })
 }
 
-export { Dimensions } from "./types"
+export * from "./types"
