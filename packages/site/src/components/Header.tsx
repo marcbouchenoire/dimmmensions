@@ -129,7 +129,7 @@ export function Header({ className, features, ...props }: Props) {
           />
           <div className="flex flex-wrap gap-4 mt-8 text-center">
             <a
-              className="flex flex-none gap-2 justify-center items-center py-2 px-3 pl-2.5 w-full sm:w-auto font-medium text-white hover:bg-opacity-80 dark:hover:bg-opacity-80 rounded-md shadow-lg transition cursor-pointer hover:shadow-primary-500/10 dark:hover:shadow-primary-400/10 selection:bg-white/30 dark:selection:bg-zinc-900/30 dark:text-zinc-900 bg-primary-500 dark:bg-primary-400 focusable shadow-primary-500/20 dark:shadow-primary-400/20"
+              className="flex flex-none gap-2 justify-center items-center py-2 px-3 pl-2.5 w-full sm:w-auto font-medium text-white hover:bg-opacity-80 dark:hover:bg-opacity-80 rounded-md shadow-lg transition cursor-pointer hover:shadow-primary-500/10 dark:hover:shadow-primary-400/5 selection:bg-white/30 dark:selection:bg-zinc-900/30 dark:text-zinc-900 bg-primary-500 dark:bg-primary-400 focusable shadow-primary-500/20 dark:shadow-primary-400/10"
               href="https://github.com/marcbouchenoire/dimmmensions"
             >
               <svg
