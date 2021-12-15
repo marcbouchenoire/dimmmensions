@@ -122,6 +122,10 @@ module.exports = {
           }
         }
       },
+      transitionProperty: {
+        DEFAULT:
+          "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, text-decoration-color"
+      },
       zIndex: {
         negative: -1
       }

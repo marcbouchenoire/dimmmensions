@@ -7,6 +7,7 @@ import {
 } from "@radix-ui/react-toggle-group"
 import { HTMLMotionProps, LayoutGroup, motion } from "framer-motion"
 import { ReactChild, memo } from "react"
+import { springy } from "../transitions"
 import { mergeProps } from "../utils/merge-props"
 
 interface Props extends Omit<ToggleGroupSingleProps, "type"> {
@@ -50,6 +51,7 @@ export const SegmentedControl = memo(
                 <motion.span
                   aria-hidden
                   layoutId="background"
+                  transition={springy}
                   {...backgroundProps}
                 />
               )}

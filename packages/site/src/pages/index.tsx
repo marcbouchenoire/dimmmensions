@@ -24,20 +24,22 @@ interface Props {
 function Page({ date, content, features }: Props) {
   return (
     <>
-      <Header
-        className="pt-5 md:pt-6 lg:pt-8 mx-auto mb-5 md:mb-6 lg:mb-8 max-w-screen-sm px-5-safe"
-        features={features}
-      />
-      <Playground className="my-10 md:my-16 lg:my-20 mx-auto max-w-screen-lg px-5-safe" />
+      <div className="overflow-hidden absolute top-0 w-screen h-72 md:h-80 lg:h-96 pointer-events-none">
+        <div className="relative h-full content">
+          <div className="absolute h-full opacity-30 aura w-[300%] md:w-[400%] left-[-100%] md:left-[-150%] z-negative" />
+        </div>
+      </div>
+      <Header className="pt-5 md:pt-6 lg:pt-8 content" features={features} />
+      <Playground className="my-10 md:my-16 lg:my-20 content-lg" />
       <article
-        className="my-10 md:my-16 lg:my-20 mx-auto max-w-screen-sm prose px-5-safe prose-zinc dark:prose-invert"
+        className="my-10 md:my-16 lg:my-20 prose content prose-zinc dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}
       />
-      <div className="mx-auto max-w-screen-sm px-5-safe">
+      <div className="content">
         <hr className="w-full border-t border-zinc-150 dark:border-zinc-800" />
       </div>
       <Footer
-        className="flex items-center my-8 md:my-10 lg:my-12 mx-auto max-w-screen-sm px-5-safe"
+        className="flex items-center my-8 md:my-10 lg:my-12 content pb-0-safe"
         date={date}
       />
     </>
