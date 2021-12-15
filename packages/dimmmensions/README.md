@@ -7,7 +7,7 @@
 - 📦 **Typed**: Written in [TypeScript](https://www.typescriptlang.org/) and includes definitions out-of-the-box
 - 💨 **Zero dependencies**
 
-[![version](https://img.shields.io/badge/iOS%2015.0-message?color=%23b4e)](https://developer.apple.com/sf-symbols/)
+[![version](https://img.shields.io/badge/iOS%2015-message?color=%23b4e)](https://developer.apple.com/sf-symbols/)
 [![build](https://img.shields.io/github/workflow/status/marcbouchenoire/dimmmensions/CI?color=%23b4e)](https://github.com/marcbouchenoire/dimmmensions/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/dimmmensions?color=%23b4e)](https://www.npmjs.com/package/dimmmensions)
 [![size](https://img.shields.io/bundlephobia/minzip/dimmmensions?label=size&color=%23b4e)](https://bundlephobia.com/package/dimmmensions)
@@ -24,15 +24,15 @@ interface Dimensions {
   name: string
   radius: number
   scale: number
-  landscape: Orientation
-  portrait: Orientation
+  landscape: OrientedDimensions
+  portrait: OrientedDimensions
 }
 ```
 
 `landscape` and `portrait` both contain orientation-specific dimensions and size classes.
 
 ```typescript
-interface Orientation {
+interface OrientedDimensions {
   screen: {
     width: number
     height: number

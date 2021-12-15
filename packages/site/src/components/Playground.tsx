@@ -14,7 +14,7 @@ import {
   useMemo,
   useState
 } from "react"
-import { springy } from "../transitions"
+import { springier } from "../transitions"
 import { getPercentage } from "../utils/get-percentage"
 import { SegmentedControl } from "./SegmentedControl"
 
@@ -293,7 +293,7 @@ export function Playground(props: ComponentProps<"section">) {
                 style={{
                   transformOrigin: "center center"
                 }}
-                transition={springy}
+                transition={springier}
                 variants={{
                   portrait: { rotate: 0 },
                   landscape: { rotate: -90 }
@@ -328,8 +328,7 @@ export function Playground(props: ComponentProps<"section">) {
               aria-label="Orientation"
               backgroundProps={{
                 className:
-                  "absolute inset-0.5 bg-white dark:bg-zinc-550 rounded-md shadow z-0",
-                transition: springy
+                  "absolute inset-0.5 bg-white dark:bg-zinc-550 rounded-md shadow z-0"
               }}
               className="grid grid-flow-col auto-cols-fr w-full sm:w-auto h-9 rounded-lg transition-colors gap-x-[4px] bg-zinc-100 hover:bg-zinc-150 text-zinc-500 dark:bg-zinc-750 dark:hover:bg-zinc-700 dark:text-zinc-350"
               itemProps={{

@@ -6,13 +6,40 @@ body {
   @apply bg-white dark:bg-zinc-900 selection:bg-primary-500/30 dark:selection:bg-primary-400/40;
 }
 
+@layer base {
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a,
+  option,
+  label,
+  *[role="button"],
+  button:not([disabled]),
+  input:not([disabled]),
+  textarea:not([disabled]),
+  select:not([disabled]) {
+    touch-action: manipulation;
+  }
+}
+
 @layer utilities {
   .focusable {
     @apply box-decoration-clone focus:outline-none focus:ring focus:ring-primary-500 dark:focus:ring-primary-400 focus:ring-opacity-40 dark:focus:ring-opacity-40;
   }
 
   .link {
-    @apply transition focusable rounded-sm ring-offset-2 ring-offset-white dark:ring-offset-zinc-900 underline underline-offset-4 focus:no-underline decoration-primary-500/40 dark:decoration-primary-400/40 selection:decoration-primary-500/40 dark:selection:decoration-primary-400/40 hover:opacity-60;
+    @apply transition focusable rounded-md underline underline-offset-4 decoration-zinc-600/20 dark:decoration-white/20 selection:decoration-zinc-600/20 dark:selection:decoration-white/20 hover:decoration-zinc-600/40 dark:hover:decoration-white/40;
+  }
+}
+
+@layer components {
+  .content {
+    @apply mx-auto max-w-screen-sm px-5-safe;
+  }
+
+  .content-lg {
+    @apply mx-auto max-w-screen-lg px-5-safe;
   }
 }
 
@@ -91,7 +118,7 @@ pre[class*="language-"] {
     .language-markdown &.strike &.punctuation,
     .language-markdown &.list.punctuation,
     .language-markdown &.title.important > &.punctuation {
-      @apply text-rose-600 dark:text-rose-300;
+      @apply text-pink-600 dark:text-pink-300;
     }
 
     &.attr-name,
@@ -151,7 +178,7 @@ pre[class*="language-"] {
     @apply scroll-mt-6;
 
     a[aria-hidden="true"] {
-      @apply relative no-underline opacity-0 transition focus:outline-none text-zinc-300 hover:!text-zinc-400 dark:text-zinc-600 dark:hover:!text-zinc-500;
+      @apply relative no-underline hidden md:block opacity-0 transition focus:outline-none text-zinc-300 hover:!text-zinc-400 dark:text-zinc-600 dark:hover:!text-zinc-500;
 
       padding-right: 1em;
       margin-left: -1em;
@@ -176,13 +203,35 @@ pre[class*="language-"] {
     @apply my-1;
 
     summary {
-      @apply rounded-md py-0.5 pl-1 cursor-pointer focusable transition;
+      @apply my-1 rounded-md cursor-pointer focusable ring-offset-2 dark:ring-offset-zinc-900 transition;
     }
   }
 }
 
+.avatar {
+  @apply bg-white inline-block overflow-hidden relative rounded-full ring-offset-2;
+
+  box-shadow: 0 0 0 2px theme("colors.white"), 0 0 1px 2px rgb(0 0 0 / 8%),
+    0 1px 4px 2px rgb(0 0 0 / 8%), 0 2px 8px 2px rgb(0 0 0 / 6%);
+
+  &::before {
+    @apply absolute inset-0 pointer-events-none rounded-full z-10;
+
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 6%);
+    content: "";
+  }
+
+  & > span {
+    @apply !absolute !inset-0 !w-full !h-full;
+  }
+}
+
 .aura {
-  mask-image: radial-gradient(farthest-side at center -100%, #000, transparent);
+  background: radial-gradient(
+    farthest-side at center -100%,
+    theme("colors.primary.500"),
+    transparent
+  );
 }
 
 .logo {
