@@ -45,7 +45,7 @@ module.exports = {
         device: `0px 0px 0px 4px ${theme(
           "colors.white"
         )}, 0px 0px 1px 4px rgba(0, 0, 0, 0.08), 0px 2px 8px 4px rgba(0, 0, 0, 0.08), 0px 6px 42px 4px rgba(0, 0, 0, 0.06)`,
-        "device-highlight": `0px 0px 1px 4px ${theme(
+        "device-invert": `0px 0px 1px 4px ${theme(
           "colors.zinc.850"
         )}, 0px 0px 1px 4px ${theme(
           "colors.zinc.700"
@@ -53,16 +53,16 @@ module.exports = {
       }),
       colors: {
         primary: {
-          50: "#FCF5FF",
-          100: "#F7E8FF",
-          200: "#EFD3FF",
-          300: "#E4B0FD",
-          400: "#D47FFB",
-          500: "#C14EF3",
-          600: "#AA2DDF",
-          700: "#901FBF",
-          800: "#791D9C",
-          900: "#641B7E"
+          50: "#f8f4ff",
+          100: "#f0e9fe",
+          200: "#e3d6fe",
+          300: "#ceb5fd",
+          400: "#b488fb",
+          500: "#9a59f6",
+          600: "#8837eb",
+          700: "#7625d3",
+          800: "#6421af",
+          900: "#521c8e"
         },
         zinc: {
           150: "#ececee",
@@ -84,7 +84,7 @@ module.exports = {
         "2xs": [
           "0.65rem",
           {
-            lineHeight: "1rem"
+            lineHeight: 1
           }
         ]
       },

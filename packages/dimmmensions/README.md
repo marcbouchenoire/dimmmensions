@@ -7,12 +7,12 @@
 - 📦 **Typed**: Written in [TypeScript](https://www.typescriptlang.org/) and includes definitions out-of-the-box
 - 💨 **Zero dependencies**
 
-[![version](https://img.shields.io/badge/iOS%2015-message?color=%23b4e)](https://developer.apple.com/sf-symbols/)
-[![build](https://img.shields.io/github/workflow/status/marcbouchenoire/dimmmensions/CI?color=%23b4e)](https://github.com/marcbouchenoire/dimmmensions/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/dimmmensions?color=%23b4e)](https://www.npmjs.com/package/dimmmensions)
-[![size](https://img.shields.io/bundlephobia/minzip/dimmmensions?label=size&color=%23b4e)](https://bundlephobia.com/package/dimmmensions)
-[![coverage](https://img.shields.io/codecov/c/github/marcbouchenoire/dimmmensions?color=%23b4e)](https://codecov.io/gh/marcbouchenoire/dimmmensions)
-[![license](https://img.shields.io/github/license/marcbouchenoire/dimmmensions?color=%23b4e)](https://github.com/marcbouchenoire/dimmmensions/blob/main/LICENSE)
+[![version](https://img.shields.io/badge/iOS%2015-message?color=%2395f)](https://developer.apple.com/sf-symbols/)
+[![build](https://img.shields.io/github/workflow/status/marcbouchenoire/dimmmensions/CI?color=%2395f)](https://github.com/marcbouchenoire/dimmmensions/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dimmmensions?color=%2395f)](https://www.npmjs.com/package/dimmmensions)
+[![size](https://img.shields.io/bundlephobia/minzip/dimmmensions?label=size&color=%2395f)](https://bundlephobia.com/package/dimmmensions)
+[![coverage](https://img.shields.io/codecov/c/github/marcbouchenoire/dimmmensions?color=%2395f)](https://codecov.io/gh/marcbouchenoire/dimmmensions)
+[![license](https://img.shields.io/github/license/marcbouchenoire/dimmmensions?color=%2395f)](https://github.com/marcbouchenoire/dimmmensions/blob/main/LICENSE)
 
 ## Introduction
 

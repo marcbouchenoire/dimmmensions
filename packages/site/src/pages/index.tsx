@@ -8,9 +8,10 @@ import rehypeStringify from "rehype-stringify"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import { unified } from "unified"
+import pkg from "../../../dimmmensions/package.json"
+import { Dimensions } from "../components/Dimensions"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
-import { Playground } from "../components/Playground"
 import rehypeRemoveImages from "../plugins/rehype/remove-images"
 import remarkFilterHeadings from "../plugins/remark/filter-headings"
 import remarkFindNode from "../plugins/remark/find-node"
@@ -19,9 +20,10 @@ interface Props {
   content: string
   date: string
   features: string
+  version: string
 }
 
-function Page({ date, content, features }: Props) {
+function Page({ date, content, features, version }: Props) {
   return (
     <>
       <div className="overflow-hidden absolute top-0 w-screen h-72 md:h-80 lg:h-96 pointer-events-none">
@@ -29,8 +31,12 @@ function Page({ date, content, features }: Props) {
           <div className="absolute h-full opacity-30 aura w-[300%] md:w-[400%] left-[-100%] md:left-[-150%] z-negative" />
         </div>
       </div>
-      <Header className="pt-5 md:pt-6 lg:pt-8 content" features={features} />
-      <Playground className="my-10 md:my-16 lg:my-20 content-lg" />
+      <Header
+        className="pt-5 md:pt-6 lg:pt-8 content"
+        features={features}
+        version={version}
+      />
+      <Dimensions className="my-10 md:my-16 lg:my-20 content-lg" />
       <article
         className="my-10 md:my-16 lg:my-20 prose content prose-zinc dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}
@@ -73,6 +79,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
+      version: pkg.version,
       date: String(new Date().getFullYear()),
       content: String(content.value),
       features: String(features.value)

@@ -126,7 +126,7 @@ function Select(props: ComponentProps<"select">) {
   )
 }
 
-export function Playground(props: ComponentProps<"section">) {
+export function Dimensions(props: ComponentProps<"section">) {
   const [device, setDevice] = useState(DEFAULT_DEVICE)
   const [orientation, setOrientation] =
     useState<Orientation>(DEFAULT_ORIENTATION)
@@ -237,7 +237,7 @@ export function Playground(props: ComponentProps<"section">) {
       <div className="flex flex-col rounded-md border border-zinc-150 dark:border-zinc-800">
         <div className="flex overflow-hidden justify-center items-center min-h-0 aspect-[16/9]">
           <div
-            className="overflow-hidden relative flex-none bg-white shadow-device dark:shadow-device-highlight dark:bg-zinc-850"
+            className="overflow-hidden relative flex-none bg-white shadow-device dark:shadow-device-invert dark:bg-zinc-850"
             key={orientation}
             style={screen}
           >
@@ -288,7 +288,7 @@ export function Playground(props: ComponentProps<"section">) {
               <motion.svg
                 animate={orientation}
                 className="absolute top-2 left-2 transition-colors pointer-events-none"
-                height={20}
+                height="20"
                 role="presentation"
                 style={{
                   transformOrigin: "center center"
@@ -298,17 +298,17 @@ export function Playground(props: ComponentProps<"section">) {
                   portrait: { rotate: 0 },
                   landscape: { rotate: -90 }
                 }}
-                width={20}
+                width="20"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 {icon}
               </motion.svg>
               <svg
-                className="absolute top-2 right-2 transition-colors pointer-events-none"
+                className="absolute top-2 right-1 transition-colors pointer-events-none"
                 fill="currentColor"
-                height={20}
+                height="20"
                 role="presentation"
-                width={20}
+                width="20"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -319,7 +319,7 @@ export function Playground(props: ComponentProps<"section">) {
               </svg>
               <Select
                 aria-label="Device"
-                className="flex flex-none justify-center items-center pr-8 pl-9 w-full h-full text-sm font-medium truncate rounded-md transition appearance-none cursor-pointer focusable bg-zinc-100 text-zinc-500 dark:bg-zinc-750 dark:text-zinc-350 hover:bg-zinc-150 dark:hover:bg-zinc-700"
+                className="flex flex-none justify-center items-center pr-7 pl-9 w-full h-full text-sm font-medium truncate rounded-md transition appearance-none cursor-pointer focusable bg-zinc-100 text-zinc-500 dark:bg-zinc-750 dark:text-zinc-350 hover:bg-zinc-150 dark:hover:bg-zinc-700"
                 onChange={handleDeviceChange}
                 value={device}
               />
@@ -345,7 +345,7 @@ export function Playground(props: ComponentProps<"section">) {
             />
           </div>
           <div className="grid sm:flex flex-1 grid-cols-2 gap-6 sm:gap-4 items-center py-4 md:py-0 px-5 md:px-3">
-            <div className="flex flex-col flex-1 gap-1.5 items-center tabular-nums whitespace-nowrap">
+            <div className="flex flex-col flex-1 gap-2 items-center tabular-nums whitespace-nowrap">
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-200">
                 {orientedDimensions.screen.width}
                 <span className="text-zinc-400">pt</span> ×{" "}
@@ -356,7 +356,7 @@ export function Playground(props: ComponentProps<"section">) {
                 Screen
               </p>
             </div>
-            <div className="flex flex-col gap-1.5 items-center tabular-nums whitespace-nowrap flex-3/4">
+            <div className="flex flex-col gap-2 items-center tabular-nums whitespace-nowrap flex-3/4">
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-200">
                 {dimensions.radius}
                 <span className="text-zinc-400">pt</span>
@@ -365,7 +365,7 @@ export function Playground(props: ComponentProps<"section">) {
                 Radius
               </p>
             </div>
-            <div className="flex flex-col gap-1.5 items-center tabular-nums whitespace-nowrap flex-3/4">
+            <div className="flex flex-col gap-2 items-center tabular-nums whitespace-nowrap flex-3/4">
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-200">
                 <span className="text-zinc-400">@</span>
                 {dimensions.scale}x
@@ -374,7 +374,7 @@ export function Playground(props: ComponentProps<"section">) {
                 Scale
               </p>
             </div>
-            <div className="flex flex-col flex-1 gap-1.5 items-center tabular-nums whitespace-nowrap">
+            <div className="flex flex-col flex-1 gap-2 items-center tabular-nums whitespace-nowrap">
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-200">
                 <span aria-label="width" className="text-zinc-400">
                   w

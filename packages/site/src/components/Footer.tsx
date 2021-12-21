@@ -30,15 +30,15 @@ export function Footer({ className, date, ...props }: Props) {
         <span className="hidden sm:inline whitespace-pre">Made by </span>
         <a
           className="inline-flex items-center link"
-          href="https://marcbouchenoire.com/"
+          href="https://marcbouchenoire.com"
         >
           <span className="mr-2 ml-1.5 w-4 h-4 avatar">
             <Image
               alt="Portrait of Marc Bouchenoire"
-              height={20}
+              height="20"
               layout="fixed"
               src={avatar}
-              width={20}
+              width="20"
             />
           </span>{" "}
           Marc Bouchenoire

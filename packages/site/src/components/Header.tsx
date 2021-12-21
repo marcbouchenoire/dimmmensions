@@ -1,4 +1,3 @@
-import clsx from "clsx"
 import { Transition, Variants, motion } from "framer-motion"
 import Image from "next/image"
 import { ComponentProps } from "react"
@@ -9,6 +8,7 @@ import { springier, springiest } from "../transitions"
 
 interface Props extends ComponentProps<"header"> {
   features: string
+  version: string
 }
 
 const NPM_INSTALL = "npm i dimmmensions"
@@ -60,14 +60,14 @@ const clipboardVariants: Variants = {
   }
 }
 
-export function Header({ className, features, ...props }: Props) {
+export function Header({ features, version, ...props }: Props) {
   const [theme, toggleTheme] = useSystemTheme()
   const [clipboardCopied, handleClipboardClick] = useCopy(NPM_INSTALL)
 
   return (
-    <header className={clsx("relative", className)} {...props}>
+    <header {...props}>
       <nav className="flex items-center text-zinc-700 dark:text-zinc-100">
-        <p className="flex items-center whitespace-pre">
+        <p className="flex items-center leading-none whitespace-pre">
           <a
             aria-label="marcbouchenoire.com"
             className="mr-0.5 w-5 h-5 hover:opacity-60 transition focusable avatar"
@@ -75,16 +75,16 @@ export function Header({ className, features, ...props }: Props) {
           >
             <Image
               alt="Portrait of Marc Bouchenoire"
-              height={20}
+              height="20"
               layout="fixed"
               src={avatar}
-              width={20}
+              width="20"
             />
           </a>{" "}
           <svg
             className="mx-1.5"
-            fill="none"
             height="20"
+            role="presentation"
             width="10"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -97,18 +97,24 @@ export function Header({ className, features, ...props }: Props) {
             />
           </svg>
           <strong>Dimmmensions</strong>
+          <a
+            className="py-1 px-1.5 ml-1.5 font-semibold rounded-full transition cursor-pointer text-2xs focusable hover:bg-primary-500/20 dark:hover:bg-primary-400/30 text-primary-500 bg-primary-500/10 dark:bg-primary-400/20 dark:text-primary-400"
+            href="https://github.com/marcbouchenoire/dimmmensions/releases"
+          >
+            v{version}
+          </a>
         </p>
         <div className="ml-auto">
           <button
             aria-label="Toggle Theme"
-            className="p-1.5 bg-transparent rounded-md transition hover:bg-zinc-500/10 dark:hover:bg-zinc-100/10 focusable"
+            className="p-1.5 bg-transparent rounded-md transition hover:bg-primary-500/10 dark:hover:bg-primary-400/20 focusable"
             onClick={toggleTheme}
           >
             <svg
               className="flex-none transition-colors"
-              height={24}
+              height="24"
               role="presentation"
-              width={24}
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <motion.g
@@ -140,20 +146,14 @@ export function Header({ className, features, ...props }: Props) {
         </div>
       </nav>
       <section className="mt-16 md:mt-20 lg:mt-28">
-        <h1 className="text-4xl md:text-5xl font-bold">
-          <img
-            alt="Dimmmensions"
-            className="logo"
-            height="40"
-            src="/logo.svg"
-            width="326"
-          />
+        <h1 className="text-4xl md:text-5xl font-bold logo">
+          <img alt="Dimmmensions" height="40" src="/logo.svg" width="326" />
         </h1>
         <p className="mt-6 text-lg md:text-xl text-zinc-700 dark:text-zinc-300">
           A collection of dimensions from iOS and iPadOS devices.
         </p>
         <div
-          className="mt-6 prose prose-zinc dark:prose-invert"
+          className="mt-6 prose prose-zinc prose-primary dark:prose-invert"
           dangerouslySetInnerHTML={{ __html: features }}
         />
         <div className="flex flex-wrap gap-4 mt-8 text-center">
@@ -162,9 +162,9 @@ export function Header({ className, features, ...props }: Props) {
             href="https://github.com/marcbouchenoire/dimmmensions"
           >
             <svg
-              height={24}
+              height="24"
               role="presentation"
-              width={24}
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -183,9 +183,9 @@ export function Header({ className, features, ...props }: Props) {
           >
             <svg
               className="flex-none"
-              height={24}
+              height="24"
               role="presentation"
-              width={24}
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -198,9 +198,9 @@ export function Header({ className, features, ...props }: Props) {
             <span className="truncate">{NPM_INSTALL}</span>
             <svg
               className="flex-none opacity-30 dark:opacity-50 transition-opacity"
-              height={24}
+              height="24"
               role="presentation"
-              width={24}
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <g clipRule="evenodd" fill="currentColor" fillRule="evenodd">
