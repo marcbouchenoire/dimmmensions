@@ -11,26 +11,57 @@ import { springy } from "../transitions"
 import { mergeProps } from "../utils/merge-props"
 
 interface Props extends Omit<ToggleGroupSingleProps, "type"> {
+  /**
+   * A set of `motion.span` props for the background element.
+   */
   backgroundProps?: HTMLMotionProps<"span">
-  itemProps?: Omit<ToggleGroupItemProps, "value">
+
+  /**
+   * A list of option labels.
+   */
   labels?: ReactChild[]
+
+  /**
+   * A list of option values.
+   */
   options: string[]
-  selectedItemProps?: Omit<ToggleGroupItemProps, "value">
+
+  /**
+   * A set of props for the segment elements.
+   */
+  segmentProps?: Omit<ToggleGroupItemProps, "value">
+
+  /**
+   * A set of props for the currently selected segment element.
+   */
+  selectedSegmentProps?: Omit<ToggleGroupItemProps, "value">
 }
 
+/**
+ * A set of two or more mutually exclusive segments.
+ *
+ * @param props - A set of props.
+ * @param props.options - A list of option values.
+ * @param [props.labels] - A list of option labels.
+ * @param [props.value] - The default value.
+ * @param [props.onValueChange] - A function invoked whenever the value changes.
+ * @param [props.segmentProps] - A set of props for the segment elements.
+ * @param [props.selectedSegmentProps] - A set of props for the currently selected segment element.
+ * @param [props.backgroundProps] - A set of `motion.span` props for the background element.
+ */
 export const SegmentedControl = memo(
   ({
     options,
     labels = [],
     value,
     onValueChange,
-    itemProps = {},
-    selectedItemProps = {},
+    segmentProps = {},
+    selectedSegmentProps = {},
     backgroundProps = {},
     ...props
   }: Props) => {
     const id = useId()
-    const mergedItemProps = mergeProps(itemProps, selectedItemProps)
+    const mergedSegmentProps = mergeProps(segmentProps, selectedSegmentProps)
 
     return (
       <LayoutGroup id={id}>
@@ -44,7 +75,7 @@ export const SegmentedControl = memo(
             <Item
               key={index}
               value={option}
-              {...(option === value ? mergedItemProps : itemProps)}
+              {...(option === value ? mergedSegmentProps : segmentProps)}
             >
               <span className="relative z-10">{labels[index] ?? option}</span>
               {option === value && (

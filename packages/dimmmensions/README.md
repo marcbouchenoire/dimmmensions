@@ -256,7 +256,7 @@ const dimensions = getDimensions()
 // dimensions: [Dimensions, Dimensions, Dimensions...]
 ```
 
-Given a specific `width` and `height`, `getDimensions` will return dimensions that match the specified `screen` size, either in portrait or landscape.
+Given a specific `width` and `height`, `getDimensions` will return dimensions that match the specified screen size, either in portrait or landscape.
 
 ```typescript
 const dimensions = getDimensions(320, 568)

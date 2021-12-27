@@ -3,8 +3,34 @@ import { isNumber } from "./guards"
 import { Dimensions } from "./types"
 import { isMultiple } from "./utils/is-multiple"
 
+/**
+ * A collection of all dimensions.
+ *
+ * @example
+ *
+ * ```js
+ * import { dimensions } from "dimmmensions"
+ *
+ * // dimensions: [Dimensions, Dimensions, Dimensions...]
+ * ```
+ */
 export const dimensions = data as Dimensions[]
 
+/**
+ * Get dimensions, optionally matching a specified screen size.
+ *
+ * @param [width] - A screen width.
+ * @param [height] - A screen height.
+ * @returns A collection of dimensions.
+ *
+ * @example
+ *
+ * ```js
+ * const symbol = getSymbol("scribble.variable")
+ *
+ * // symbol: "􀤑"
+ * ```
+ */
 export function getDimensions(): Dimensions[]
 export function getDimensions(width: number, height: number): Dimensions[]
 export function getDimensions(width?: number, height?: number): Dimensions[] {

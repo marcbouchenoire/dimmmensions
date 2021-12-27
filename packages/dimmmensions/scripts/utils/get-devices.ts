@@ -1,25 +1,26 @@
 import { execa } from "execa"
 
 export interface SimulatorDevice {
-  dataPath: string
-  deviceTypeIdentifier: string
-  isAvailable: boolean
-  logPath: string
+  /**
+   * A formatted device name.
+   */
   name: string
-  state: string
-  udid: string
 }
 
+/**
+ * Get a formatted name from a device platform.
+ *
+ * @param platform - The device platform to get the name of.
+ */
 function getPlatformName(platform: string) {
   const [, name, version] = platform.match(/([A-Za-z]+)-([\d-]+)/) ?? []
 
   return `${name} ${version.replace("-", ".")}`
 }
 
-export function getDeviceNames(devices: SimulatorDevice[]) {
-  return devices.map((device) => device.name)
-}
-
+/**
+ * Get a list of all iOS and iPadOS devices from Xcode.
+ */
 export async function getDevices(): Promise<[SimulatorDevice[], string]> {
   const { stdout } = await execa("xcrun", [
     "simctl",

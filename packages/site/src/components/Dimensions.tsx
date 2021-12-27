@@ -19,10 +19,23 @@ import { getPercentage } from "../utils/get-percentage"
 import { SegmentedControl } from "./SegmentedControl"
 
 interface Pattern {
-  color: string
+  /**
+   * A list of one or more classes.
+   */
+  className: string
+
+  /**
+   * A path outlining the pattern's content frame.
+   */
   path?: string
 }
 
+/**
+ * Sort sets of dimensions.
+ *
+ * @param a - The first set of dimensions.
+ * @param b - The second set of dimensions.
+ */
 function sortDimensions(a: Dimensions, b: Dimensions) {
   return a.name.localeCompare(b.name)
 }
@@ -38,6 +51,9 @@ const attributedDimensions = new Map(
   defaultDimensions.map((dimensions) => [dimensions.name, dimensions])
 )
 
+/**
+ * Get the most recent device as a default.
+ */
 function getDefaultDevice() {
   const devices = defaultDimensions
     .map((dimensions) => dimensions.name.match(/\w+\s+(\d+)$/))
@@ -55,6 +71,13 @@ const SCREEN_PATTERN_SIZE = 8
 const SCREEN_PERCENTAGE_MIN = 50
 const SCREEN_PERCENTAGE_MAX = 75
 
+/**
+ * Create a path from a frame and a reference size.
+ *
+ * @param frame - The frame to create path from.
+ * @param width - The reference width.
+ * @param height - The reference height.
+ */
 function getPathFromFrame(frame: Frame, width: number, height: number) {
   return `M ${frame.left} ${frame.top}
           V ${height - frame.bottom}
@@ -62,6 +85,15 @@ function getPathFromFrame(frame: Frame, width: number, height: number) {
           V ${frame.top} Z`
 }
 
+/**
+ * Create a path from bounds and a reference frame.
+ *
+ * @param screen - The screen dimensions.
+ * @param screen.width - The screen width.
+ * @param screen.height - The screen height.
+ * @param reference - The reference frame to create a path from.
+ * @param [bounds] - The optional bounds to inset the reference frame from.
+ */
 function getPathFromDimensions(
   { width, height }: Screen,
   reference: Frame,
@@ -105,6 +137,11 @@ const iPadRoundedIcon = (
   </g>
 )
 
+/**
+ * A select element containing all iOS and iPadOS devices as options.
+ *
+ * @param props - A set of `select` props.
+ */
 function Select(props: ComponentProps<"select">) {
   return (
     <select {...props}>
@@ -126,6 +163,11 @@ function Select(props: ComponentProps<"select">) {
   )
 }
 
+/**
+ * An interactive section to explore all dimensions.
+ *
+ * @param props - A set of `section` props.
+ */
 export function Dimensions(props: ComponentProps<"section">) {
   const [device, setDevice] = useState(DEFAULT_DEVICE)
   const [orientation, setOrientation] =
@@ -183,14 +225,14 @@ export function Dimensions(props: ComponentProps<"section">) {
   const patterns: Pattern[] = useMemo(
     () => [
       {
-        color: "text-violet-500 dark:text-violet-300",
+        className: "text-violet-500 dark:text-violet-300",
         path: getPathFromDimensions(
           orientedDimensions.screen,
           orientedDimensions.safeArea
         )
       },
       {
-        color: "text-cyan-500 dark:text-cyan-300",
+        className: "text-cyan-500 dark:text-cyan-300",
         path: getPathFromDimensions(
           orientedDimensions.screen,
           orientedDimensions.layoutMargins,
@@ -198,7 +240,7 @@ export function Dimensions(props: ComponentProps<"section">) {
         )
       },
       {
-        color: "text-lime-500 dark:text-lime-300",
+        className: "text-lime-500 dark:text-lime-300",
         path: getPathFromDimensions(
           orientedDimensions.screen,
           orientedDimensions.readableContent,
@@ -249,9 +291,9 @@ export function Dimensions(props: ComponentProps<"section">) {
               width="100%"
             >
               <defs>
-                {patterns.map(({ color }, index) => (
+                {patterns.map(({ className }, index) => (
                   <pattern
-                    className={color}
+                    className={className}
                     height={SCREEN_PATTERN_SIZE}
                     id={`${index}`}
                     key={`pattern-${index}`}
@@ -269,11 +311,15 @@ export function Dimensions(props: ComponentProps<"section">) {
                   </pattern>
                 ))}
               </defs>
-              {patterns.map(({ path, color }, index) => {
+              {patterns.map(({ path, className }, index) => {
                 if (!path) return null
 
                 return (
-                  <g className={color} fillRule="evenodd" key={`fill-${index}`}>
+                  <g
+                    className={className}
+                    fillRule="evenodd"
+                    key={`fill-${index}`}
+                  >
                     <path className="opacity-20 fill-current" d={path} />
                     <path d={path} fill={`url(#${index})`} />
                   </g>
@@ -331,14 +377,14 @@ export function Dimensions(props: ComponentProps<"section">) {
                   "absolute inset-0.5 bg-white dark:bg-zinc-550 rounded-md shadow z-0"
               }}
               className="grid grid-flow-col auto-cols-fr w-full sm:w-auto h-9 rounded-lg transition-colors gap-x-[4px] bg-zinc-100 hover:bg-zinc-150 text-zinc-500 dark:bg-zinc-750 dark:hover:bg-zinc-700 dark:text-zinc-350"
-              itemProps={{
-                className:
-                  "flex relative justify-center items-center px-3 text-sm font-medium rounded-lg transition-shadow focusable"
-              }}
               labels={["Portrait", "Landscape"]}
               onValueChange={handleOrientationChange}
               options={["portrait", "landscape"]}
-              selectedItemProps={{
+              segmentProps={{
+                className:
+                  "flex relative justify-center items-center px-3 text-sm font-medium rounded-lg transition-shadow focusable"
+              }}
+              selectedSegmentProps={{
                 className: "text-zinc-600 dark:text-zinc-100"
               }}
               value={orientation}
