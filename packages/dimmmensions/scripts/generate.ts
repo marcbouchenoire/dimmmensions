@@ -9,8 +9,8 @@ import { writeJsonFile } from "write-json-file"
 import {
   Device,
   Dimensions,
-  ExtractedDimensions,
-  OrientedDimensions
+  OrientedDimensions,
+  SimulatorDimensions
 } from "../src/types"
 import { SimulatorDevice, getDevices } from "./utils/get-devices"
 import { getHashCode } from "./utils/get-hash-code"
@@ -24,8 +24,19 @@ const DIMENSIONS = "./src/data/dimensions.json"
 const LOGS = "./src/data/logs.json"
 
 interface Context {
+  /**
+   * A list of Simulator devices.
+   */
   devices: SimulatorDevice[]
+
+  /**
+   * A list of dimensions.
+   */
   dimensions: Dimensions[]
+
+  /**
+   * The current device's platform.
+   */
   platform: string
 }
 
@@ -114,7 +125,7 @@ const tasks = new Listr([
                       scale: extractedScale,
                       radius: extractedRadius,
                       ...dimensions
-                    }: ExtractedDimensions = await loadJsonFile(attachment)
+                    }: SimulatorDimensions = await loadJsonFile(attachment)
 
                     device = extractedDevice as Device
                     scale = extractedScale
