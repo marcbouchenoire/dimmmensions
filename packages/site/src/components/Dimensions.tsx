@@ -394,7 +394,8 @@ export function Dimensions(props: ComponentProps<"section">) {
             <div className="flex flex-col flex-1 gap-2 items-center tabular-nums whitespace-nowrap">
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-200">
                 {orientedDimensions.screen.width}
-                <span className="text-zinc-400">pt</span> ×{" "}
+                <span className="text-zinc-400">pt</span>{" "}
+                <span className="text-zinc-400 dark:text-zinc-400">×</span>{" "}
                 {orientedDimensions.screen.height}
                 <span className="text-zinc-400">pt</span>
               </p>
@@ -431,7 +432,7 @@ export function Dimensions(props: ComponentProps<"section">) {
                 >
                   {orientedDimensions.sizeClass.horizontal.charAt(0)}
                 </span>{" "}
-                ×{" "}
+                <span className="text-zinc-400 dark:text-zinc-400">×</span>{" "}
                 <span
                   aria-label="height"
                   className="text-zinc-400 dark:text-zinc-400"
