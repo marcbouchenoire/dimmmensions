@@ -14,9 +14,9 @@ import {
   useMemo,
   useState
 } from "react"
-import { springier } from "../transitions"
-import { getPercentage } from "../utils/get-percentage"
-import { SegmentedControl } from "./SegmentedControl"
+import { springier } from "../../transitions"
+import { getPercentage } from "../../utils/get-percentage"
+import { SegmentedControl } from "../controls/SegmentedControl"
 
 interface Pattern {
   /**

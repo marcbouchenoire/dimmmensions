@@ -8,10 +8,8 @@ import rehypeStringify from "rehype-stringify"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import { unified } from "unified"
-import pkg from "../../../dimmmensions/package.json"
-import { Dimensions } from "../components/Dimensions"
-import { Footer } from "../components/Footer"
-import { Header } from "../components/Header"
+import { Dimensions } from "../components/sections/Dimensions"
+import { Introduction } from "../components/sections/Introduction"
 import rehypeRemoveImages from "../plugins/rehype/remove-images"
 import remarkFilterHeadings from "../plugins/remark/filter-headings"
 import remarkFindNode from "../plugins/remark/find-node"
@@ -23,56 +21,28 @@ interface Props {
   content: string
 
   /**
-   * The current year.
-   */
-  date: string
-
-  /**
    * The README list of features formatted as HTML.
    */
   features: string
-
-  /**
-   * The latest package version.
-   */
-  version: string
 }
 
 /**
  * The index page component.
  *
  * @param props - A set of props.
- * @param props.date - The current year.
  * @param props.content - The filtered README content formatted as HTML.
  * @param props.features - The README list of features formatted as HTML.
- * @param props.version - The latest package version.
  */
-function Page({ date, content, features, version }: Props) {
+function Page({ content, features }: Props) {
   return (
-    <>
-      <div className="overflow-hidden absolute top-0 w-screen h-72 pointer-events-none md:h-80 lg:h-96">
-        <div className="relative h-full content">
-          <div className="absolute left-[-100%] w-[300%] h-full opacity-30 md:left-[-150%] md:w-[400%] aura z-negative" />
-        </div>
-      </div>
-      <Header
-        className="pt-5 md:pt-6 lg:pt-8 content"
-        features={features}
-        version={version}
-      />
+    <main>
+      <Introduction className="content" features={features} />
       <Dimensions className="my-10 md:my-16 lg:my-20 content-lg" />
       <article
-        className="my-10 prose md:my-16 lg:my-20 content prose-zinc dark:prose-invert"
+        className="mb-10 prose md:mb-16 lg:mb-20 content prose-zinc dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}
       />
-      <div className="content">
-        <hr className="w-full border-t dark:border-zinc-800 border-zinc-150" />
-      </div>
-      <Footer
-        className="flex items-center my-8 md:my-10 lg:my-12 content pb-0-safe"
-        date={date}
-      />
-    </>
+    </main>
   )
 }
 
@@ -103,8 +73,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
-      version: pkg.version,
-      date: String(new Date().getFullYear()),
       content: String(content.value),
       features: String(features.value)
     }
