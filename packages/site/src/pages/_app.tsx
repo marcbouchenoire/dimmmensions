@@ -26,10 +26,10 @@ function App({ Component, pageProps }: AppProps) {
         />
         <meta content="website" property="og:type" />
         <meta
-          content="https://dimmmensions.marcbouchenoire.com/"
+          content="https://dimmmensions.marcbouchenoire.com"
           property="og:url"
         />
-        <meta content="Marc Bouchenoire" property="og:title" />
+        <meta content="Dimmmensions" property="og:title" />
         <meta
           content="A collection of dimensions from iOS and iPadOS devices."
           property="og:description"
@@ -39,7 +39,7 @@ function App({ Component, pageProps }: AppProps) {
           property="og:image"
         />
         <meta
-          content="https://www.marcbouchenoire.com/"
+          content="https://dimmmensions.marcbouchenoire.com"
           property="twitter:url"
         />
         <meta content="@marcbouchenoire" property="twitter:creator" />
