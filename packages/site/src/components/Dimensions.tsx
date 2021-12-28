@@ -276,8 +276,8 @@ export function Dimensions(props: ComponentProps<"section">) {
 
   return (
     <section {...props}>
-      <div className="flex flex-col rounded-md border border-zinc-150 dark:border-zinc-800">
-        <div className="flex overflow-hidden justify-center items-center min-h-0 aspect-[16/9]">
+      <div className="flex flex-col rounded-md border dark:border-zinc-800 border-zinc-150">
+        <div className="aspect-[16/9] flex overflow-hidden justify-center items-center min-h-0">
           <div
             className="overflow-hidden relative flex-none bg-white shadow-device dark:shadow-device-invert dark:bg-zinc-850"
             key={orientation}
@@ -328,9 +328,9 @@ export function Dimensions(props: ComponentProps<"section">) {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row flex-none gap-4 p-4 md:p-5 border-t border-zinc-150 dark:border-zinc-800">
-          <div className="flex flex-col sm:flex-row flex-none md:flex-1 gap-4 items-center">
-            <div className="relative sm:flex-1 w-full h-9 text-zinc-400 hover:text-zinc-450 dark:text-zinc-450 dark:hover:text-zinc-400">
+        <div className="flex flex-col flex-none gap-4 p-4 border-t dark:border-zinc-800 md:flex-row md:p-5 border-zinc-150">
+          <div className="flex flex-col flex-none gap-4 items-center sm:flex-row md:flex-1">
+            <div className="relative w-full h-9 text-zinc-400 dark:hover:text-zinc-400 sm:flex-1 hover:text-zinc-450 dark:text-zinc-450">
               <motion.svg
                 animate={orientation}
                 className="absolute top-2 left-2 transition-colors pointer-events-none"
@@ -365,7 +365,7 @@ export function Dimensions(props: ComponentProps<"section">) {
               </svg>
               <Select
                 aria-label="Device"
-                className="flex flex-none justify-center items-center pr-7 pl-9 w-full h-full text-sm font-medium truncate rounded-md transition appearance-none cursor-pointer focusable bg-zinc-100 text-zinc-500 dark:bg-zinc-750 dark:text-zinc-350 hover:bg-zinc-150 dark:hover:bg-zinc-700"
+                className="flex flex-none justify-center items-center pr-7 pl-9 w-full h-full text-sm font-medium text-zinc-500 truncate bg-zinc-100 dark:hover:bg-zinc-700 rounded-md transition appearance-none cursor-pointer focusable dark:bg-zinc-750 dark:text-zinc-350 hover:bg-zinc-150"
                 onChange={handleDeviceChange}
                 value={device}
               />
@@ -376,7 +376,7 @@ export function Dimensions(props: ComponentProps<"section">) {
                 className:
                   "absolute inset-0.5 bg-white dark:bg-zinc-550 rounded-md shadow z-0"
               }}
-              className="grid grid-flow-col auto-cols-fr w-full sm:w-auto h-9 rounded-lg transition-colors gap-x-[4px] bg-zinc-100 hover:bg-zinc-150 text-zinc-500 dark:bg-zinc-750 dark:hover:bg-zinc-700 dark:text-zinc-350"
+              className="grid grid-flow-col auto-cols-fr gap-x-[4px] w-full h-9 text-zinc-500 bg-zinc-100 dark:hover:bg-zinc-700 rounded-lg transition-colors sm:w-auto hover:bg-zinc-150 dark:bg-zinc-750 dark:text-zinc-350"
               labels={["Portrait", "Landscape"]}
               onValueChange={handleOrientationChange}
               options={["portrait", "landscape"]}
@@ -390,7 +390,7 @@ export function Dimensions(props: ComponentProps<"section">) {
               value={orientation}
             />
           </div>
-          <div className="grid sm:flex flex-1 grid-cols-2 gap-6 sm:gap-4 items-center py-4 md:py-0 px-5 md:px-3">
+          <div className="grid flex-1 grid-cols-2 gap-6 items-center py-4 px-5 sm:flex sm:gap-4 md:py-0 md:px-3">
             <div className="flex flex-col flex-1 gap-2 items-center tabular-nums whitespace-nowrap">
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-200">
                 {orientedDimensions.screen.width}
@@ -399,7 +399,7 @@ export function Dimensions(props: ComponentProps<"section">) {
                 {orientedDimensions.screen.height}
                 <span className="text-zinc-400">pt</span>
               </p>
-              <p className="font-semibold tracking-widest uppercase text-2xs text-zinc-400">
+              <p className="font-semibold tracking-widest text-zinc-400 uppercase text-2xs">
                 Screen
               </p>
             </div>
@@ -408,7 +408,7 @@ export function Dimensions(props: ComponentProps<"section">) {
                 {dimensions.radius}
                 <span className="text-zinc-400">pt</span>
               </p>
-              <p className="font-semibold tracking-widest uppercase text-2xs text-zinc-400">
+              <p className="font-semibold tracking-widest text-zinc-400 uppercase text-2xs">
                 Radius
               </p>
             </div>
@@ -417,7 +417,7 @@ export function Dimensions(props: ComponentProps<"section">) {
                 <span className="text-zinc-400">@</span>
                 {dimensions.scale}x
               </p>
-              <p className="font-semibold tracking-widest uppercase text-2xs text-zinc-400">
+              <p className="font-semibold tracking-widest text-zinc-400 uppercase text-2xs">
                 Scale
               </p>
             </div>
@@ -446,7 +446,7 @@ export function Dimensions(props: ComponentProps<"section">) {
                   {orientedDimensions.sizeClass.vertical.charAt(0)}
                 </span>
               </p>
-              <p className="font-semibold tracking-wider uppercase text-2xs text-zinc-400 dark:text-zinc-400">
+              <p className="font-semibold tracking-wider text-zinc-400 dark:text-zinc-400 uppercase text-2xs">
                 Size Classes
               </p>
             </div>
