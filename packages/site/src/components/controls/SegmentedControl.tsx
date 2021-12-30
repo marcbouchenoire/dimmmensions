@@ -2,20 +2,15 @@ import { useId } from "@radix-ui/react-id"
 import {
   Item,
   Root,
-  ToggleGroupItemProps,
   ToggleGroupSingleProps
 } from "@radix-ui/react-toggle-group"
-import { HTMLMotionProps, LayoutGroup, motion } from "framer-motion"
-import { ReactChild, memo } from "react"
+import clsx from "clsx"
+import { LayoutGroup, motion } from "framer-motion"
+import { ReactChild, forwardRef } from "react"
 import { springy } from "../../transitions"
-import { mergeProps } from "../../utils/merge-props"
 
-interface Props extends Omit<ToggleGroupSingleProps, "type"> {
-  /**
-   * A set of `motion.span` props for the background element.
-   */
-  backgroundProps?: HTMLMotionProps<"span">
-
+export interface SegmentedControlProps
+  extends Omit<ToggleGroupSingleProps, "type"> {
   /**
    * A list of option labels.
    */
@@ -25,16 +20,6 @@ interface Props extends Omit<ToggleGroupSingleProps, "type"> {
    * A list of option values.
    */
   options: string[]
-
-  /**
-   * A set of props for the segment elements.
-   */
-  segmentProps?: Omit<ToggleGroupItemProps, "value">
-
-  /**
-   * A set of props for the currently selected segment element.
-   */
-  selectedSegmentProps?: Omit<ToggleGroupItemProps, "value">
 }
 
 /**
@@ -44,52 +29,57 @@ interface Props extends Omit<ToggleGroupSingleProps, "type"> {
  * @param props.options - A list of option values.
  * @param [props.labels] - A list of option labels.
  * @param [props.value] - The default value.
- * @param [props.onValueChange] - A function invoked whenever the value changes.
- * @param [props.segmentProps] - A set of props for the segment elements.
- * @param [props.selectedSegmentProps] - A set of props for the currently selected segment element.
- * @param [props.backgroundProps] - A set of `motion.span` props for the background element.
+ * @param [props.className] - A list of one or more classes.
+ * @param [props.id] - A unique identifier.
  */
-export const SegmentedControl = memo(
-  ({
-    options,
-    labels = [],
-    value,
-    onValueChange,
-    segmentProps = {},
-    selectedSegmentProps = {},
-    backgroundProps = {},
-    ...props
-  }: Props) => {
-    const id = useId()
-    const mergedSegmentProps = mergeProps(segmentProps, selectedSegmentProps)
+export const SegmentedControl = forwardRef<
+  HTMLDivElement,
+  SegmentedControlProps
+>(({ options, labels = [], value, className, id, ...props }, ref) => {
+  const layoutId = useId(id)
 
-    return (
-      <LayoutGroup id={id}>
-        <Root
-          onValueChange={onValueChange}
-          value={value}
-          {...props}
-          type="single"
-        >
-          {options.map((option, index) => (
+  return (
+    <LayoutGroup id={layoutId}>
+      <Root
+        className={clsx(
+          className,
+          "grid grid-flow-col auto-cols-fr gap-x-[4px] h-9 text-zinc-500 bg-zinc-100 dark:hover:bg-zinc-700 rounded-lg transition-colors hover:bg-zinc-150 dark:bg-zinc-750 dark:text-zinc-350"
+        )}
+        id={id}
+        {...props}
+        ref={ref}
+        type="single"
+      >
+        {options.map((option, index, options) => {
+          const isActive = option === value
+          const isAfterActive = options[index - 1] === value
+
+          return (
             <Item
+              className={clsx(
+                "flex first-of-type:before:hidden relative before:absolute before:left-[-3px] justify-center items-center px-3 before:w-[2px] before:h-1/2 text-sm font-medium before:bg-current rounded-lg before:rounded-full before:opacity-20 transition before:transition-opacity focusable",
+                {
+                  "text-primary-500 dark:text-primary-400": isActive,
+                  "before:opacity-0": isActive || isAfterActive
+                }
+              )}
               key={index}
+              title={option}
               value={option}
-              {...(option === value ? mergedSegmentProps : segmentProps)}
             >
-              <span className="relative z-10">{labels[index] ?? option}</span>
-              {option === value && (
+              <span className="relative z-20">{labels[index] ?? option}</span>
+              {isActive && (
                 <motion.span
                   aria-hidden
+                  className="absolute inset-0.5 z-10 bg-white dark:bg-zinc-600 rounded-md shadow"
                   layoutId="background"
                   transition={springy}
-                  {...backgroundProps}
                 />
               )}
             </Item>
-          ))}
-        </Root>
-      </LayoutGroup>
-    )
-  }
-)
+          )
+        })}
+      </Root>
+    </LayoutGroup>
+  )
+})
