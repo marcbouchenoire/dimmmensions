@@ -17,6 +17,7 @@ import {
 import { springier } from "../../transitions"
 import { getPercentage } from "../../utils/get-percentage"
 import { SegmentedControl } from "../controls/SegmentedControl"
+import { Select } from "../controls/Select"
 
 interface Pattern {
   /**
@@ -46,6 +47,25 @@ const iPhone = defaultDimensions
 const iPad = defaultDimensions
   .filter((dimensions) => dimensions.device === "iPad")
   .sort(sortDimensions)
+
+const deviceOptions = (
+  <>
+    <optgroup label="iPhone">
+      {iPhone.map((device) => (
+        <option key={device.name} value={device.name}>
+          {device.name}
+        </option>
+      ))}
+    </optgroup>
+    <optgroup label="iPad">
+      {iPad.map((device) => (
+        <option key={device.name} value={device.name}>
+          {device.name}
+        </option>
+      ))}
+    </optgroup>
+  </>
+)
 
 const attributedDimensions = new Map(
   defaultDimensions.map((dimensions) => [dimensions.name, dimensions])
@@ -136,32 +156,6 @@ const iPadRoundedIcon = (
     <path d="M3 3.5A2.5 2.5 0 0 1 5.5 1h9A2.5 2.5 0 0 1 17 3.5v13a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 3 16.5Zm1.5 13a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-13a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1Z" />
   </g>
 )
-
-/**
- * A select element containing all iOS and iPadOS devices as options.
- *
- * @param props - A set of `select` props.
- */
-function Select(props: ComponentProps<"select">) {
-  return (
-    <select {...props}>
-      <optgroup label="iPhone">
-        {iPhone.map((device) => (
-          <option key={device.name} value={device.name}>
-            {device.name}
-          </option>
-        ))}
-      </optgroup>
-      <optgroup label="iPad">
-        {iPad.map((device) => (
-          <option key={device.name} value={device.name}>
-            {device.name}
-          </option>
-        ))}
-      </optgroup>
-    </select>
-  )
-}
 
 /**
  * An interactive section to explore all dimensions.
@@ -330,7 +324,16 @@ export function Dimensions(props: ComponentProps<"section">) {
         </div>
         <div className="flex flex-col flex-none gap-4 p-4 border-t dark:border-zinc-800 md:flex-row md:p-5 border-zinc-150">
           <div className="flex flex-col flex-none gap-4 items-center sm:flex-row md:flex-1">
-            <div className="relative w-full h-9 text-zinc-400 dark:hover:text-zinc-400 sm:flex-1 hover:text-zinc-450 dark:text-zinc-450">
+            <Select
+              className="flex-none w-full sm:flex-1"
+              selectProps={{
+                "aria-label": "Device",
+                children: deviceOptions,
+                className: "pl-9",
+                onChange: handleDeviceChange,
+                value: device
+              }}
+            >
               <motion.svg
                 animate={orientation}
                 className="absolute top-2 left-2 transition-colors pointer-events-none"
@@ -349,44 +352,13 @@ export function Dimensions(props: ComponentProps<"section">) {
               >
                 {icon}
               </motion.svg>
-              <svg
-                className="absolute top-2 right-1 transition-colors pointer-events-none"
-                fill="currentColor"
-                height="20"
-                role="presentation"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clipRule="evenodd"
-                  d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                  fillRule="evenodd"
-                />
-              </svg>
-              <Select
-                aria-label="Device"
-                className="flex flex-none justify-center items-center pr-7 pl-9 w-full h-full text-sm font-medium text-zinc-500 truncate bg-zinc-100 dark:hover:bg-zinc-700 rounded-md transition appearance-none cursor-pointer focusable dark:bg-zinc-750 dark:text-zinc-350 hover:bg-zinc-150"
-                onChange={handleDeviceChange}
-                value={device}
-              />
-            </div>
+            </Select>
             <SegmentedControl
               aria-label="Orientation"
-              backgroundProps={{
-                className:
-                  "absolute inset-0.5 bg-white dark:bg-zinc-550 rounded-md shadow z-0"
-              }}
-              className="grid grid-flow-col auto-cols-fr gap-x-[4px] w-full h-9 text-zinc-500 bg-zinc-100 dark:hover:bg-zinc-700 rounded-lg transition-colors sm:w-auto hover:bg-zinc-150 dark:bg-zinc-750 dark:text-zinc-350"
+              className="w-full sm:w-auto"
               labels={["Portrait", "Landscape"]}
               onValueChange={handleOrientationChange}
               options={["portrait", "landscape"]}
-              segmentProps={{
-                className:
-                  "flex relative justify-center items-center px-3 text-sm font-medium rounded-lg transition-shadow focusable"
-              }}
-              selectedSegmentProps={{
-                className: "text-zinc-600 dark:text-zinc-100"
-              }}
               value={orientation}
             />
           </div>
