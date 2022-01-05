@@ -367,7 +367,7 @@ export function Dimensions(props: ComponentProps<"section">) {
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-200">
                 {orientedDimensions.screen.width}
                 <span className="text-zinc-400">pt</span>{" "}
-                <span className="text-zinc-400 dark:text-zinc-400">×</span>{" "}
+                <span className="text-zinc-400">×</span>{" "}
                 {orientedDimensions.screen.height}
                 <span className="text-zinc-400">pt</span>
               </p>
@@ -404,11 +404,8 @@ export function Dimensions(props: ComponentProps<"section">) {
                 >
                   {orientedDimensions.sizeClass.horizontal.charAt(0)}
                 </span>{" "}
-                <span className="text-zinc-400 dark:text-zinc-400">×</span>{" "}
-                <span
-                  aria-label="height"
-                  className="text-zinc-400 dark:text-zinc-400"
-                >
+                <span className="text-zinc-400">×</span>{" "}
+                <span aria-label="height" className="text-zinc-400">
                   h
                 </span>
                 <span
@@ -418,7 +415,7 @@ export function Dimensions(props: ComponentProps<"section">) {
                   {orientedDimensions.sizeClass.vertical.charAt(0)}
                 </span>
               </p>
-              <p className="font-semibold tracking-wider text-zinc-400 dark:text-zinc-400 uppercase text-2xs">
+              <p className="font-semibold tracking-widest text-zinc-400 uppercase text-2xs">
                 Size Classes
               </p>
             </div>
