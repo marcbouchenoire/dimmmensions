@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme")
 const plugin = require("tailwindcss/plugin")
 
 const paddingSafe = plugin(({ addUtilities, config, e }) => {
@@ -79,6 +80,9 @@ module.exports = {
       flex: {
         "3/2": "1.5 1.5 0%",
         "3/4": "0.75 0.75 0%"
+      },
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans]
       },
       fontSize: {
         "2xs": [
