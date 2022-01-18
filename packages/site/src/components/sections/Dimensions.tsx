@@ -270,7 +270,7 @@ export function Dimensions(props: ComponentProps<"section">) {
 
   return (
     <section {...props}>
-      <div className="flex flex-col rounded-md border dark:border-zinc-800 border-zinc-150">
+      <div className="flex flex-col rounded-lg border dark:border-zinc-800 border-zinc-150">
         <div className="aspect-[16/9] flex overflow-hidden justify-center items-center min-h-0">
           <div
             className="overflow-hidden relative flex-none bg-white shadow-device dark:shadow-device-invert dark:bg-zinc-850"
