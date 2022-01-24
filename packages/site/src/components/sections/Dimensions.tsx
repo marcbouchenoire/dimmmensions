@@ -270,10 +270,10 @@ export function Dimensions(props: ComponentProps<"section">) {
 
   return (
     <section {...props}>
-      <div className="flex flex-col rounded-lg border dark:border-zinc-800 border-zinc-150">
-        <div className="aspect-[16/9] flex overflow-hidden justify-center items-center min-h-0">
+      <div className="border-zinc-150 flex flex-col rounded-lg border dark:border-zinc-800">
+        <div className="flex aspect-[16/9] min-h-0 items-center justify-center overflow-hidden">
           <div
-            className="overflow-hidden relative flex-none bg-white shadow-device dark:shadow-device-invert dark:bg-zinc-850"
+            className="shadow-device dark:shadow-device-invert dark:bg-zinc-850 relative flex-none overflow-hidden bg-white"
             key={orientation}
             style={screen}
           >
@@ -314,7 +314,7 @@ export function Dimensions(props: ComponentProps<"section">) {
                     fillRule="evenodd"
                     key={`fill-${index}`}
                   >
-                    <path className="opacity-20 fill-current" d={path} />
+                    <path className="fill-current opacity-20" d={path} />
                     <path d={path} fill={`url(#${index})`} />
                   </g>
                 )
@@ -322,10 +322,10 @@ export function Dimensions(props: ComponentProps<"section">) {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col flex-none gap-4 p-4 border-t dark:border-zinc-800 md:flex-row md:p-5 border-zinc-150">
-          <div className="flex flex-col flex-none gap-4 items-center sm:flex-row md:flex-1">
+        <div className="border-zinc-150 flex flex-none flex-col gap-4 border-t p-4 dark:border-zinc-800 md:flex-row md:p-5">
+          <div className="flex flex-none flex-col items-center gap-4 sm:flex-row md:flex-1">
             <Select
-              className="flex-none w-full sm:flex-1"
+              className="w-full flex-none sm:flex-1"
               selectProps={{
                 "aria-label": "Device",
                 children: deviceOptions,
@@ -336,7 +336,7 @@ export function Dimensions(props: ComponentProps<"section">) {
             >
               <motion.svg
                 animate={orientation}
-                className="absolute top-2 left-2 transition-colors pointer-events-none"
+                className="pointer-events-none absolute top-2 left-2 transition-colors"
                 height="20"
                 role="presentation"
                 style={{
@@ -362,8 +362,8 @@ export function Dimensions(props: ComponentProps<"section">) {
               value={orientation}
             />
           </div>
-          <div className="grid flex-1 grid-cols-2 gap-6 items-center py-4 px-5 sm:flex sm:gap-4 md:py-0 md:px-3">
-            <div className="flex flex-col flex-1 gap-2 items-center tabular-nums whitespace-nowrap">
+          <div className="grid flex-1 grid-cols-2 items-center gap-6 py-4 px-5 sm:flex sm:gap-4 md:py-0 md:px-3">
+            <div className="flex flex-1 flex-col items-center gap-2 whitespace-nowrap tabular-nums">
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-200">
                 {orientedDimensions.screen.width}
                 <span className="text-zinc-400">pt</span>{" "}
@@ -371,29 +371,29 @@ export function Dimensions(props: ComponentProps<"section">) {
                 {orientedDimensions.screen.height}
                 <span className="text-zinc-400">pt</span>
               </p>
-              <p className="font-semibold tracking-widest text-zinc-400 uppercase text-2xs">
+              <p className="text-2xs font-semibold uppercase tracking-widest text-zinc-400">
                 Screen
               </p>
             </div>
-            <div className="flex flex-col gap-2 items-center tabular-nums whitespace-nowrap flex-3/4">
+            <div className="flex-3/4 flex flex-col items-center gap-2 whitespace-nowrap tabular-nums">
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-200">
                 {dimensions.radius}
                 <span className="text-zinc-400">pt</span>
               </p>
-              <p className="font-semibold tracking-widest text-zinc-400 uppercase text-2xs">
+              <p className="text-2xs font-semibold uppercase tracking-widest text-zinc-400">
                 Radius
               </p>
             </div>
-            <div className="flex flex-col gap-2 items-center tabular-nums whitespace-nowrap flex-3/4">
+            <div className="flex-3/4 flex flex-col items-center gap-2 whitespace-nowrap tabular-nums">
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-200">
                 <span className="text-zinc-400">@</span>
                 {dimensions.scale}x
               </p>
-              <p className="font-semibold tracking-widest text-zinc-400 uppercase text-2xs">
+              <p className="text-2xs font-semibold uppercase tracking-widest text-zinc-400">
                 Scale
               </p>
             </div>
-            <div className="flex flex-col flex-1 gap-2 items-center tabular-nums whitespace-nowrap">
+            <div className="flex flex-1 flex-col items-center gap-2 whitespace-nowrap tabular-nums">
               <p className="text-sm font-medium text-zinc-600 dark:text-zinc-200">
                 <span aria-label="width" className="text-zinc-400">
                   w
@@ -415,7 +415,7 @@ export function Dimensions(props: ComponentProps<"section">) {
                   {orientedDimensions.sizeClass.vertical.charAt(0)}
                 </span>
               </p>
-              <p className="font-semibold tracking-widest text-zinc-400 uppercase text-2xs">
+              <p className="text-2xs font-semibold uppercase tracking-widest text-zinc-400">
                 Size Classes
               </p>
             </div>
