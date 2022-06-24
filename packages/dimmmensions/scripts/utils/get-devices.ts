@@ -28,7 +28,7 @@ export async function getDevices(): Promise<[SimulatorDevice[], string]> {
     "devices",
     "--json"
   ])
-  const platforms = (JSON.parse(stdout) ?? {}).devices
+  const platforms = JSON.parse(stdout)?.devices
   const [platform] = Object.keys(platforms)
     .filter((platform) => platform.includes("iOS"))
     .sort()

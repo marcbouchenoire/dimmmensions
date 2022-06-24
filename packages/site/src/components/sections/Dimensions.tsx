@@ -77,7 +77,7 @@ const attributedDimensions = new Map(
 function getDefaultDevice() {
   const devices = defaultDimensions
     .map((dimensions) => dimensions.name.match(/\w+\s+(\d+)$/))
-    .filter((devices) => devices)
+    .filter(Boolean)
     .sort((a, b) => Number(b?.[1]) - Number(a?.[1]))
 
   return devices?.[0]?.input ?? iPhone[0].name
