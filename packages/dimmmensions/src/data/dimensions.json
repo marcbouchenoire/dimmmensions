@@ -3,7 +3,7 @@
     "device": "iPhone",
     "landscape": {
       "screen": {
-        "width": 812,
+        "width": 667,
         "height": 375
       },
       "sizeClass": {
@@ -11,91 +11,29 @@
         "vertical": "compact"
       },
       "layoutMargins": {
-        "left": 60,
+        "left": 20,
         "top": 0,
-        "right": 60,
-        "bottom": 21
+        "right": 20,
+        "bottom": 0
       },
       "readableContent": {
-        "left": 60,
+        "left": 20,
         "top": 0,
-        "right": 60,
-        "bottom": 21
+        "right": 20,
+        "bottom": 0
       },
       "safeArea": {
-        "left": 44,
+        "left": 0,
         "top": 0,
-        "right": 44,
-        "bottom": 21
+        "right": 0,
+        "bottom": 0
       }
     },
-    "name": "iPhone 11 Pro",
+    "name": "iPhone SE (3rd generation)",
     "portrait": {
       "screen": {
         "width": 375,
-        "height": 812
-      },
-      "sizeClass": {
-        "horizontal": "compact",
-        "vertical": "regular"
-      },
-      "layoutMargins": {
-        "left": 16,
-        "top": 44,
-        "right": 16,
-        "bottom": 34
-      },
-      "readableContent": {
-        "left": 16,
-        "top": 44,
-        "right": 16,
-        "bottom": 34
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 44,
-        "right": 0,
-        "bottom": 34
-      }
-    },
-    "radius": 39,
-    "scale": 3
-  },
-  {
-    "device": "iPhone",
-    "landscape": {
-      "screen": {
-        "width": 568,
-        "height": 320
-      },
-      "sizeClass": {
-        "horizontal": "compact",
-        "vertical": "compact"
-      },
-      "layoutMargins": {
-        "left": 20,
-        "top": 0,
-        "right": 20,
-        "bottom": 0
-      },
-      "readableContent": {
-        "left": 20,
-        "top": 0,
-        "right": 20,
-        "bottom": 0
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 0,
-        "right": 0,
-        "bottom": 0
-      }
-    },
-    "name": "iPod touch (7th generation)",
-    "portrait": {
-      "screen": {
-        "width": 320,
-        "height": 568
+        "height": 667
       },
       "sizeClass": {
         "horizontal": "compact",
@@ -186,127 +124,127 @@
     "scale": 3
   },
   {
-    "device": "iPhone",
+    "device": "iPad",
     "landscape": {
       "screen": {
-        "width": 896,
-        "height": 414
+        "width": 1180,
+        "height": 820
       },
       "sizeClass": {
         "horizontal": "regular",
-        "vertical": "compact"
-      },
-      "layoutMargins": {
-        "left": 64,
-        "top": 0,
-        "right": 64,
-        "bottom": 21
-      },
-      "readableContent": {
-        "left": 116,
-        "top": 0,
-        "right": 116,
-        "bottom": 21
-      },
-      "safeArea": {
-        "left": 48,
-        "top": 0,
-        "right": 48,
-        "bottom": 21
-      }
-    },
-    "name": "iPhone 11",
-    "portrait": {
-      "screen": {
-        "width": 414,
-        "height": 896
-      },
-      "sizeClass": {
-        "horizontal": "compact",
         "vertical": "regular"
       },
       "layoutMargins": {
         "left": 20,
-        "top": 48,
+        "top": 24,
         "right": 20,
-        "bottom": 34
+        "bottom": 20
       },
       "readableContent": {
-        "left": 20,
-        "top": 48,
-        "right": 20,
-        "bottom": 34
+        "left": 258,
+        "top": 24,
+        "right": 258,
+        "bottom": 20
       },
       "safeArea": {
         "left": 0,
-        "top": 48,
+        "top": 24,
         "right": 0,
-        "bottom": 34
+        "bottom": 20
       }
     },
-    "radius": 41.5,
+    "name": "iPad (10th generation)",
+    "portrait": {
+      "screen": {
+        "width": 820,
+        "height": 1180
+      },
+      "sizeClass": {
+        "horizontal": "regular",
+        "vertical": "regular"
+      },
+      "layoutMargins": {
+        "left": 20,
+        "top": 24,
+        "right": 20,
+        "bottom": 20
+      },
+      "readableContent": {
+        "left": 78,
+        "top": 24,
+        "right": 78,
+        "bottom": 20
+      },
+      "safeArea": {
+        "left": 0,
+        "top": 24,
+        "right": 0,
+        "bottom": 20
+      }
+    },
+    "radius": 25,
     "scale": 2
   },
   {
-    "device": "iPhone",
+    "device": "iPad",
     "landscape": {
       "screen": {
-        "width": 667,
-        "height": 375
+        "width": 1366,
+        "height": 1024
       },
       "sizeClass": {
-        "horizontal": "compact",
-        "vertical": "compact"
-      },
-      "layoutMargins": {
-        "left": 20,
-        "top": 0,
-        "right": 20,
-        "bottom": 0
-      },
-      "readableContent": {
-        "left": 20,
-        "top": 0,
-        "right": 20,
-        "bottom": 0
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 0,
-        "right": 0,
-        "bottom": 0
-      }
-    },
-    "name": "iPhone SE (2nd generation)",
-    "portrait": {
-      "screen": {
-        "width": 375,
-        "height": 667
-      },
-      "sizeClass": {
-        "horizontal": "compact",
+        "horizontal": "regular",
         "vertical": "regular"
       },
       "layoutMargins": {
-        "left": 16,
-        "top": 20,
-        "right": 16,
-        "bottom": 0
+        "left": 20,
+        "top": 24,
+        "right": 20,
+        "bottom": 20
       },
       "readableContent": {
-        "left": 16,
-        "top": 20,
-        "right": 16,
-        "bottom": 0
+        "left": 351,
+        "top": 24,
+        "right": 351,
+        "bottom": 20
       },
       "safeArea": {
         "left": 0,
-        "top": 20,
+        "top": 24,
         "right": 0,
-        "bottom": 0
+        "bottom": 20
       }
     },
-    "radius": 0,
+    "name": "iPad Pro (12.9-inch) (6th generation)",
+    "portrait": {
+      "screen": {
+        "width": 1024,
+        "height": 1366
+      },
+      "sizeClass": {
+        "horizontal": "regular",
+        "vertical": "regular"
+      },
+      "layoutMargins": {
+        "left": 20,
+        "top": 24,
+        "right": 20,
+        "bottom": 20
+      },
+      "readableContent": {
+        "left": 180,
+        "top": 24,
+        "right": 180,
+        "bottom": 20
+      },
+      "safeArea": {
+        "left": 0,
+        "top": 24,
+        "right": 0,
+        "bottom": 20
+      }
+    },
+    "radius": 18,
     "scale": 2
   },
   {
@@ -370,130 +308,6 @@
     },
     "radius": 47.33,
     "scale": 3
-  },
-  {
-    "device": "iPad",
-    "landscape": {
-      "screen": {
-        "width": 1024,
-        "height": 768
-      },
-      "sizeClass": {
-        "horizontal": "regular",
-        "vertical": "regular"
-      },
-      "layoutMargins": {
-        "left": 20,
-        "top": 20,
-        "right": 20,
-        "bottom": 0
-      },
-      "readableContent": {
-        "left": 180,
-        "top": 20,
-        "right": 180,
-        "bottom": 0
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 20,
-        "right": 0,
-        "bottom": 0
-      }
-    },
-    "name": "iPad Pro (9.7-inch)",
-    "portrait": {
-      "screen": {
-        "width": 768,
-        "height": 1024
-      },
-      "sizeClass": {
-        "horizontal": "regular",
-        "vertical": "regular"
-      },
-      "layoutMargins": {
-        "left": 20,
-        "top": 20,
-        "right": 20,
-        "bottom": 0
-      },
-      "readableContent": {
-        "left": 52,
-        "top": 20,
-        "right": 52,
-        "bottom": 0
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 20,
-        "right": 0,
-        "bottom": 0
-      }
-    },
-    "radius": 0,
-    "scale": 2
-  },
-  {
-    "device": "iPad",
-    "landscape": {
-      "screen": {
-        "width": 1180,
-        "height": 820
-      },
-      "sizeClass": {
-        "horizontal": "regular",
-        "vertical": "regular"
-      },
-      "layoutMargins": {
-        "left": 20,
-        "top": 24,
-        "right": 20,
-        "bottom": 20
-      },
-      "readableContent": {
-        "left": 258,
-        "top": 24,
-        "right": 258,
-        "bottom": 20
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 24,
-        "right": 0,
-        "bottom": 20
-      }
-    },
-    "name": "iPad Air (4th generation)",
-    "portrait": {
-      "screen": {
-        "width": 820,
-        "height": 1180
-      },
-      "sizeClass": {
-        "horizontal": "regular",
-        "vertical": "regular"
-      },
-      "layoutMargins": {
-        "left": 20,
-        "top": 24,
-        "right": 20,
-        "bottom": 20
-      },
-      "readableContent": {
-        "left": 78,
-        "top": 24,
-        "right": 78,
-        "bottom": 20
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 24,
-        "right": 0,
-        "bottom": 20
-      }
-    },
-    "radius": 18,
-    "scale": 2
   },
   {
     "device": "iPhone",
@@ -620,40 +434,102 @@
     "scale": 3
   },
   {
+    "device": "iPad",
+    "landscape": {
+      "screen": {
+        "width": 1194,
+        "height": 834
+      },
+      "sizeClass": {
+        "horizontal": "regular",
+        "vertical": "regular"
+      },
+      "layoutMargins": {
+        "left": 20,
+        "top": 24,
+        "right": 20,
+        "bottom": 20
+      },
+      "readableContent": {
+        "left": 265,
+        "top": 24,
+        "right": 265,
+        "bottom": 20
+      },
+      "safeArea": {
+        "left": 0,
+        "top": 24,
+        "right": 0,
+        "bottom": 20
+      }
+    },
+    "name": "iPad Pro (11-inch) (4th generation)",
+    "portrait": {
+      "screen": {
+        "width": 834,
+        "height": 1194
+      },
+      "sizeClass": {
+        "horizontal": "regular",
+        "vertical": "regular"
+      },
+      "layoutMargins": {
+        "left": 20,
+        "top": 24,
+        "right": 20,
+        "bottom": 20
+      },
+      "readableContent": {
+        "left": 85,
+        "top": 24,
+        "right": 85,
+        "bottom": 20
+      },
+      "safeArea": {
+        "left": 0,
+        "top": 24,
+        "right": 0,
+        "bottom": 20
+      }
+    },
+    "radius": 18,
+    "scale": 2
+  },
+  {
     "device": "iPhone",
     "landscape": {
       "screen": {
-        "width": 896,
-        "height": 414
+        "width": 932,
+        "height": 430
       },
       "sizeClass": {
         "horizontal": "regular",
         "vertical": "compact"
       },
       "layoutMargins": {
-        "left": 60,
+        "left": 75,
         "top": 0,
-        "right": 60,
+        "right": 75,
         "bottom": 21
       },
       "readableContent": {
-        "left": 116,
+        "left": 134,
         "top": 0,
-        "right": 116,
+        "right": 134,
         "bottom": 21
       },
       "safeArea": {
-        "left": 44,
+        "left": 59,
         "top": 0,
-        "right": 44,
+        "right": 59,
         "bottom": 21
       }
     },
-    "name": "iPhone 11 Pro Max",
+    "name": "iPhone 14 Pro Max",
     "portrait": {
       "screen": {
-        "width": 414,
-        "height": 896
+        "width": 430,
+        "height": 932
       },
       "sizeClass": {
         "horizontal": "compact",
@@ -661,24 +537,148 @@
       },
       "layoutMargins": {
         "left": 20,
-        "top": 44,
+        "top": 59,
         "right": 20,
         "bottom": 34
       },
       "readableContent": {
         "left": 20,
-        "top": 44,
+        "top": 59,
         "right": 20,
         "bottom": 34
       },
       "safeArea": {
         "left": 0,
-        "top": 44,
+        "top": 59,
         "right": 0,
         "bottom": 34
       }
     },
-    "radius": 39,
+    "radius": 55,
+    "scale": 3
+  },
+  {
+    "device": "iPhone",
+    "landscape": {
+      "screen": {
+        "width": 926,
+        "height": 428
+      },
+      "sizeClass": {
+        "horizontal": "regular",
+        "vertical": "compact"
+      },
+      "layoutMargins": {
+        "left": 63,
+        "top": 0,
+        "right": 63,
+        "bottom": 21
+      },
+      "readableContent": {
+        "left": 131,
+        "top": 0,
+        "right": 131,
+        "bottom": 21
+      },
+      "safeArea": {
+        "left": 47,
+        "top": 0,
+        "right": 47,
+        "bottom": 21
+      }
+    },
+    "name": "iPhone 14 Plus",
+    "portrait": {
+      "screen": {
+        "width": 428,
+        "height": 926
+      },
+      "sizeClass": {
+        "horizontal": "compact",
+        "vertical": "regular"
+      },
+      "layoutMargins": {
+        "left": 20,
+        "top": 47,
+        "right": 20,
+        "bottom": 34
+      },
+      "readableContent": {
+        "left": 20,
+        "top": 47,
+        "right": 20,
+        "bottom": 34
+      },
+      "safeArea": {
+        "left": 0,
+        "top": 47,
+        "right": 0,
+        "bottom": 34
+      }
+    },
+    "radius": 53.33,
+    "scale": 3
+  },
+  {
+    "device": "iPhone",
+    "landscape": {
+      "screen": {
+        "width": 844,
+        "height": 390
+      },
+      "sizeClass": {
+        "horizontal": "compact",
+        "vertical": "compact"
+      },
+      "layoutMargins": {
+        "left": 63,
+        "top": 0,
+        "right": 63,
+        "bottom": 21
+      },
+      "readableContent": {
+        "left": 63,
+        "top": 0,
+        "right": 63,
+        "bottom": 21
+      },
+      "safeArea": {
+        "left": 47,
+        "top": 0,
+        "right": 47,
+        "bottom": 21
+      }
+    },
+    "name": "iPhone 14",
+    "portrait": {
+      "screen": {
+        "width": 390,
+        "height": 844
+      },
+      "sizeClass": {
+        "horizontal": "compact",
+        "vertical": "regular"
+      },
+      "layoutMargins": {
+        "left": 16,
+        "top": 47,
+        "right": 16,
+        "bottom": 34
+      },
+      "readableContent": {
+        "left": 16,
+        "top": 47,
+        "right": 16,
+        "bottom": 34
+      },
+      "safeArea": {
+        "left": 0,
+        "top": 47,
+        "right": 0,
+        "bottom": 34
+      }
+    },
+    "radius": 47.33,
     "scale": 3
   },
   {
@@ -868,6 +868,9 @@
     "scale": 3
   },
   {
+    "name": "iPhone 8"
+  },
+  {
     "device": "iPhone",
     "landscape": {
       "screen": {
@@ -930,68 +933,6 @@
     "scale": 3
   },
   {
-    "device": "iPad",
-    "landscape": {
-      "screen": {
-        "width": 1194,
-        "height": 834
-      },
-      "sizeClass": {
-        "horizontal": "regular",
-        "vertical": "regular"
-      },
-      "layoutMargins": {
-        "left": 20,
-        "top": 24,
-        "right": 20,
-        "bottom": 20
-      },
-      "readableContent": {
-        "left": 265,
-        "top": 24,
-        "right": 265,
-        "bottom": 20
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 24,
-        "right": 0,
-        "bottom": 20
-      }
-    },
-    "name": "iPad Pro (11-inch) (3rd generation)",
-    "portrait": {
-      "screen": {
-        "width": 834,
-        "height": 1194
-      },
-      "sizeClass": {
-        "horizontal": "regular",
-        "vertical": "regular"
-      },
-      "layoutMargins": {
-        "left": 20,
-        "top": 24,
-        "right": 20,
-        "bottom": 20
-      },
-      "readableContent": {
-        "left": 85,
-        "top": 24,
-        "right": 85,
-        "bottom": 20
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 24,
-        "right": 0,
-        "bottom": 20
-      }
-    },
-    "radius": 18,
-    "scale": 2
-  },
-  {
     "device": "iPhone",
     "landscape": {
       "screen": {
@@ -1052,130 +993,6 @@
     },
     "radius": 47.33,
     "scale": 3
-  },
-  {
-    "device": "iPad",
-    "landscape": {
-      "screen": {
-        "width": 1080,
-        "height": 810
-      },
-      "sizeClass": {
-        "horizontal": "regular",
-        "vertical": "regular"
-      },
-      "layoutMargins": {
-        "left": 20,
-        "top": 20,
-        "right": 20,
-        "bottom": 0
-      },
-      "readableContent": {
-        "left": 208,
-        "top": 20,
-        "right": 208,
-        "bottom": 0
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 20,
-        "right": 0,
-        "bottom": 0
-      }
-    },
-    "name": "iPad (9th generation)",
-    "portrait": {
-      "screen": {
-        "width": 810,
-        "height": 1080
-      },
-      "sizeClass": {
-        "horizontal": "regular",
-        "vertical": "regular"
-      },
-      "layoutMargins": {
-        "left": 20,
-        "top": 20,
-        "right": 20,
-        "bottom": 0
-      },
-      "readableContent": {
-        "left": 73,
-        "top": 20,
-        "right": 73,
-        "bottom": 0
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 20,
-        "right": 0,
-        "bottom": 0
-      }
-    },
-    "radius": 0,
-    "scale": 2
-  },
-  {
-    "device": "iPhone",
-    "landscape": {
-      "screen": {
-        "width": 667,
-        "height": 375
-      },
-      "sizeClass": {
-        "horizontal": "compact",
-        "vertical": "compact"
-      },
-      "layoutMargins": {
-        "left": 20,
-        "top": 0,
-        "right": 20,
-        "bottom": 0
-      },
-      "readableContent": {
-        "left": 20,
-        "top": 0,
-        "right": 20,
-        "bottom": 0
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 0,
-        "right": 0,
-        "bottom": 0
-      }
-    },
-    "name": "iPhone 8",
-    "portrait": {
-      "screen": {
-        "width": 375,
-        "height": 667
-      },
-      "sizeClass": {
-        "horizontal": "compact",
-        "vertical": "regular"
-      },
-      "layoutMargins": {
-        "left": 16,
-        "top": 20,
-        "right": 16,
-        "bottom": 0
-      },
-      "readableContent": {
-        "left": 16,
-        "top": 20,
-        "right": 16,
-        "bottom": 0
-      },
-      "safeArea": {
-        "left": 0,
-        "top": 20,
-        "right": 0,
-        "bottom": 0
-      }
-    },
-    "radius": 0,
-    "scale": 2
   },
   {
     "device": "iPhone",
@@ -1243,8 +1060,8 @@
     "device": "iPad",
     "landscape": {
       "screen": {
-        "width": 1366,
-        "height": 1024
+        "width": 1180,
+        "height": 820
       },
       "sizeClass": {
         "horizontal": "regular",
@@ -1257,9 +1074,9 @@
         "bottom": 20
       },
       "readableContent": {
-        "left": 351,
+        "left": 258,
         "top": 24,
-        "right": 351,
+        "right": 258,
         "bottom": 20
       },
       "safeArea": {
@@ -1269,11 +1086,11 @@
         "bottom": 20
       }
     },
-    "name": "iPad Pro (12.9-inch) (5th generation)",
+    "name": "iPad Air (5th generation)",
     "portrait": {
       "screen": {
-        "width": 1024,
-        "height": 1366
+        "width": 820,
+        "height": 1180
       },
       "sizeClass": {
         "horizontal": "regular",
@@ -1286,9 +1103,9 @@
         "bottom": 20
       },
       "readableContent": {
-        "left": 180,
+        "left": 78,
         "top": 24,
-        "right": 180,
+        "right": 78,
         "bottom": 20
       },
       "safeArea": {
@@ -1300,5 +1117,67 @@
     },
     "radius": 18,
     "scale": 2
+  },
+  {
+    "device": "iPhone",
+    "landscape": {
+      "screen": {
+        "width": 852,
+        "height": 393
+      },
+      "sizeClass": {
+        "horizontal": "compact",
+        "vertical": "compact"
+      },
+      "layoutMargins": {
+        "left": 75,
+        "top": 0,
+        "right": 75,
+        "bottom": 21
+      },
+      "readableContent": {
+        "left": 75,
+        "top": 0,
+        "right": 75,
+        "bottom": 21
+      },
+      "safeArea": {
+        "left": 59,
+        "top": 0,
+        "right": 59,
+        "bottom": 21
+      }
+    },
+    "name": "iPhone 14 Pro",
+    "portrait": {
+      "screen": {
+        "width": 393,
+        "height": 852
+      },
+      "sizeClass": {
+        "horizontal": "compact",
+        "vertical": "regular"
+      },
+      "layoutMargins": {
+        "left": 16,
+        "top": 59,
+        "right": 16,
+        "bottom": 34
+      },
+      "readableContent": {
+        "left": 16,
+        "top": 59,
+        "right": 16,
+        "bottom": 34
+      },
+      "safeArea": {
+        "left": 0,
+        "top": 59,
+        "right": 0,
+        "bottom": 34
+      }
+    },
+    "radius": 55,
+    "scale": 3
   }
 ]
