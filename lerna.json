@@ -6,7 +6,7 @@
   },
   "packages": ["packages/*"],
   "useWorkspaces": true,
-  "version": "2.2.2",
+  "version": "2.3.0",
   "command": {
     "publish": {
       "allowBranch": "main",
