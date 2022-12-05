@@ -1,6 +1,6 @@
 import fs from "fs/promises"
 import withApp from "app-exists"
-import withCommand from "command-exists"
+import { sync as withCommand } from "command-exists"
 import { execa } from "execa"
 import { globby } from "globby"
 import Listr, { ListrTask } from "listr"
