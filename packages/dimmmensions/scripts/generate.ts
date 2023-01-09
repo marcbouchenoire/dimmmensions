@@ -3,16 +3,18 @@ import withApp from "app-exists"
 import { sync as withCommand } from "command-exists"
 import { execa } from "execa"
 import { globby } from "globby"
-import Listr, { ListrTask } from "listr"
+import type { ListrTask } from "listr"
+import Listr from "listr"
 import { loadJsonFile } from "load-json-file"
 import { writeJsonFile } from "write-json-file"
-import {
+import type {
   Device,
   Dimensions,
   OrientedDimensions,
   SimulatorDimensions
 } from "../src/types"
-import { SimulatorDevice, getDevices } from "./utils/get-devices"
+import type { SimulatorDevice } from "./utils/get-devices"
+import { getDevices } from "./utils/get-devices"
 import { getHashCode } from "./utils/get-hash-code"
 import { isMacOS } from "./utils/is-macOS"
 import { SilentError, isSilentError } from "./utils/silent-error"

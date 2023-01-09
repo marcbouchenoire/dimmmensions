@@ -1,19 +1,8 @@
-import {
-  Dimensions,
-  Frame,
-  Orientation,
-  Screen,
-  dimensions as defaultDimensions
-} from "dimmmensions"
+import type { Dimensions, Frame, Orientation, Screen } from "dimmmensions"
+import { dimensions as defaultDimensions } from "dimmmensions"
 import { motion, transform } from "framer-motion"
-import {
-  CSSProperties,
-  ChangeEvent,
-  ComponentProps,
-  useCallback,
-  useMemo,
-  useState
-} from "react"
+import type { CSSProperties, ChangeEvent, ComponentProps } from "react"
+import { useCallback, useMemo, useState } from "react"
 import { springier } from "../../transitions"
 import { getPercentage } from "../../utils/get-percentage"
 import { SegmentedControl } from "../controls/SegmentedControl"
