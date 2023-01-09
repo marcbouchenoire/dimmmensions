@@ -1,6 +1,6 @@
 import data from "./data/dimensions.json"
 import { isNumber } from "./guards"
-import { Dimensions } from "./types"
+import type { Dimensions } from "./types"
 import { isMultiple } from "./utils/is-multiple"
 
 /**
