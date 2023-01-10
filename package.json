@@ -1,38 +1,38 @@
 {
-  "name": "",
+  "name": "dimmmensions",
   "private": true,
   "prettier": "@marcbouchenoire/prettier-config",
   "nano-staged": {
     "*.{json,md,yml}": [
-      "yarn prettier"
+      "pnpm prettier"
     ],
     "packages/dimmmensions/**/*.mjs": [
-      "yarn workspace dimmmensions eslint --fix",
-      "yarn workspace dimmmensions prettier"
+      "pnpm --filter dimmmensions eslint --fix",
+      "pnpm --filter dimmmensions prettier"
     ],
     "packages/dimmmensions/**/*.{ts,tsx}": [
-      "yarn workspace dimmmensions eslint --fix",
-      "yarn workspace dimmmensions tsatsiki --project tsconfig.json",
-      "yarn workspace dimmmensions prettier"
+      "pnpm --filter dimmmensions eslint --fix",
+      "pnpm --filter dimmmensions tsatsiki --project tsconfig.json",
+      "pnpm --filter dimmmensions prettier"
     ],
     "packages/dimmmensions/**/*.{json,md}": [
-      "yarn workspace dimmmensions prettier"
+      "pnpm --filter dimmmensions prettier"
     ],
     "packages/site/**/*.{cjs,mjs}": [
-      "yarn workspace site eslint --fix",
-      "yarn workspace site prettier"
+      "pnpm --filter site eslint --fix",
+      "pnpm --filter site prettier"
     ],
     "packages/site/**/*.{ts,tsx}": [
-      "yarn workspace site eslint --fix",
-      "yarn workspace site tsatsiki --project tsconfig.json next-env.d.ts declarations.d.ts",
-      "yarn workspace site prettier"
+      "pnpm --filter site eslint --fix",
+      "pnpm --filter site tsatsiki --project tsconfig.json next-env.d.ts declarations.d.ts",
+      "pnpm --filter site prettier"
     ],
     "packages/site/**/*.css": [
-      "yarn workspace site stylelint --fix",
-      "yarn workspace site prettier"
+      "pnpm --filter site stylelint --fix",
+      "pnpm --filter site prettier"
     ],
     "packages/site/**/*.{json,md}": [
-      "yarn workspace site prettier"
+      "pnpm --filter site prettier"
     ]
   },
   "husky": {
@@ -47,25 +47,26 @@
     "packages/*"
   ],
   "scripts": {
-    "site:dev": "yarn workspace site dev",
-    "site:build": "yarn workspace site build",
-    "site:publish": "yarn build && yarn site:build",
+    "site:dev": "pnpm --filter site dev",
+    "site:build": "pnpm --filter site build",
+    "site:publish": "pnpm build && pnpm site:build",
     "prettier": "prettier --write --loglevel silent --ignore-path .gitignore",
-    "generate": "yarn workspace dimmmensions generate",
-    "build": "yarn workspace dimmmensions build",
-    "test": "yarn workspace dimmmensions test",
-    "test:coverage": "yarn workspace dimmmensions test:coverage",
-    "lint": "yarn prettier '*.{json,md,yml}' && lerna run lint --stream",
-    "release": "yarn test && lerna publish",
-    "postinstall": "yarn workspace site postinstall"
+    "generate": "pnpm --filter dimmmensions generate",
+    "build": "pnpm --filter dimmmensions build",
+    "test": "pnpm --filter dimmmensions test",
+    "test:coverage": "pnpm --filter dimmmensions test:coverage",
+    "lint": "pnpm prettier '*.{json,md,yml}' && pnpm --recursive --parallel --if-present lint",
+    "change": "pnpm changeset",
+    "bump": "pnpm changeset version && pnpm install",
+    "release": "pnpm test && pnpm publish -r"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "@marcbouchenoire/eslint-config": "^2.8.1",
     "@marcbouchenoire/prettier-config": "^1.1.0",
     "@types/node": "^18.11.18",
     "eslint": "^8.31.0",
     "husky": "4.3.8",
-    "lerna": "^6.4.0",
     "nano-staged": "^0.8.0",
     "prettier": "^2.8.2",
     "tsatsiki": "^2.0.1",
