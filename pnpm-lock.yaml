@@ -42,6 +42,8 @@ importers:
       nyc: ^15.1.0
       uvu: ^0.5.6
       write-json-file: ^5.0.0
+      zod: ^3.20.2
+      zod-validation-error: ^0.3.0
     devDependencies:
       '@types/command-exists': 1.2.0
       '@types/listr': 0.14.4
@@ -55,6 +57,8 @@ importers:
       nyc: 15.1.0
       uvu: 0.5.6
       write-json-file: 5.0.0
+      zod: 3.20.2
+      zod-validation-error: 0.3.0_zod@3.20.2
 
   packages/site:
     specifiers:
@@ -8856,6 +8860,19 @@ packages:
   /yocto-queue/1.0.0:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
+    dev: true
+
+  /zod-validation-error/0.3.0_zod@3.20.2:
+    resolution: {integrity: sha512-M0g8+1fgEgz6do82lA90v1IA4WXOK7TxAHqohAPktNJbTacl7tI74JS38AUWJPIJgDjUkhtEuLkUUFl3uhneyA==}
+    engines: {node: ^14.17 || >=16.0.0}
+    peerDependencies:
+      zod: ^3.18.0
+    dependencies:
+      zod: 3.20.2
+    dev: true
+
+  /zod/3.20.2:
+    resolution: {integrity: sha512-1MzNQdAvO+54H+EaK5YpyEy0T+Ejo/7YLHS93G3RnYWh5gaotGHwGeN/ZO687qEDU2y4CdStQYXVHIgrUl5UVQ==}
     dev: true
 
   /zwitch/2.0.4:
