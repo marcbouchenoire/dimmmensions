@@ -868,7 +868,66 @@
     "scale": 3
   },
   {
-    "name": "iPhone 8"
+    "device": "iPhone",
+    "landscape": {
+      "screen": {
+        "width": 667,
+        "height": 375
+      },
+      "sizeClass": {
+        "horizontal": "compact",
+        "vertical": "compact"
+      },
+      "layoutMargins": {
+        "left": 20,
+        "top": 0,
+        "right": 20,
+        "bottom": 0
+      },
+      "readableContent": {
+        "left": 20,
+        "top": 0,
+        "right": 20,
+        "bottom": 0
+      },
+      "safeArea": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      }
+    },
+    "name": "iPhone 8",
+    "portrait": {
+      "screen": {
+        "width": 375,
+        "height": 667
+      },
+      "sizeClass": {
+        "horizontal": "compact",
+        "vertical": "regular"
+      },
+      "layoutMargins": {
+        "left": 16,
+        "top": 20,
+        "right": 16,
+        "bottom": 0
+      },
+      "readableContent": {
+        "left": 16,
+        "top": 20,
+        "right": 16,
+        "bottom": 0
+      },
+      "safeArea": {
+        "left": 0,
+        "top": 20,
+        "right": 0,
+        "bottom": 0
+      }
+    },
+    "radius": 0,
+    "scale": 2
   },
   {
     "device": "iPhone",
