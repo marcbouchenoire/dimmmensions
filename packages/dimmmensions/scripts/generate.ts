@@ -8,9 +8,9 @@ import Listr from "listr"
 import { loadJsonFile } from "load-json-file"
 import { writeJsonFile } from "write-json-file"
 import type {
-  Device,
-  Dimensions,
-  OrientedDimensions,
+  DeviceSchema,
+  DimensionsSchema,
+  OrientedDimensionsSchema,
   SimulatorDimensions
 } from "../src/types"
 import type { SimulatorDevice } from "./utils/get-devices"

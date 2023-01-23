@@ -50,4 +50,14 @@ export function getDimensions(width?: number, height?: number): Dimensions[] {
   })
 }
 
-export * from "./types"
+export type {
+  Device,
+  Traits,
+  Screen,
+  Frame,
+  SizeClass,
+  SizeClasses,
+  Orientation,
+  OrientedDimensions,
+  Dimensions
+} from "./types"
