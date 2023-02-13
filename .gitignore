@@ -4,6 +4,7 @@ coverage
 dist
 xcuserdata
 .next
+.turbo
 data.json
 *.tsbuildinfo
 *.log
