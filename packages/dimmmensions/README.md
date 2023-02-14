@@ -7,7 +7,6 @@
 - 📦 **Typed**: Written in [TypeScript](https://www.typescriptlang.org/) and includes definitions out-of-the-box
 - 💨 **Zero dependencies**
 
-[![version](https://img.shields.io/badge/iOS%2015-message?color=%2395f)](https://developer.apple.com/sf-symbols/)
 [![build](https://img.shields.io/github/actions/workflow/status/marcbouchenoire/dimmmensions/.github/workflows/ci.yml?color=%2395f)](https://github.com/marcbouchenoire/dimmmensions/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/dimmmensions?color=%2395f)](https://www.npmjs.com/package/dimmmensions)
 [![size](https://img.shields.io/bundlephobia/minzip/dimmmensions?label=size&color=%2395f)](https://bundlephobia.com/package/dimmmensions)
