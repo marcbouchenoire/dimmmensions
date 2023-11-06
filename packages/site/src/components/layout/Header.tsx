@@ -123,6 +123,32 @@ export function Header({ className, ...props }: ComponentProps<"header">) {
           </button>
         </div>
       </div>
+      <div className="mt-6 lg:mt-8">
+        <div className="bg-primary-500/10 dark:bg-primary-400/20 flex gap-2 rounded-lg p-5 pl-4 text-sm sm:gap-3">
+          <svg
+            className="text-primary-500 dark:text-primary-400 flex-none"
+            height="24"
+            role="presentation"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M3.773 15.986 10.276 4.93c.774-1.315 2.675-1.315 3.448 0l6.503 11.055C21.011 17.319 20.05 19 18.503 19H5.497c-1.547 0-2.508-1.68-1.724-3.014ZM12 8a1 1 0 0 1 1 1v4a1 1 0 0 1-2 0V9a1 1 0 0 1 1-1Zm-1 8a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"
+              fill="currentColor"
+              fillRule="evenodd"
+            />
+          </svg>
+          <div>
+            <small className="text-primary-500 dark:text-primary-400 text-2xs font-semibold uppercase leading-none tracking-widest">
+              Deprecation notice
+            </small>
+            <p className="mt-2 leading-relaxed text-zinc-700 dark:text-zinc-100">
+              This project is archived and no longer maintained.
+            </p>
+          </div>
+        </div>
+      </div>
     </header>
   )
 }
