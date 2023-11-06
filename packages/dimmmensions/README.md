@@ -209,20 +209,6 @@ interface OrientedDimensions {
 
 ## Installation
 
-#### Skypack
-
-```javascript
-import { dimensions } from "https://cdn.skypack.dev/dimmmensions"
-```
-
-#### Yarn
-
-```bash
-yarn add dimmmensions
-```
-
-#### npm
-
 ```bash
 npm install dimmmensions
 ```
