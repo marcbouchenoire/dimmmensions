@@ -27,6 +27,8 @@ export default () => {
   storeStaticFiles()
 
   return {
+    assetPrefix:
+      process.env.NODE_ENV === "production" ? "/projects/dimmmensions" : undefined,
     trailingSlash: false,
     eslint: {
       ignoreDuringBuilds: true
