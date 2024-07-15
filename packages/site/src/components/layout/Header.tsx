@@ -144,7 +144,7 @@ export function Header({ className, ...props }: ComponentProps<"header">) {
               Deprecation notice
             </small>
             <p className="mt-2 leading-relaxed text-zinc-700 dark:text-zinc-100">
-              This project is archived and no longer maintained.
+              This project is no longer maintained.
             </p>
           </div>
         </div>
