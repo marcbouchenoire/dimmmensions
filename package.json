@@ -2,44 +2,6 @@
   "name": "dimmmensions",
   "private": true,
   "prettier": "@marcbouchenoire/prettier-config",
-  "nano-staged": {
-    "*.{json,md,yml}": [
-      "pnpm prettier"
-    ],
-    "packages/dimmmensions/**/*.mjs": [
-      "pnpm --filter dimmmensions eslint --fix",
-      "pnpm --filter dimmmensions prettier"
-    ],
-    "packages/dimmmensions/**/*.{ts,tsx}": [
-      "pnpm --filter dimmmensions eslint --fix",
-      "pnpm --filter dimmmensions tsatsiki --project tsconfig.json",
-      "pnpm --filter dimmmensions prettier"
-    ],
-    "packages/dimmmensions/**/*.{json,md}": [
-      "pnpm --filter dimmmensions prettier"
-    ],
-    "packages/site/**/*.{cjs,mjs}": [
-      "pnpm --filter site eslint --fix",
-      "pnpm --filter site prettier"
-    ],
-    "packages/site/**/*.{ts,tsx}": [
-      "pnpm --filter site eslint --fix",
-      "pnpm --filter site tsatsiki --project tsconfig.json next-env.d.ts declarations.d.ts",
-      "pnpm --filter site prettier"
-    ],
-    "packages/site/**/*.css": [
-      "pnpm --filter site stylelint --fix",
-      "pnpm --filter site prettier"
-    ],
-    "packages/site/**/*.{json,md}": [
-      "pnpm --filter site prettier"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "nano-staged"
-    }
-  },
   "scripts": {
     "prettier": "prettier --write --loglevel silent --ignore-path .gitignore",
     "generate": "turbo generate",
@@ -58,8 +20,6 @@
     "@marcbouchenoire/prettier-config": "^1.1.0",
     "@types/node": "^18.11.18",
     "eslint": "^8.31.0",
-    "husky": "4.3.8",
-    "nano-staged": "^0.8.0",
     "prettier": "^2.8.2",
     "tsatsiki": "^2.0.1",
     "tsm": "^2.3.0",
