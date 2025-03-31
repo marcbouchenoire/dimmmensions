@@ -9,11 +9,15 @@ import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import type { Plugin } from "unified"
 import { unified } from "unified"
+import type { Parent } from "unist"
+import type { Text } from "mdast"
 import { Dimensions } from "../components/sections/Dimensions"
 import { Introduction } from "../components/sections/Introduction"
 import rehypeRemoveImages from "../plugins/rehype/remove-images"
 import remarkFilterHeadings from "../plugins/remark/filter-headings"
 import remarkFindNode from "../plugins/remark/find-node"
+
+const BLOCKQUOTE_ALERTS_REGEX = /\[\![A-Z]+\]/g
 
 interface Props {
   /**
@@ -62,6 +66,32 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     .process(file)
 
   const content = await processor()
+    .use(() => {
+      return (tree) => {
+        ;(tree as Parent).children = (tree as Parent).children.filter(
+          (node) => {
+            if (node.type === "blockquote") {
+              const paragraph = (node as Parent).children[0] as
+                | Parent
+                | undefined
+
+              if (
+                paragraph?.type === "paragraph" &&
+                paragraph.children[0]?.type === "text"
+              ) {
+                const text = paragraph.children[0] as Text | undefined
+
+                if (text?.value.match(BLOCKQUOTE_ALERTS_REGEX)) {
+                  return false
+                }
+              }
+            }
+
+            return true
+          }
+        )
+      }
+    })
     .use(remarkFilterHeadings, { exclude: [{ depth: 1 }] })
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
